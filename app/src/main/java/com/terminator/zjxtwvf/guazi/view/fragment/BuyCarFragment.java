@@ -59,13 +59,13 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
     }
     @Override
     public View onCreateSuccessView() {
+        mView = UIUtils.inflate(R.layout.activity_sellcar_fragment);
+        ButterKnife.bind(this,mView);
         return mView;
     }
 
     @Override
     public LoadingPage.ResultState onLoad() {
-        mView = UIUtils.inflate(R.layout.activity_sellcar_fragment);
-        ButterKnife.bind(this,mView);
         mBuyCarPresenter.getSelldetailInfo();
         mBuyCarPresenter.getSellRecords();
         return LoadingPage.ResultState.STATE_SUCCESS;

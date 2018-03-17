@@ -45,13 +45,13 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
 
     @Override
     public View onCreateSuccessView() {
+        mView = UIUtils.inflate(R.layout.activity_buycar_fragment);
+        ButterKnife.bind(this,mView);
         return mView;
     }
 
     @Override
     public LoadingPage.ResultState onLoad() {
-        mView = UIUtils.inflate(R.layout.activity_buycar_fragment);
-        ButterKnife.bind(this,mView);
         mHomeAdapter = new HomeAdapter();
         mSellCarView.setLayoutManager(new LinearLayoutManager(UIUtils.getContext()));
         mSellCarView.setAdapter(mHomeAdapter);

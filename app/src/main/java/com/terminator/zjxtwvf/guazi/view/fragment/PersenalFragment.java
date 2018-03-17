@@ -65,13 +65,13 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
     }
     @Override
     public View onCreateSuccessView() {
+        mView = UIUtils.inflate(R.layout.activity_persenal_fragment);
+        ButterKnife.bind(this,mView);
         return mView;
     }
 
     @Override
     public LoadingPage.ResultState onLoad() {
-        mView = UIUtils.inflate(R.layout.activity_persenal_fragment);
-        ButterKnife.bind(this,mView);
         mPersonnalPresenter.getPersonalCenter();
         mPersonnalPresenter.getRecommend();
         //mHomeAdapter = new HomeAdapter();

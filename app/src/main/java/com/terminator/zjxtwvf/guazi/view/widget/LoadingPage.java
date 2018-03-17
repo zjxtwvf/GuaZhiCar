@@ -72,6 +72,11 @@ public abstract class LoadingPage extends FrameLayout{
             addView(mErrorPage);
         }
 
+        // 初始化数据
+        if (mSuccessPage == null) {
+            mSuccessPage = onCreateSuccessView();
+        }
+
         // 初始化数据为空布局
         if (mEmptyPage == null) {
             mEmptyPage = UIUtils.inflate(R.layout.loading_error);
@@ -97,14 +102,13 @@ public abstract class LoadingPage extends FrameLayout{
                 .setVisibility(mCurrentState == STATE_LOAD_EMPTY ? View.VISIBLE
                         : View.GONE);
         // 当成功布局为空,并且当前状态为成功,才初始化成功的布局
-        if (mSuccessPage == null && mCurrentState == STATE_LOAD_SUCCESS) {
-            mSuccessPage = onCreateSuccessView();
+        if (mCurrentState == STATE_LOAD_SUCCESS) {
             if (mSuccessPage != null) {
                 addView(mSuccessPage);
             }
         }
 
-        if (mSuccessPage != null) {
+        if (mSuccessPage != null && mCurrentState == STATE_LOAD_SUCCESS) {
             mSuccessPage
                     .setVisibility(mCurrentState == STATE_LOAD_SUCCESS ? View.VISIBLE
                             : View.GONE);
@@ -116,6 +120,7 @@ public abstract class LoadingPage extends FrameLayout{
     public void loadData() {
         if (mCurrentState != STATE_LOAD_LOADING) {// 如果当前没有加载, 就开始加载数据
             mCurrentState = STATE_LOAD_LOADING;
+            mSuccessPage = onCreateSuccessView();
             final ResultState resultState = onLoad();
             // 运行在主线程
             UIUtils.runOnUIThread(new Runnable() {

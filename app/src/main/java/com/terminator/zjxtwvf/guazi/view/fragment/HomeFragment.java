@@ -89,13 +89,13 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
 
     @Override
     public View onCreateSuccessView() {
+        mHomeView = UIUtils.inflate(R.layout.activity_home_fragment);
+        ButterKnife.bind(this,mHomeView);
         return mHomeView;
     }
 
     @Override
     public LoadingPage.ResultState onLoad() {
-        mHomeView = UIUtils.inflate(R.layout.activity_home_fragment);
-        ButterKnife.bind(this,mHomeView);
         mHomePresenter.getBanner();
         mHomePresenter.getFastIndex();
         mHomePresenter.getHomeCar();
