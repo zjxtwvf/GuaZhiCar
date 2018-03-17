@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_commit"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_arrow"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_service"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_arrow"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_car"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_arrow"
+            />
+
+        <ImageView
+            style="@style/AppSaleCarProcessImageViewStyle"
+            android:src="@drawable/ic_sale_transfer"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            style="@style/AppSaleCarProcessTvStyle"
+            android:text="提交信息"
+            />
+
+        <TextView
+            style="@style/AppSaleCarProcessTvStyle"
+            android:text="上门服务"
+            />
+
+        <TextView
+            style="@style/AppSaleCarProcessTvStyle"
+            android:text="买车看车"
+            />
+
+        <TextView
+            style="@style/AppSaleCarProcessTvStyle"
+            android:text="交易过户"
+            />
+    </LinearLayout>
+</LinearLayout>

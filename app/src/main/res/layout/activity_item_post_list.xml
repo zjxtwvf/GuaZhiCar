@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:padding="10dp"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/iv_item_post_list"
+        android:layout_width="140dp"
+        android:layout_height="90dp" />
+
+    <RelativeLayout
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_item_post_list"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <TextView
+            android:id="@+id/tv_item_post_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#000"
+            />
+
+        <TextView
+            android:layout_below="@id/tv_item_post_title"
+            android:id="@+id/tv_item_post_date_hual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            />
+
+        <TextView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/tv_item_post_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="#e3734f"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

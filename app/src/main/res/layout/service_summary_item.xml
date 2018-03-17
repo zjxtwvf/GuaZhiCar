@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/service_summary_item_item"
+        android:id="@+id/summary_item_item0"></include>
+    <include layout="@layout/service_summary_item_item"
+        android:id="@+id/summary_item_item1"></include>
+    <include layout="@layout/service_summary_item_item"
+        android:id="@+id/summary_item_item2"></include>
+
+</LinearLayout>

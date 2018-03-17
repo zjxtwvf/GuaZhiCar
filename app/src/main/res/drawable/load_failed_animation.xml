@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/loading_failed1" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed4" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed5" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed7" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed9" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed11" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed13" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed15" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed17" />
+    <item android:duration="100" android:drawable="@drawable/loading_failed19" />
+</animation-list>
