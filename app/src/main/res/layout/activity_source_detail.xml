@@ -825,7 +825,7 @@
                 android:layout_height="wrap_content"
                 android:text="降价通知"
                 android:textColor="@color/colorTextDark"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:layout_gravity="center_horizontal"
                 />
         </LinearLayout>
@@ -855,7 +855,7 @@
                 android:layout_height="wrap_content"
                 android:text="免费咨询"
                 android:textColor="@color/colorTextDark"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:layout_gravity="center_horizontal"
                 />
         </LinearLayout>
