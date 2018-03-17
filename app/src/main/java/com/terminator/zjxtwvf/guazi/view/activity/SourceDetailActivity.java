@@ -74,6 +74,8 @@ public class SourceDetailActivity extends AppCompatActivity implements SourceDet
     LinearLayout mServiceSummary;
     @Bind(R.id.ll_evaluate_item)
     LinearLayout mEvaluateItem;
+    @Bind(R.id.ll_detail_baomai)
+    LinearLayout mBaoMai;
 
 
     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT,1);
@@ -126,6 +128,17 @@ public class SourceDetailActivity extends AppCompatActivity implements SourceDet
         mDetailNewPrice.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
         mEvaluateDesc.setText(sourceDetailEntity.getData().getEvaluator_desc());
+
+        if(!sourceDetailEntity.getData().getBaomai().getImage().equals("")){
+            View view = UIUtils.inflate(R.layout.baomai_layout_item);
+            ImageView iv = (ImageView)view.findViewById(R.id.iv_baomai);
+            BitmapCacheUtils.getInstance().displayMatchWidth(iv,sourceDetailEntity.getData().getBaomai().getImage());
+            TextView tv = (TextView)view.findViewById(R.id.tv_baomai_distance);
+            tv.setText(sourceDetailEntity.getData().getBm_address().getDistance());
+            tv = (TextView)view.findViewById(R.id.tv_baomai_addr);
+            tv.setText(sourceDetailEntity.getData().getBm_address().getTitle());
+            mBaoMai.addView(view,params1);
+        }
 
         for(int i=0;i<sourceDetailEntity.getData().getImageList().size();i++){
             View view = UIUtils.inflate(R.layout.source_detail_image_list_item);
@@ -239,11 +252,11 @@ public class SourceDetailActivity extends AppCompatActivity implements SourceDet
             TextView tv = (TextView) view.findViewById(R.id.tv_evaluate_title);
             tv.setText(sourceDetailEntity.getData().getEvaluate_items().get(i).getTitle());
             TextView count = (TextView) view.findViewById(R.id.tv_evaluate_count);
-            count.setText(sourceDetailEntity.getData().getEvaluate_items().get(i).getCount()+"項");
+            count.setText(sourceDetailEntity.getData().getEvaluate_items().get(i).getCount()+"项");
             if(sourceDetailEntity.getData().getEvaluate_items().get(i).getFails() != 0){
                 TextView fail = (TextView) view.findViewById(R.id.tv_evaluate_fail);
                 fail.setVisibility(View.VISIBLE);
-                fail.setText(sourceDetailEntity.getData().getEvaluate_items().get(i).getFails()+"項");
+                fail.setText(sourceDetailEntity.getData().getEvaluate_items().get(i).getFails()+"项");
             }
             mEvaluateItem.addView(view,params2);
         }

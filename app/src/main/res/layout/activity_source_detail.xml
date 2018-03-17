@@ -5,7 +5,93 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <LinearLayout
+        android:id="@+id/ll_detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTextWhite"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_reduce_price_notice"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="降价通知"
+                android:textColor="@color/colorTextDark"
+                android:textSize="11sp"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorSplitLine"
+            >
+        </View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_detail_call_phone"
+                android:layout_gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="免费咨询"
+                android:textColor="@color/colorTextDark"
+                android:textSize="11sp"
+                android:layout_gravity="center_horizontal"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="砍价"
+            android:gravity="center"
+            android:textColor="@color/colorTextWhite"
+            android:background="@color/colorTextYellowBack"
+            android:layout_weight="1.5"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="预约看车"
+            android:gravity="center"
+            android:textColor="@color/colorTextWhite"
+            android:background="@color/colorTextPrice"
+            android:layout_weight="1.5"
+            />
+    </LinearLayout>
+
     <ScrollView
+        android:layout_above="@id/ll_detail_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
@@ -185,44 +271,11 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/ll_detail_baomai"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/colorTextDark"
                 >
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:text="保卖车"
-                        android:textColor="@color/colorTextBlak"
-                        android:textSize="15sp"
-                        android:layout_centerVertical="true"
-                        />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/baomai_more"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        />
-                </RelativeLayout>
-
-                <ImageView
-                    android:id="@+id/iv_baomai"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="20dp"
-                    />
             </LinearLayout>
 
             <LinearLayout
@@ -798,88 +851,4 @@
             android:layout_marginRight="20dp"
             />
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:orientation="horizontal"
-        android:layout_alignParentBottom="true"
-        android:background="@color/colorTextWhite"
-        >
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_reduce_price_notice"
-                android:layout_gravity="center_horizontal"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="降价通知"
-                android:textColor="@color/colorTextDark"
-                android:textSize="11sp"
-                android:layout_gravity="center_horizontal"
-                />
-        </LinearLayout>
-        <View
-            android:layout_width="1dp"
-            android:layout_height="match_parent"
-            android:background="@color/colorSplitLine"
-            >
-        </View>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="center"
-            >
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_detail_call_phone"
-                android:layout_gravity="center_horizontal"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="免费咨询"
-                android:textColor="@color/colorTextDark"
-                android:textSize="11sp"
-                android:layout_gravity="center_horizontal"
-                />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:text="砍价"
-            android:gravity="center"
-            android:textColor="@color/colorTextWhite"
-            android:background="@color/colorTextYellowBack"
-            android:layout_weight="1.5"
-            />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:textSize="16sp"
-            android:text="预约看车"
-            android:gravity="center"
-            android:textColor="@color/colorTextWhite"
-            android:background="@color/colorTextPrice"
-            android:layout_weight="1.5"
-            />
-    </LinearLayout>
 </RelativeLayout>
