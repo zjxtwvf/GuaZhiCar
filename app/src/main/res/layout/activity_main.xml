@@ -5,7 +5,7 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v4.view.ViewPager
+    <com.terminator.zjxtwvf.guazi.view.widget.NoScrollViewPager
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:layout_weight="1"
@@ -29,7 +29,9 @@
             android:layout_marginBottom="5dp"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/ll_main_home"
+            >
 
             <ImageView
                 android:id="@+id/iv_item_tab_home"
@@ -57,6 +59,7 @@
             android:layout_marginBottom="5dp"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
+            android:id="@+id/ll_main_buy_car"
             >
             <ImageView
                 android:layout_gravity="center_horizontal"
@@ -85,6 +88,7 @@
             android:layout_marginBottom="5dp"
             android:layout_gravity="center_vertical"
             android:gravity="center_vertical"
+            android:id="@+id/ll_main_sell_car"
             >
             <ImageView
                 android:layout_gravity="center_horizontal"
@@ -113,6 +117,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:gravity="center_vertical"
+            android:id="@+id/ll_main_mine"
             >
             <ImageView
                 android:layout_gravity="center_horizontal"

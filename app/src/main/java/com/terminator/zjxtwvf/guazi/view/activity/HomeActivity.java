@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeViewPagerAdapter;
@@ -18,6 +21,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/12/24.
@@ -29,6 +33,22 @@ public class HomeActivity extends AppCompatActivity{
 
     @Bind(R.id.banner_home_content)
     ViewPager mBanner;
+    @Bind(R.id.tv_item_tab_home)
+    TextView mTvTabHome;
+    @Bind(R.id.tv_item_tab_sell_car)
+    TextView mTvTabSellCar;
+    @Bind(R.id.tv_item_tab_buy_car)
+    TextView mTvTabBuyCar;
+    @Bind(R.id.tv_item_tab_me)
+    TextView mTvTabMe;
+    @Bind(R.id.iv_item_tab_home)
+    ImageView mIvTabHome;
+    @Bind(R.id.iv_item_tab_sell_car)
+    ImageView mIvTabSellCar;
+    @Bind(R.id.iv_item_tab_buy_car)
+    ImageView mIvTabBuyCar;
+    @Bind(R.id.iv_item_tab_me)
+    ImageView mIvTabMe;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,5 +67,39 @@ public class HomeActivity extends AppCompatActivity{
 
         mBanner.setAdapter(new HomeViewPagerAdapter(getSupportFragmentManager(),mFragments));
         mBanner.setCurrentItem(0);
+    }
+
+    @OnClick({R.id.ll_main_home,R.id.ll_main_buy_car,R.id.ll_main_sell_car,R.id.ll_main_mine})
+    public void onClick(View view){
+        mIvTabHome.setImageDrawable(getResources().getDrawable(R.drawable.tab_home_normal));
+        mIvTabBuyCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_buy_normal));
+        mIvTabSellCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_sell_normal));
+        mIvTabMe.setImageDrawable(getResources().getDrawable(R.drawable.tab_my_info_normal));
+        mTvTabHome.setTextColor(getResources().getColor(R.color.colorTextBlak));
+        mTvTabSellCar.setTextColor(getResources().getColor(R.color.colorTextBlak));
+        mTvTabBuyCar.setTextColor(getResources().getColor(R.color.colorTextBlak));
+        mTvTabMe.setTextColor(getResources().getColor(R.color.colorTextBlak));
+        switch (view.getId()){
+            case R.id.ll_main_home:
+                mIvTabHome.setImageDrawable(getResources().getDrawable(R.drawable.tab_home_selected));
+                mTvTabHome.setTextColor(getResources().getColor(R.color.colorTextMain));
+                mBanner.setCurrentItem(0);
+                break;
+            case R.id.ll_main_buy_car:
+                mIvTabBuyCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_buy_selected));
+                mTvTabBuyCar.setTextColor(getResources().getColor(R.color.colorTextMain));
+                mBanner.setCurrentItem(1);
+                break;
+            case R.id.ll_main_sell_car:
+                mIvTabSellCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_sell_selected));
+                mTvTabSellCar.setTextColor(getResources().getColor(R.color.colorTextMain));
+                mBanner.setCurrentItem(2);
+                break;
+            case R.id.ll_main_mine:
+                mIvTabMe.setImageDrawable(getResources().getDrawable(R.drawable.tab_my_info_selected));
+                mTvTabMe.setTextColor(getResources().getColor(R.color.colorTextMain));
+                mBanner.setCurrentItem(3);
+                break;
+        }
     }
 }

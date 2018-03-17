@@ -34,4 +34,6 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return data.size();
     }
+
+
 }
