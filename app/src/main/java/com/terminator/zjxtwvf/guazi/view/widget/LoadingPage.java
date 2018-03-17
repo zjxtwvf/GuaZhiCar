@@ -9,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.terminator.zjxtwvf.guazi.R;
-import com.terminator.zjxtwvf.guazi.util.ThreadManager;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
 
 /**
@@ -117,21 +116,16 @@ public abstract class LoadingPage extends FrameLayout{
     public void loadData() {
         if (mCurrentState != STATE_LOAD_LOADING) {// 如果当前没有加载, 就开始加载数据
             mCurrentState = STATE_LOAD_LOADING;
-            ThreadManager.getThreadPool().execute(new Runnable() {
+            final ResultState resultState = onLoad();
+            // 运行在主线程
+            UIUtils.runOnUIThread(new Runnable() {
                 @Override
                 public void run() {
-                    final ResultState resultState = onLoad();
-                    // 运行在主线程
-                    UIUtils.runOnUIThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (resultState != null) {
-                                mCurrentState = resultState.getState();// 网络加载结束后,更新网络状态
-                                // 根据最新的状态来刷新页面
-                                showRightPage();
-                            }
-                        }
-                    });
+                    if (resultState != null) {
+                        mCurrentState = resultState.getState();// 网络加载结束后,更新网络状态
+                        // 根据最新的状态来刷新页面
+                        showRightPage();
+                    }
                 }
             });
         }
@@ -148,7 +142,7 @@ public abstract class LoadingPage extends FrameLayout{
                 STATE_LOAD_ERROR);
         private int state;
 
-        private ResultState(int state) {
+        ResultState(int state) {
             this.state = state;
         }
         public int getState() {
