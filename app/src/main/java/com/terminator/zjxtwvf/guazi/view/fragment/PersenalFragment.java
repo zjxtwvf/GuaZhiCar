@@ -74,9 +74,6 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
     public LoadingPage.ResultState onLoad() {
         mPersonnalPresenter.getPersonalCenter();
         mPersonnalPresenter.getRecommend();
-        //mHomeAdapter = new HomeAdapter();
-        //mLlPersonalRecomend.setLayoutManager(new LinearLayoutManager(UIUtils.getContext()));
-        //mLlPersonalRecomend.setAdapter(mHomeAdapter);
         return LoadingPage.ResultState.STATE_SUCCESS;
     }
 
@@ -87,7 +84,7 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
             TextView textView = (TextView)view.findViewById(R.id.tv_personal_center);
             textView.setText(personalCenterEntity.getData().get(0).getList().get(i).getTitle());
             ImageView imageView = (ImageView)view.findViewById(R.id.iv_personal_center);
-            BitmapCacheUtils.getInstance().displayMatchWidth(imageView,personalCenterEntity.getData().get(0).getList().get(i).getImageUrl());
+            BitmapCacheUtils.getInstance().display(imageView,personalCenterEntity.getData().get(0).getList().get(i).getImageUrl());
             params.setMargins(0,UIUtils.dip2px(20),0,0);
             mLlPersonalCenter.addView(view,params);
         }
@@ -103,7 +100,7 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
             TextView textView = (TextView)view.findViewById(R.id.tv_personal_center);
             textView.setText(personalCenterEntity.getData().get(1).getList().get(i).getTitle());
             ImageView imageView = (ImageView)view.findViewById(R.id.iv_personal_center);
-            BitmapCacheUtils.getInstance().displayMatchWidth(imageView,personalCenterEntity.getData().get(1).getList().get(i).getImageUrl());
+            BitmapCacheUtils.getInstance().display(imageView,personalCenterEntity.getData().get(1).getList().get(i).getImageUrl());
             if(i < personalCenterEntity.getData().get(1).getList().size()/2){
                 mLlPersonalFun0.addView(view,params);
             }else{

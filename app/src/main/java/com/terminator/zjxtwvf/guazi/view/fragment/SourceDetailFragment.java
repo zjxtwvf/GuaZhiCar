@@ -109,7 +109,7 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
     @Override
     public LoadingPage.ResultState onLoad() {
         mSourceDetailPresenter.getSourceDetail();
-        return null;
+        return LoadingPage.ResultState.STATE_SUCCESS;
     }
 
     @Override

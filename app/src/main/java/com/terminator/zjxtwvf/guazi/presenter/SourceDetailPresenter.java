@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.presenter;
 import com.orhanobut.logger.Logger;
 import com.terminator.zjxtwvf.guazi.model.api.ApiService;
 import com.terminator.zjxtwvf.guazi.model.entity.SourceDetailEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import javax.inject.Inject;
 
@@ -45,6 +46,7 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
                 .subscribe(new Subscriber<SourceDetailEntity>() {
                     @Override
                     public void onCompleted() {
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         Logger.d("getSourceDetail onCompleted------------->");
                     }
                     @Override

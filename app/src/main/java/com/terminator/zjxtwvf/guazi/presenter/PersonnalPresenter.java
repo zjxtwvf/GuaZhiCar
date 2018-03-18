@@ -2,7 +2,6 @@ package com.terminator.zjxtwvf.guazi.presenter;
 
 import com.orhanobut.logger.Logger;
 import com.terminator.zjxtwvf.guazi.model.api.ApiService;
-import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.PersonalCenterEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecommendEntity;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
@@ -52,7 +51,6 @@ public class PersonnalPresenter implements PersonalContract.Presenter{
                     @Override
                     public void onNext(PersonalCenterEntity personalCenterEntity) {
                         Logger.d("getPersonalCenter onNext------------->");
-                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         mView.onDisplayPersonalCenter(personalCenterEntity);
                     }
                 });
@@ -83,6 +81,7 @@ public class PersonnalPresenter implements PersonalContract.Presenter{
                     @Override
                     public void onNext(RecommendEntity recommendEntity) {
                         Logger.d("getRecommend onNext------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         mView.onDisplayRecommend(recommendEntity);
                     }
                 });

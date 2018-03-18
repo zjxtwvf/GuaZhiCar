@@ -94,14 +94,14 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
 
     @Override
     public void onDisplaySelldetailInfo(SellDetailInfoEntity sellDetailInfoEntity) {
-        BitmapCacheUtils.getInstance().displayMatchWidth(mBannerPic,sellDetailInfoEntity.getData().getBanner_pic());
+        BitmapCacheUtils.getInstance().display(mBannerPic,sellDetailInfoEntity.getData().getBanner_pic());
         mDualNum.setText(sellDetailInfoEntity.getData().getClueNum()+"位车主提交了卖车申请");
 
         for(int i=0;i<sellDetailInfoEntity.getData().getNew_car_banner().size();i++){
             ImageView iv = new ImageView(UIUtils.getContext());
             iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
             mNewCarBanner.addView(iv,params60);
-            BitmapCacheUtils.getInstance().displayMatchWidth(iv,sellDetailInfoEntity.getData()
+            BitmapCacheUtils.getInstance().display(iv,sellDetailInfoEntity.getData()
                     .getNew_car_banner().get(i).getImgUrl());
         }
 
