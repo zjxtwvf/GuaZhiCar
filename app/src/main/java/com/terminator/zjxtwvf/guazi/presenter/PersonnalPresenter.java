@@ -5,6 +5,7 @@ import com.terminator.zjxtwvf.guazi.model.api.ApiService;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.PersonalCenterEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecommendEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import javax.inject.Inject;
 
@@ -51,6 +52,7 @@ public class PersonnalPresenter implements PersonalContract.Presenter{
                     @Override
                     public void onNext(PersonalCenterEntity personalCenterEntity) {
                         Logger.d("getPersonalCenter onNext------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         mView.onDisplayPersonalCenter(personalCenterEntity);
                     }
                 });
@@ -75,6 +77,7 @@ public class PersonnalPresenter implements PersonalContract.Presenter{
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("getRecommend onError------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_ERROR);
                         e.printStackTrace();
                     }
                     @Override

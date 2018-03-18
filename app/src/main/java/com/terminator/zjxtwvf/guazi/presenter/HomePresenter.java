@@ -6,6 +6,7 @@ import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import javax.inject.Inject;
 
@@ -118,11 +119,13 @@ public class HomePresenter implements HomeContract.Presenter{
                     @Override
                     public void onCompleted() {
                         Logger.d("getHomeTopic onCompleted------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                     }
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("getHomeCar onError------------->");
                         e.printStackTrace();
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_ERROR);
                     }
                     @Override
                     public void onNext(TopicEntity topicEntity) {

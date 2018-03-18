@@ -55,11 +55,17 @@ public abstract class BaseFragment extends Fragment{
             lazyLoad();
         }
     }
-
+    //懒加载数据
     private void lazyLoad(){
         if(mIsUiVisible && !mFirst){
             loadData();
             mFirst = true;
+        }
+    }
+
+    public void updatePage(LoadingPage.ResultState resultState){
+        if (mLoadingPage != null) {
+            mLoadingPage.updatePage(resultState);
         }
     }
 

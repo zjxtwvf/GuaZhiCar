@@ -128,4 +128,9 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
             mQuestion.addView(view,paramsMM);
         }
     }
+
+    @Override
+    public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
+        updatePage(resultState);
+    }
 }

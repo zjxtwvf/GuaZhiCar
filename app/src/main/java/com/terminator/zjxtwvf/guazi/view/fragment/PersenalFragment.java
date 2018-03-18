@@ -141,4 +141,9 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
             mLlPersonaRecomendList.addView(view);
         }
     }
+
+    @Override
+    public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
+        updatePage(resultState);
+    }
 }

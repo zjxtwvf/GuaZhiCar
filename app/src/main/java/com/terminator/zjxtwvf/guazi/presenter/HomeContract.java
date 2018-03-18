@@ -4,6 +4,7 @@ import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import java.util.List;
 
@@ -25,5 +26,7 @@ public interface HomeContract {
         void onDisplayFastIndex(FastIndexEntity fastIndexEntity);
         void onDisplayHomeCar(HomeEntity homeEntity);
         void onDisplayHomeTopic(TopicEntity topicEntity);
+
+        void onUpdateLoadingPage(LoadingPage.ResultState resultState);
     }
 }

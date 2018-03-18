@@ -63,4 +63,9 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     public void onDisplayCarList(CarListEntity carListEntity) {
         mHomeAdapter.updateData(carListEntity.getData().getPostList());
     }
+
+    @Override
+    public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
+        updatePage(resultState);
+    }
 }

@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.di.components;
 import com.terminator.zjxtwvf.guazi.di.modules.SourceDetailModule;
 import com.terminator.zjxtwvf.guazi.di.scope.UserScope;
 import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
+import com.terminator.zjxtwvf.guazi.view.fragment.SourceDetailFragment;
 
 import dagger.Component;
 
@@ -14,5 +15,5 @@ import dagger.Component;
 @UserScope
 @Component(modules = SourceDetailModule.class,dependencies = NetComponent.class)
 public interface SourceDetailComponent {
-    void Inject(SourceDetailActivity sourceDetailActivity);
+    void Inject(SourceDetailFragment sourceDetailFragment);
 }

@@ -5,6 +5,7 @@ import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import java.util.List;
 
@@ -20,5 +21,6 @@ public interface SellCarContract {
 
     interface View{
         void onDisplayCarList(CarListEntity carListEntity);
+        void onUpdateLoadingPage(LoadingPage.ResultState resultState);
     }
 }

@@ -23,6 +23,8 @@ public abstract class LoadingPage extends FrameLayout{
     private static final int STATE_LOAD_EMPTY = 4;// 数据为空
     private static final int STATE_LOAD_SUCCESS = 5;// 加载成功
 
+    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+
     private int mCurrentState = STATE_LOAD_UNDO;// 当前状态
 
     private View mLoadingPage;
@@ -53,7 +55,7 @@ public abstract class LoadingPage extends FrameLayout{
             mLoadingPage = UIUtils.inflate(R.layout.loading_page);
             loadingAnima = (ImageView) mLoadingPage.findViewById(R.id.iv_loading_page);
             ((AnimationDrawable)loadingAnima.getDrawable()).start();
-            addView(mLoadingPage);// 将加载中的布局添加给当前的帧布局
+            addView(mLoadingPage,params);// 将加载中的布局添加给当前的帧布局
         }
 
         // 初始化加载失败布局
@@ -69,7 +71,7 @@ public abstract class LoadingPage extends FrameLayout{
                 }
             });
 
-            addView(mErrorPage);
+            addView(mErrorPage,params);
         }
 
         // 初始化数据
@@ -80,14 +82,22 @@ public abstract class LoadingPage extends FrameLayout{
         // 初始化数据为空布局
         if (mEmptyPage == null) {
             mEmptyPage = UIUtils.inflate(R.layout.loading_error);
-            addView(mEmptyPage);
+            addView(mEmptyPage,params);
         }
         showRightPage();
     }
 
-    public void updatePage(int  resultState){
-        mCurrentState = resultState;
-        showRightPage();
+    public void updatePage(final ResultState  resultState){
+        UIUtils.runOnUIThread(new Runnable() {
+            @Override
+            public void run() {
+                if (resultState != null) {
+                    mCurrentState = resultState.getState();// 网络加载结束后,更新网络状态
+                    // 根据最新的状态来刷新页面
+                    showRightPage();
+                }
+            }
+        });
     }
 
     // 根据当前状态,决定显示哪个布局
@@ -122,17 +132,6 @@ public abstract class LoadingPage extends FrameLayout{
             mCurrentState = STATE_LOAD_LOADING;
             mSuccessPage = onCreateSuccessView();
             final ResultState resultState = onLoad();
-            // 运行在主线程
-            UIUtils.runOnUIThread(new Runnable() {
-                @Override
-                public void run() {
-                    if (resultState != null) {
-                        mCurrentState = resultState.getState();// 网络加载结束后,更新网络状态
-                        // 根据最新的状态来刷新页面
-                        showRightPage();
-                    }
-                }
-            });
         }
     }
 

@@ -215,6 +215,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         }
     }
 
+    @Override
+    public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
+        updatePage(resultState);
+    }
+
     public class HomeClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {

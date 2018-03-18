@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.presenter;
 import com.orhanobut.logger.Logger;
 import com.terminator.zjxtwvf.guazi.model.api.ApiService;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
+import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 
 import javax.inject.Inject;
@@ -42,10 +43,12 @@ public class SellCarPresenter implements SellCarContract.Presenter{
                     @Override
                     public void onCompleted() {
                         Logger.d("getCarList onCompleted------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                     }
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("getCarList onError------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_ERROR);
                         e.printStackTrace();
                     }
                     @Override
