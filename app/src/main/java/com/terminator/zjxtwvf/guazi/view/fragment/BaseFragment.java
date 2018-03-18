@@ -16,6 +16,8 @@ import java.util.ArrayList;
 
 public abstract class BaseFragment extends Fragment{
 
+    private boolean mIsUiVisible = false;
+    private boolean mFirst = false;
     private LoadingPage mLoadingPage;
 
     public BaseFragment(){
@@ -37,16 +39,27 @@ public abstract class BaseFragment extends Fragment{
         return mLoadingPage;
     }
 
-    // 加载成功的布局, 必须由子类来实现
-    public abstract View onCreateSuccessView();
-
-    // 加载网络数据, 必须由子类来实现
-    public abstract LoadingPage.ResultState onLoad();
-
     // 开始加载数据
     public void loadData() {
         if (mLoadingPage != null) {
             mLoadingPage.loadData();
+        }
+    }
+
+    //懒加载数据
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser){
+            mIsUiVisible = true;
+            lazyLoad();
+        }
+    }
+
+    private void lazyLoad(){
+        if(mIsUiVisible && !mFirst){
+            loadData();
+            mFirst = true;
         }
     }
 
@@ -65,4 +78,10 @@ public abstract class BaseFragment extends Fragment{
         }
         return LoadingPage.ResultState.STATE_ERROR;
     }
+
+    // 加载成功的布局, 必须由子类来实现
+    public abstract View onCreateSuccessView();
+
+    // 加载网络数据, 必须由子类来实现
+    public abstract LoadingPage.ResultState onLoad();
 }
