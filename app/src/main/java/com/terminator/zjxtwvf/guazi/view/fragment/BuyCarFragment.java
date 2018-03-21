@@ -16,6 +16,7 @@ import com.terminator.zjxtwvf.guazi.presenter.BuyCarContract;
 import com.terminator.zjxtwvf.guazi.presenter.BuyCarPresenter;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
+import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import javax.inject.Inject;
@@ -47,7 +48,6 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
     @Inject
     BuyCarPresenter mBuyCarPresenter;
 
-    LinearLayout.LayoutParams params180 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,UIUtils.dip2px(180));
     LinearLayout.LayoutParams params60 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,UIUtils.dip2px(60));
     LinearLayout.LayoutParams paramsMM = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
 
@@ -98,17 +98,16 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
         mDualNum.setText(sellDetailInfoEntity.getData().getClueNum()+"位车主提交了卖车申请");
 
         for(int i=0;i<sellDetailInfoEntity.getData().getNew_car_banner().size();i++){
-            ImageView iv = new ImageView(UIUtils.getContext());
+            ImageViewMatchWidth iv = new ImageViewMatchWidth(UIUtils.getContext());
             iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            mNewCarBanner.addView(iv,params60);
+            mNewCarBanner.addView(iv,paramsMM);
             BitmapCacheUtils.getInstance().display(iv,sellDetailInfoEntity.getData()
                     .getNew_car_banner().get(i).getImgUrl());
         }
 
         for(int i=0;i<sellDetailInfoEntity.getData().getPic_url().size();i++){
-            ImageView iv = new ImageView(UIUtils.getContext());
-            iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            mSaleCarPicUrl.addView(iv,params180);
+            ImageViewMatchWidth iv = new ImageViewMatchWidth(UIUtils.getContext());
+            mSaleCarPicUrl.addView(iv,paramsMM);
             BitmapCacheUtils.getInstance().display(iv,sellDetailInfoEntity.getData().getPic_url().get(i));
         }
 

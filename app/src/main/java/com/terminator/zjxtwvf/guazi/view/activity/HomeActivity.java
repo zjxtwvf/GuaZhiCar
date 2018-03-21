@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeViewPagerAdapter;
@@ -100,6 +101,19 @@ public class HomeActivity extends AppCompatActivity{
                 mTvTabMe.setTextColor(getResources().getColor(R.color.colorTextMain));
                 mBanner.setCurrentItem(3);
                 break;
+        }
+    }
+
+    private long firstTime = 0;
+    @Override
+    public void onBackPressed() {
+        long secondTime = System.currentTimeMillis();
+
+        if ( secondTime - firstTime < 2000) {
+            System.exit(0);
+        } else {
+            Toast.makeText(HomeActivity.this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            firstTime = System.currentTimeMillis();
         }
     }
 }

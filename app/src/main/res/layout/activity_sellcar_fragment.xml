@@ -35,10 +35,10 @@
             android:orientation="vertical"
             >
 
-            <ImageView
+            <com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth
                 android:id="@+id/iv_sell_car_bannerpic"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:scaleType="fitCenter"
                 />
 
