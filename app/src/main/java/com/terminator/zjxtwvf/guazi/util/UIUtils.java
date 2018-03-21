@@ -43,7 +43,8 @@ public class UIUtils{
 			return;
 
 		ViewGroup.LayoutParams params = imageView.getLayoutParams();
-		matchWidth = imageView.getMeasuredWidth();
+		//matchWidth = imageView.getMeasuredWidth();
+		matchWidth = params.width;
 		float scale = (float) matchWidth / (float) bitmap.getWidth();
 		int defaultHeight = Math.round(bitmap.getHeight() * scale);
 		params.height = defaultHeight;

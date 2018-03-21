@@ -6,7 +6,7 @@
     android:orientation="vertical"
     >
 
-    <ImageView
+    <com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth
         android:layout_gravity="center_vertical"
         android:id="@+id/iv_item_post_list"
         android:layout_width="140dp"

@@ -7,7 +7,7 @@
     android:orientation="vertical"
     >
 
-    <ImageView
+    <com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:layout_width="match_parent"

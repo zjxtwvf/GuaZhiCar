@@ -46,7 +46,6 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
                 .subscribe(new Subscriber<SourceDetailEntity>() {
                     @Override
                     public void onCompleted() {
-                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         Logger.d("getSourceDetail onCompleted------------->");
                     }
                     @Override
@@ -57,6 +56,7 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
                     @Override
                     public void onNext(SourceDetailEntity sourceDetailEntity) {
                         Logger.d("getSourceDetail onNext------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_SUCCESS);
                         mView.onDisplaySourceDetail(sourceDetailEntity);
                     }
                 });

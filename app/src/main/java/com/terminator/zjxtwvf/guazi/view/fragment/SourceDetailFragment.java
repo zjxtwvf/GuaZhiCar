@@ -161,7 +161,7 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
                     getImageList().get(i).getImages().size()){
                 continue;
             }
-            BitmapCacheUtils.getInstance().displayMatchWidth(iv,sourceDetailEntity.getData().
+            BitmapCacheUtils.getInstance().display(iv,sourceDetailEntity.getData().
                     getImageList().get(i).getImages().get(0).getImage());
             TextView tv = (TextView)view.findViewById(R.id.tv_source_detail_item_desc);
             tv.setText(sourceDetailEntity.getData().getImageList().get(i).getCategory_desc());
