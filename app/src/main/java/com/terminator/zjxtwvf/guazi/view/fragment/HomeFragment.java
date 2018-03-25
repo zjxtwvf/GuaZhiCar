@@ -27,6 +27,7 @@ import com.terminator.zjxtwvf.guazi.presenter.HomePresenter;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
+import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import java.util.Arrays;
@@ -153,8 +154,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         }
 
         for(int i=0;i<fastIndexEntity.getData().getLike().getItemList().size();i++) {
-            ImageView iv = new ImageView(UIUtils.getContext());
-            iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            ImageViewMatchWidth iv = new ImageViewMatchWidth(UIUtils.getContext());
             BitmapCacheUtils.getInstance().display(iv, fastIndexEntity.getData().getLike().getItemList().get(i).getImgUrl());
             if(i == 0 || i == 3){
                 mLlItemLikeLeft.addView(iv,params2);
