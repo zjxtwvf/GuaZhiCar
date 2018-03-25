@@ -1,5 +1,6 @@
 package com.terminator.zjxtwvf.guazi.view.fragment;
 
+import android.animation.ValueAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.app.MyApplication;
@@ -48,6 +50,8 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     RecyclerView mSellCarView;
     @Bind(R.id.iv_loading_more)
     ImageView mLoadingMore;
+    @Bind(R.id.rl_load_more)
+    RelativeLayout mRlLoadingMore;
 
     public SellCarFragment(){
         super();
@@ -62,6 +66,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     public View onCreateSuccessView() {
         mView = UIUtils.inflate(R.layout.activity_buycar_fragment);
         ButterKnife.bind(this,mView);
+        mRlLoadingMore.setPadding(0,-UIUtils.dip2px(60),0,0);
         return mView;
     }
 
@@ -77,6 +82,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     @Override
     public void onLoadMoreData(CarListEntity carListEntity) {
         mData.addAll(carListEntity.getData().getPostList());
+        toggle(true);
         mHomeAdapter.updateData(mData);
     }
 
@@ -97,6 +103,25 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onReceiveEvent(RecyclerViewEvent recyclerViewEvent){
+        toggle(false);
         mSellCarPresenter.loadMoreData();
+    }
+
+    private void toggle(boolean down){
+        ValueAnimator animator = null;
+        if(!down){
+            animator = ValueAnimator.ofInt(0,UIUtils.dip2px(60));
+        }else{
+            animator =ValueAnimator.ofInt(UIUtils.dip2px(60),0);
+        }
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator arg0) {
+                mRlLoadingMore.setPadding(0,(Integer) arg0.getAnimatedValue() - UIUtils.dip2px(60),0,0);
+            }
+        });
+
+        animator.setDuration(600);
+        animator.start();
     }
 }
