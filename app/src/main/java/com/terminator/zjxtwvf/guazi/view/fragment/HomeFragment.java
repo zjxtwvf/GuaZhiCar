@@ -70,6 +70,8 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
     LinearLayout mLlItemPostList;
     @Bind(R.id.ll_item_topic_details)
     LinearLayout mLlItemTopicDetails;
+    @Bind(R.id.tv_home_more)
+    TextView mHomeMore;
 
     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT,1);
     LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,0,1);
@@ -193,6 +195,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
             BitmapCacheUtils.getInstance().display(iv,homeEntity.getData().get(0).getPostList().get(i).getThumb_img());
             mLlItemPostList.addView(view);
         }
+        mHomeMore.setOnClickListener(mHomeClickListener);
     }
 
     @Override

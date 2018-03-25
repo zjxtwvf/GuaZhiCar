@@ -17,6 +17,7 @@ import com.terminator.zjxtwvf.guazi.presenter.SourceDetailContract;
 import com.terminator.zjxtwvf.guazi.presenter.SourceDetailPresenter;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
+import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
 import java.util.ArrayList;
@@ -280,8 +281,8 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
     class SourceDetailClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(UIUtils.getContext(),SourceDetailFragment.class);
-            startActivity(intent);
+            Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
+            UIUtils.getContext().startActivity(intent);
         }
     }
 }

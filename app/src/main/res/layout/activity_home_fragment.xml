@@ -19,8 +19,16 @@
             android:text="成都" />
     </RelativeLayout>
 
-    <ScrollView
+    <View
+        android:id="@+id/home_view_top"
         android:layout_below="@id/rl_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorMianBackground"
+        />
+
+    <ScrollView
+        android:layout_below="@id/home_view_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
@@ -151,12 +159,34 @@
             >
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="20dp"
-            android:id="@+id/my_recycler_view"
-            android:scrollbars="vertical"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="70dp"
+            >
+            <TextView
+                android:id="@+id/tv_home_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="查看更多车源"
+                android:textColor="@color/colorTextDark"
+                android:textSize="15sp"
+                android:background="@drawable/bg_text_grey"
+                android:gravity="center"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                />
+
+        </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/my_recycler_view"
+                android:scrollbars="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
     </ScrollView>
