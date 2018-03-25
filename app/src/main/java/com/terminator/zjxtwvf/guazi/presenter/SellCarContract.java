@@ -17,9 +17,11 @@ public interface SellCarContract {
 
     interface Presenter{
         void getCarList();
+        void loadMoreData();
     }
 
     interface View{
+        void onLoadMoreData(CarListEntity carListEntity);
         void onDisplayCarList(CarListEntity carListEntity);
         void onUpdateLoadingPage(LoadingPage.ResultState resultState);
     }

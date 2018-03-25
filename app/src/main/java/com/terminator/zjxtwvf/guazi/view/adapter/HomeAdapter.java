@@ -9,9 +9,12 @@ import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
+import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
@@ -20,12 +23,13 @@ import java.util.List;
  */
 
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
+
     List<CarListEntity.DataBean.PostListBean> data;
 
     public HomeAdapter(){
     }
 
-    public  void updateData(List<CarListEntity.DataBean.PostListBean> data){
+    public void updateData(List<CarListEntity.DataBean.PostListBean> data){
         this.data = data;
         this.notifyDataSetChanged();
     }
@@ -46,6 +50,9 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
 
     @Override
     public void onBindViewHolder(HomeAdapter.MyViewHolder holder, int position) {
+        if(position == data.size() -1){
+            EventBus.getDefault().post(new RecyclerViewEvent());
+        }
         holder.tvTtile.setText(data.get(position).getTitle());
         holder.tvDateHual.setText(data.get(position).getLicense_date());
         holder.tvPrice.setText(data.get(position).getPrice());

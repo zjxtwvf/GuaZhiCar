@@ -48,7 +48,6 @@ public class BuyCarFragment extends BaseFragment implements BuyCarContract.View{
     @Inject
     BuyCarPresenter mBuyCarPresenter;
 
-    LinearLayout.LayoutParams params60 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,UIUtils.dip2px(60));
     LinearLayout.LayoutParams paramsMM = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
 
     public BuyCarFragment(){
