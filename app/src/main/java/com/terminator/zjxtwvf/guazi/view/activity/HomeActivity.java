@@ -10,12 +10,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.terminator.zjxtwvf.guazi.R;
+import com.terminator.zjxtwvf.guazi.model.entity.FragmentEvent;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeViewPagerAdapter;
 import com.terminator.zjxtwvf.guazi.view.fragment.BaseFragment;
 import com.terminator.zjxtwvf.guazi.view.fragment.BuyCarFragment;
 import com.terminator.zjxtwvf.guazi.view.fragment.HomeFragment;
 import com.terminator.zjxtwvf.guazi.view.fragment.PersenalFragment;
 import com.terminator.zjxtwvf.guazi.view.fragment.SellCarFragment;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +36,7 @@ import butterknife.OnClick;
 public class HomeActivity extends AppCompatActivity{
 
     List<BaseFragment> mFragments = new ArrayList<BaseFragment>();
+    private long firstTime = 0;
 
     @Bind(R.id.banner_home_content)
     ViewPager mBanner;
@@ -56,6 +62,7 @@ public class HomeActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(HomeActivity.this);
+        EventBus.getDefault().register(this);
 
         BaseFragment homeFragment = new HomeFragment();
         mFragments.add(homeFragment);
@@ -70,8 +77,7 @@ public class HomeActivity extends AppCompatActivity{
         mBanner.setCurrentItem(0);
     }
 
-    @OnClick({R.id.ll_main_home,R.id.ll_main_buy_car,R.id.ll_main_sell_car,R.id.ll_main_mine})
-    public void onClick(View view){
+    public void setTabsNormal(){
         mIvTabHome.setImageDrawable(getResources().getDrawable(R.drawable.tab_home_normal));
         mIvTabBuyCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_buy_normal));
         mIvTabSellCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_sell_normal));
@@ -80,6 +86,11 @@ public class HomeActivity extends AppCompatActivity{
         mTvTabSellCar.setTextColor(getResources().getColor(R.color.colorTextBlak));
         mTvTabBuyCar.setTextColor(getResources().getColor(R.color.colorTextBlak));
         mTvTabMe.setTextColor(getResources().getColor(R.color.colorTextBlak));
+    }
+
+    @OnClick({R.id.ll_main_home,R.id.ll_main_buy_car,R.id.ll_main_sell_car,R.id.ll_main_mine})
+    public void onClick(View view){
+        setTabsNormal();
         switch (view.getId()){
             case R.id.ll_main_home:
                 mIvTabHome.setImageDrawable(getResources().getDrawable(R.drawable.tab_home_selected));
@@ -104,7 +115,20 @@ public class HomeActivity extends AppCompatActivity{
         }
     }
 
-    private long firstTime = 0;
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onReceiveEvent(FragmentEvent fragmentEvent){
+        setTabsNormal();
+        mIvTabBuyCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_buy_selected));
+        mTvTabBuyCar.setTextColor(getResources().getColor(R.color.colorTextMain));
+        mBanner.setCurrentItem(fragmentEvent.getMessage());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
     @Override
     public void onBackPressed() {
         long secondTime = System.currentTimeMillis();

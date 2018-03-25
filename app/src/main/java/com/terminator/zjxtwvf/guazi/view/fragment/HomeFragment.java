@@ -20,6 +20,7 @@ import com.terminator.zjxtwvf.guazi.di.components.DaggerHomeComponent;
 import com.terminator.zjxtwvf.guazi.di.modules.HomeModule;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
+import com.terminator.zjxtwvf.guazi.model.entity.FragmentEvent;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
 import com.terminator.zjxtwvf.guazi.presenter.HomeContract;
@@ -29,6 +30,8 @@ import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.Arrays;
 import java.util.List;
@@ -226,6 +229,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
     public class HomeClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
+            switch (view.getId()){
+                case R.id.tv_home_more:
+                    EventBus.getDefault().post(new FragmentEvent(FragmentEvent.FRAGMENT_SELL_ID));
+                return;
+            }
             Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
             startActivity(intent);
         }

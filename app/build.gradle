@@ -73,4 +73,6 @@ dependencies {
 
     compile 'cn.bingoogolapple:bga-banner:2.1.7@aar'
 
+    compile 'org.greenrobot:eventbus:3.0.0'
+
 }
