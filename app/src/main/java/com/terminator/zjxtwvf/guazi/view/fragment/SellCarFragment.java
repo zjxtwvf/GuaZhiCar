@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.view.fragment;
 import android.animation.ValueAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -75,6 +76,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         mHomeAdapter = new HomeAdapter();
         mSellCarView.setLayoutManager(new LinearLayoutManager(UIUtils.getContext()));
         mSellCarView.setAdapter(mHomeAdapter);
+        ((SimpleItemAnimator)mSellCarView.getItemAnimator()).setSupportsChangeAnimations(false);
         mSellCarPresenter.getCarList();
         return LoadingPage.ResultState.STATE_SUCCESS;
     }
@@ -118,6 +120,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
             @Override
             public void onAnimationUpdate(ValueAnimator arg0) {
                 mRlLoadingMore.setPadding(0,(Integer) arg0.getAnimatedValue() - UIUtils.dip2px(60),0,0);
+                System.out.println( "mRlLoadingMore.setPadding        " +   ((Integer) arg0.getAnimatedValue() - UIUtils.dip2px(60)) );
             }
         });
 

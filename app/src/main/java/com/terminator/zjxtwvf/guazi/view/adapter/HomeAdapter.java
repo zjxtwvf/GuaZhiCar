@@ -2,6 +2,7 @@ package com.terminator.zjxtwvf.guazi.view.adapter;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SimpleItemAnimator;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -31,7 +32,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>{
 
     public void updateData(List<CarListEntity.DataBean.PostListBean> data){
         this.data = data;
-        this.notifyDataSetChanged();
+        this.notifyItemRangeChanged(0,data.size());
     }
 
     @Override
