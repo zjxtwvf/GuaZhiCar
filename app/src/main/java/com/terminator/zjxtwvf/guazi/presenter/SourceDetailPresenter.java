@@ -35,7 +35,6 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
     // &dpi=3.0&customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=3.9.1.0&model=m3%20note&ca_s=app_tg
     @Override
     public void getSourceDetail() {
-
         mApiService.getSourceDetail("3003793877","30.704457","104.017387",
                 "1080X1920","armeabi-v7a","7.0",
                 "862007036501106","meizu","c78c3b8facf9cbb40f9d8f92ee02e77e",
@@ -51,6 +50,7 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("getSourceDetail onError------------->");
+                        mView.onUpdateLoadingPage(LoadingPage.ResultState.STATE_ERROR);
                         e.printStackTrace();
                     }
                     @Override

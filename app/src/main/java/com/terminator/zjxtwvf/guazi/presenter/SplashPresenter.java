@@ -23,6 +23,7 @@ import rx.schedulers.Schedulers;
  */
 
 public class SplashPresenter implements SplashContract.Presenter{
+
     SplashContract.View view;
     private ApiService apiService;
     private Map<String,String> postBody = new HashMap<String, String>();
@@ -53,18 +54,16 @@ public class SplashPresenter implements SplashContract.Presenter{
                 .subscribe(new Subscriber<ResponseBody>() {
                     @Override
                     public void onCompleted() {
-                        doNext01();
                     }
                     @Override
                     public void onError(Throwable e) {
+                        view.onGetSplashError();
                         e.printStackTrace();
                     }
                     @Override
                     public void onNext(ResponseBody splashEntity) {
                         Logger.d("SplashEntity" + splashEntity.toString());
-                        if(true){
-
-                        }
+                        doNext01();
                     }
                 });
 
@@ -85,6 +84,7 @@ public class SplashPresenter implements SplashContract.Presenter{
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("doNext02 onError------------->");
+                        view.onGetSplashError();
                         e.printStackTrace();
                     }
                     @Override
@@ -110,7 +110,7 @@ public class SplashPresenter implements SplashContract.Presenter{
                     @Override
                     public void onError(Throwable e) {
                         Logger.d("doNext01 onError m3%20note------------->");
-                        doNext02();
+                        view.onGetSplashError();
                         e.printStackTrace();
                     }
                     @Override

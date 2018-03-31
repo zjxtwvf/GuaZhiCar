@@ -67,6 +67,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     public View onCreateSuccessView() {
         mView = UIUtils.inflate(R.layout.activity_buycar_fragment);
         ButterKnife.bind(this,mView);
+        mRlLoadingMore.getLayoutParams().height = 0;
         mRlLoadingMore.setPadding(0,-UIUtils.dip2px(60),0,0);
         return mView;
     }

@@ -11,5 +11,6 @@ public interface SplashContract {
 
     interface View{
         void onDisplay(String url);
+        void onGetSplashError();
     }
 }

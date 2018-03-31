@@ -61,12 +61,17 @@ public abstract class LoadingPage extends FrameLayout{
         // 初始化加载失败布局
         if (mErrorPage == null) {
             mErrorPage = UIUtils.inflate(R.layout.loading_error);
+            loadingAnima = (ImageView) mErrorPage.findViewById(R.id.iv_loading_error);
+            ((AnimationDrawable)loadingAnima.getDrawable()).start();
             // 点击重试事件
             Button btnRetry = (Button) mErrorPage.findViewById(R.id.bt_refresh_load);
             btnRetry.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // 重新加载网络数据
+                    mCurrentState = STATE_LOAD_LOADING;
+                    showRightPage();
+                    mCurrentState = STATE_LOAD_UNDO;
                     loadData();
                 }
             });
@@ -131,7 +136,7 @@ public abstract class LoadingPage extends FrameLayout{
         if (mCurrentState != STATE_LOAD_LOADING) {// 如果当前没有加载, 就开始加载数据
             mCurrentState = STATE_LOAD_LOADING;
             mSuccessPage = onCreateSuccessView();
-            final ResultState resultState = onLoad();
+            onLoad();
         }
     }
 

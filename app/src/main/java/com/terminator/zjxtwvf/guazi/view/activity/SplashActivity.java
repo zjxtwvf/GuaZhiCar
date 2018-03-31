@@ -52,8 +52,15 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
                 //无论能否加载SPLASH图片，都进入主页面
                 Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
                 startActivity(intent);
-                finish();;
+                finish();
             }
         },time);
+    }
+
+    @Override
+    public void onGetSplashError() {
+        Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
