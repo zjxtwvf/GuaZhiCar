@@ -75,7 +75,6 @@ public abstract class LoadingPage extends FrameLayout{
                     loadData();
                 }
             });
-
             addView(mErrorPage,params);
         }
 

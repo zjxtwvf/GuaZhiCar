@@ -1,6 +1,7 @@
 package com.terminator.zjxtwvf.guazi.view.fragment;
 
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,7 +20,9 @@ import com.terminator.zjxtwvf.guazi.presenter.PersonalContract;
 import com.terminator.zjxtwvf.guazi.presenter.PersonnalPresenter;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
+import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
+
 
 import javax.inject.Inject;
 
@@ -120,13 +123,13 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
 
     @Override
     public void onDisplayRecommend(RecommendEntity recommendEntity) {
-        //mHomeAdapter.updateData(recommendEntity.getData());
         ImageView iv;
         TextView tvTtile;
         TextView tvDateHual;
         TextView tvPrice;
         for(int i=0;i<recommendEntity.getData().size();i++){
             View view = UIUtils.inflate(R.layout.activity_item_post_list);
+            view.setOnClickListener(new PersonalClickListener());
             iv = (ImageView)view.findViewById(R.id.iv_item_post_list);
             tvTtile = (TextView)view.findViewById(R.id.tv_item_post_title);
             tvDateHual = (TextView)view.findViewById(R.id.tv_item_post_date_hual);
@@ -142,5 +145,13 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
     @Override
     public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
         updatePage(resultState);
+    }
+
+    public class PersonalClickListener implements View.OnClickListener{
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
+            startActivity(intent);
+        }
     }
 }
