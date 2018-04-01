@@ -33,7 +33,16 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
                 .inject(this);
         setContentView(R.layout.activity_splash);
         ButterKnife.bind(SplashActivity.this);
-        splashPresenter.getSplash();
+        delayGetSplash();
+    }
+
+    public void delayGetSplash(){
+        MyApplication.getHandler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                splashPresenter.getSplash();
+            }
+        },1000);
     }
 
     @Override
@@ -41,7 +50,7 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
         long time = 0;
         if(url != null && !url.equals("")){
             BitmapCacheUtils.getInstance().display(imageView,url);
-            time = 2000;
+            time = 3000;
         }else{
             time = 0;
         }
@@ -50,9 +59,7 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
             @Override
             public void run() {
                 //无论能否加载SPLASH图片，都进入主页面
-                Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
-                startActivity(intent);
-                finish();
+                onGetSplashError();
             }
         },time);
     }
