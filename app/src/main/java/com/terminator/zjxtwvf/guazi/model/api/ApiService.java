@@ -1,5 +1,6 @@
 package com.terminator.zjxtwvf.guazi.model.api;
 
+import com.terminator.zjxtwvf.guazi.model.entity.BannerAdsEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
@@ -471,6 +472,39 @@ public interface ApiService {
     })
     @GET("/clientc/post/getSourceDetail")
     Observable<RecommendEntity> getContrast(@Query("puid") String puid, @Query("lat") String lat,
+                                            @Query("lng") String lng, @Query("screenWH") String screenWH,
+                                            @Query("platform") String platform, @Query("osv") String osv,
+                                            @Query("deviceId") String deviceId, @Query("ca_n") String ca_n,
+                                            @Query("sign") String sign, @Query("dpi") String dpi,
+                                            @Query("customerId") String customerId, @Query("mac") String mac,
+                                            @Query("guazi_city") String guazi_city, @Query("versionId") String versionId,
+                                            @Query("model") String model, @Query("ca_s") String ca_s);
+
+
+    //GET /clientc/banner/ad?city_id=45&key_word=polo&pageSize=20&city=45&ad_pos=APP_BUY_LIST_BM,
+    // APP_BUY_LIST_JR&last_time=1522664608&lat=30.704467&page=1&lng=104.017402&screenWH=1080X1920
+    // &platform=armeabi-v7a&osv=7.0&deviceId=862007036501106&ca_n=meizu&sign=7e63234e115ca43e6d35319fb76b9cd1
+    // &dpi=3.0&customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=3.9.6.0&model=m3%20note&ca_s=app_tg
+    @Headers({
+            "X-Ganji-Agency: meizu",
+            "contentformat: json2",
+            "GjData-Version: 1.0",
+            "versionId: 3.9.1.0",
+            "User-Agent: c_android/3.9.1.0(Android;7.0;dpi/3.0)",
+            "X-Ganji-CustomerId: 879",
+            "X-Ganji-VersionId: 3.9.1.0",
+            "model: m3 note",
+            "CustomerId: 879",
+            "Host: api.guazi.com",
+            "Connection: Keep-Alive",
+            "Accept-Encoding: gzip",
+            "If-Modified-Since: Sun, 10 Dec 2017 08:08:34 GMT"
+    })
+    @GET("/clientc/banner/ad")
+    Observable<BannerAdsEntity> getBannerAds(@Query("city_id") String city_id, @Query("key_word") String key_word,
+                                            @Query("pageSize") String pageSize, @Query("city") String city,
+                                            @Query("ad_pos") String ad_pos, @Query("last_time") String last_time,
+                                            @Query("lat") String lat, @Query("page") String page,
                                             @Query("lng") String lng, @Query("screenWH") String screenWH,
                                             @Query("platform") String platform, @Query("osv") String osv,
                                             @Query("deviceId") String deviceId, @Query("ca_n") String ca_n,

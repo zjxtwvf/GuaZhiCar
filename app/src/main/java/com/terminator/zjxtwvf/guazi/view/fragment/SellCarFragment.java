@@ -15,6 +15,7 @@ import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.app.MyApplication;
 import com.terminator.zjxtwvf.guazi.di.components.DaggerSellCarComponent;
 import com.terminator.zjxtwvf.guazi.di.modules.SellCarModule;
+import com.terminator.zjxtwvf.guazi.model.entity.BannerAdsEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.presenter.SellCarContract;
@@ -43,6 +44,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
 
     View mView;
     HomeAdapter mHomeAdapter;
+    BannerAdsEntity mBannerAdData;
     List<CarListEntity.DataBean.PostListBean> mData;
 
     @Inject
@@ -78,7 +80,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         mSellCarView.setLayoutManager(new LinearLayoutManager(UIUtils.getContext()));
         mSellCarView.setAdapter(mHomeAdapter);
         ((SimpleItemAnimator)mSellCarView.getItemAnimator()).setSupportsChangeAnimations(false);
-        mSellCarPresenter.getCarList();
+        mSellCarPresenter.getBannerAds();
         return LoadingPage.ResultState.STATE_SUCCESS;
     }
 
@@ -86,12 +88,18 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     public void onLoadMoreData(CarListEntity carListEntity) {
         mData.addAll(carListEntity.getData().getPostList());
         toggle(true);
-        mHomeAdapter.updateData(mData);
+        mHomeAdapter.updateData(mData,mBannerAdData);
+    }
+
+    @Override
+    public void onDisplayBannerAds(BannerAdsEntity bannerAdsEntity) {
+        mBannerAdData = bannerAdsEntity;
+        mSellCarPresenter.getCarList();
     }
 
     @Override
     public void onDisplayCarList(CarListEntity carListEntity) {
-        mHomeAdapter.updateData(carListEntity.getData().getPostList());
+        mHomeAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
         mData = carListEntity.getData().getPostList();
         Animation animation = AnimationUtils.loadAnimation(UIUtils.getContext(),R.anim.roate_animation);
         LinearInterpolator interpolator = new LinearInterpolator();

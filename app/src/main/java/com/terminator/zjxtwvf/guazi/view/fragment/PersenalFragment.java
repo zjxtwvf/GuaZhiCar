@@ -49,9 +49,6 @@ public class PersenalFragment extends BaseFragment implements PersonalContract.V
     @Bind(R.id.recycler_personal_recomend)
     RecyclerView mLlPersonalRecomend;
 
-
-    //HomeAdapter mHomeAdapter;
-
     @Inject
     PersonnalPresenter mPersonnalPresenter;
 
