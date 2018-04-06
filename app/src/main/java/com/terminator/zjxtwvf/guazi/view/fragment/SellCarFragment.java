@@ -4,12 +4,14 @@ import android.animation.ValueAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SimpleItemAnimator;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.app.MyApplication;
@@ -23,6 +25,7 @@ import com.terminator.zjxtwvf.guazi.presenter.SellCarPresenter;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeAdapter;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
+import com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -34,6 +37,12 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ERROR;
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ING;
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_RELEASE;
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_RETURN;
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_SUCESS;
 
 
 /**
@@ -55,6 +64,8 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     ImageView mLoadingMore;
     @Bind(R.id.rl_load_more)
     RelativeLayout mRlLoadingMore;
+    @Bind(R.id.refresh_head)
+    RelativeLayout mHeadView;
 
     public SellCarFragment(){
         super();
@@ -71,6 +82,30 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         ButterKnife.bind(this,mView);
         mRlLoadingMore.getLayoutParams().height = 0;
         mRlLoadingMore.setPadding(0,-UIUtils.dip2px(60),0,0);
+        ((RefreshRecyclerView)mSellCarView).setHeadView(mHeadView);
+        final TextView tv = (TextView)mHeadView.findViewById(R.id.tv_list_refresh);
+        final ImageView iv = (ImageView)mHeadView.findViewById(R.id.iv_list_refresh);
+        ((RefreshRecyclerView)mSellCarView).setRereshStateChangeListener(new RefreshRecyclerView.OnRereshStateChangeListener() {
+            @Override
+            public void onRereshStateChange(int state) {
+                switch (state){
+                    case  REFRESH_ING:
+                        tv.setText("正在刷新");
+                        mSellCarPresenter.loadRereshData();
+                        break;
+                    case  REFRESH_ERROR:
+                        break;
+                    case  REFRESH_SUCESS:
+                        break;
+                    case  REFRESH_RETURN:
+                        tv.setText("继续下拉刷新更多");
+                        break;
+                    case  REFRESH_RELEASE:
+                        tv.setText("释放下拉刷新更多");
+                        break;
+                }
+            }
+        });
         return mView;
     }
 
@@ -110,6 +145,11 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     @Override
     public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
         updatePage(resultState);
+    }
+
+    @Override
+    public void onLoadRereshData(CarListEntity carListEntity) {
+
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

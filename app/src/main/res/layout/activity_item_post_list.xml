@@ -4,6 +4,8 @@
     android:layout_height="110dp"
     android:padding="10dp"
     android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
     >
 
     <com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth

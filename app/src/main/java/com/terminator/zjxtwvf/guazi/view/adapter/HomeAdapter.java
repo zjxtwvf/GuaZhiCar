@@ -28,8 +28,7 @@ import java.util.List;
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     public static final int LIST_NORMAL = 0;
-    public static final int LIST_REFRESH = 1;
-    public static final int LIST_ADS = 2;
+    public static final int LIST_ADS = 1;
 
     List<CarListEntity.DataBean.PostListBean> data;
     BannerAdsEntity mAdsData;
@@ -45,9 +44,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     @Override
     public int getItemViewType(int position) {
-        if(0 == position){
-            return LIST_REFRESH;
-        }else if(1 == position || 7 == position){
+        if(0 == position || 6 == position){
             return LIST_ADS;
         }else{
             return LIST_NORMAL;
@@ -59,22 +56,19 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         if(viewType == LIST_NORMAL){
             View view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
             HomeAdapter.MyViewHolder myViewHolder = new HomeAdapter.MyViewHolder(view);
+            /*
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
                     UIUtils.getContext().startActivity(intent);
                 }
-            });
+            });*/
             return myViewHolder;
-        }else if(LIST_ADS == viewType){
+        }else{
             ImageViewMatchWidth imageViewMatchWidth = new ImageViewMatchWidth(UIUtils.getContext());
             MyViewAdHolder adHolder = new MyViewAdHolder(imageViewMatchWidth);
             return  adHolder;
-        }else{
-            View view =LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.refresh_loading,parent,false);
-            MyViewRefreshHolder refreshHolder = new MyViewRefreshHolder(view);
-            return  refreshHolder;
         }
     }
 
@@ -85,10 +79,10 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             EventBus.getDefault().post(new RecyclerViewEvent());
         }
         if(holder instanceof  HomeAdapter.MyViewHolder){
-            if(position >= 2 && position < 7){
-                index = position - 2;
+            if(position >= 1 && position < 7){
+                index = position - 1;
             }else{
-                index = position - 3;
+                index = position - 2;
             }
             ((HomeAdapter.MyViewHolder)holder).tvTtile.setText(data.get(index).getTitle());
             ((HomeAdapter.MyViewHolder)holder).tvDateHual.setText(data.get(index).getLicense_date());
@@ -96,14 +90,12 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewHolder)holder).iv,data.get(index).getThumb_img());
         }else if(holder instanceof  HomeAdapter.MyViewAdHolder){
             String imageUrl;
-            if(position == 1){
+            if(position == 0){
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_BM().get(0).getImgUrl();
             }else{
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
             }
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder)holder).iv,imageUrl);
-        }else if(holder instanceof  HomeAdapter.MyViewRefreshHolder){
-        }else{
         }
     }
 
@@ -136,17 +128,6 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         public MyViewAdHolder(View itemView) {
             super(itemView);
             iv = (ImageView)itemView;
-        }
-    }
-
-    public class MyViewRefreshHolder extends RecyclerView.ViewHolder{
-        ImageView iv;
-        TextView tv;
-
-        public MyViewRefreshHolder(View itemView) {
-            super(itemView);
-            iv = (ImageView)itemView.findViewById(R.id.iv_list_refresh);
-            tv = (TextView)itemView.findViewById(R.id.tv_list_refresh);
         }
     }
 }

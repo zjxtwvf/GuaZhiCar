@@ -120,5 +120,10 @@ public class SellCarPresenter implements SellCarContract.Presenter{
                 });
     }
 
+    @Override
+    public void loadRereshData() {
+
+    }
+
 
 }

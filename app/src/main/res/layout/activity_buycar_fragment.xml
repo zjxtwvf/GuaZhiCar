@@ -28,17 +28,27 @@
         android:background="@color/colorMianBackground"
         />
 
-    <com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView
-        android:id="@+id/recycler_sellcar"
-        android:scrollbars="vertical"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="vertical"
         >
-    </com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView>
-
-    <include layout="@layout/loading_more"
-        android:id="@+id/rl_load_more"
-        >
-    </include>
+        <include layout="@layout/refresh_loading"
+            android:id="@+id/refresh_head"
+            >
+        </include>
+        <com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView
+            android:id="@+id/recycler_sellcar"
+            android:scrollbars="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+        </com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView>
+        <include layout="@layout/loading_more"
+            android:id="@+id/rl_load_more"
+            >
+        </include>
+    </LinearLayout>
 </LinearLayout>
