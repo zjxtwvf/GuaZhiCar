@@ -12,6 +12,9 @@ import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ERROR;
+import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_SUCESS;
+
 /**
  * Created by Administrator on 2017/12/24.
  */
@@ -122,8 +125,30 @@ public class SellCarPresenter implements SellCarContract.Presenter{
 
     @Override
     public void loadRereshData() {
+        mApiService.getCarList("1515296982","30.704263","1",
+                "104.017556","20", "45","1080X1920","armeabi-v7a","7.0",
+                "862007036501106","meizu","8354b640c73730bb1182dc2d462a0f8a",
+                "3.0","879","a4:44:d1:41:f3:14","45",
+                "3.9.6.0","m3 note","app_tg")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<CarListEntity>() {
+                    @Override
+                    public void onCompleted() {
+                        Logger.d("getCarList onCompleted------------->");
 
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.d("getCarList onError------------->");
+                        e.printStackTrace();
+                        mView.onLoadRereshData(null,REFRESH_ERROR);
+                    }
+                    @Override
+                    public void onNext(CarListEntity carListEntity) {
+                        Logger.d("getCarList onNext------------->");
+                        mView.onLoadRereshData(carListEntity,REFRESH_SUCESS);
+                    }
+                });
     }
-
-
 }

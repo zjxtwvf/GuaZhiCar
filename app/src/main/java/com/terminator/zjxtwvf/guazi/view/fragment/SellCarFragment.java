@@ -1,10 +1,10 @@
 package com.terminator.zjxtwvf.guazi.view.fragment;
 
 import android.animation.ValueAnimator;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SimpleItemAnimator;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,6 +12,7 @@ import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.app.MyApplication;
@@ -19,6 +20,7 @@ import com.terminator.zjxtwvf.guazi.di.components.DaggerSellCarComponent;
 import com.terminator.zjxtwvf.guazi.di.modules.SellCarModule;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerAdsEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
+import com.terminator.zjxtwvf.guazi.model.entity.FragmentEvent;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.presenter.SellCarContract;
 import com.terminator.zjxtwvf.guazi.presenter.SellCarPresenter;
@@ -90,18 +92,22 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
             public void onRereshStateChange(int state) {
                 switch (state){
                     case  REFRESH_ING:
-                        tv.setText("正在刷新");
+                        tv.setText("正在刷新...");
+                        ((AnimationDrawable)iv.getDrawable()).start();
                         mSellCarPresenter.loadRereshData();
                         break;
                     case  REFRESH_ERROR:
+                        ((AnimationDrawable)iv.getDrawable()).stop();
+                        EventBus.getDefault().post(new FragmentEvent(FragmentEvent.FRAGMENT_BUY_ID));
                         break;
                     case  REFRESH_SUCESS:
+                        ((AnimationDrawable)iv.getDrawable()).stop();
                         break;
                     case  REFRESH_RETURN:
-                        tv.setText("继续下拉刷新更多");
+                        tv.setText("下拉可以刷新");
                         break;
                     case  REFRESH_RELEASE:
-                        tv.setText("释放下拉刷新更多");
+                        tv.setText("释放立即刷新");
                         break;
                 }
             }
@@ -148,8 +154,12 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     }
 
     @Override
-    public void onLoadRereshData(CarListEntity carListEntity) {
-
+    public void onLoadRereshData(CarListEntity carListEntity,int state) {
+        if(null != carListEntity){
+            mHomeAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
+            mData = carListEntity.getData().getPostList();
+        }
+        ((RefreshRecyclerView)mSellCarView).onRereshFinished(state);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -159,7 +169,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     }
 
     private void toggle(boolean down){
-        ValueAnimator animator = null;
+        ValueAnimator animator;
         if(!down){
             animator = ValueAnimator.ofInt(0,UIUtils.dip2px(60));
         }else{
@@ -172,7 +182,6 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
                 System.out.println( "mRlLoadingMore.setPadding        " +   ((Integer) arg0.getAnimatedValue() - UIUtils.dip2px(60)) );
             }
         });
-
         animator.setDuration(600);
         animator.start();
     }

@@ -11,7 +11,6 @@ public class FragmentEvent {
     public static final int FRAGMENT_BUY_ID = 2;
     public static final int FRAGMENT_ME_ID = 3;
 
-
     int message;
 
     public int getMessage() {

@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.model.entity.FragmentEvent;
+import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeViewPagerAdapter;
 import com.terminator.zjxtwvf.guazi.view.fragment.BaseFragment;
 import com.terminator.zjxtwvf.guazi.view.fragment.BuyCarFragment;
@@ -117,6 +118,10 @@ public class HomeActivity extends AppCompatActivity{
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onReceiveEvent(FragmentEvent fragmentEvent){
+        if(fragmentEvent.getMessage() == FragmentEvent.FRAGMENT_BUY_ID){
+            Toast.makeText(UIUtils.getContext(),"请求连接失败，检查网络",Toast.LENGTH_SHORT).show();
+            return;
+        }
         setTabsNormal();
         mIvTabBuyCar.setImageDrawable(getResources().getDrawable(R.drawable.tab_buy_selected));
         mTvTabBuyCar.setTextColor(getResources().getColor(R.color.colorTextMain));

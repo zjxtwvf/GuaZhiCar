@@ -1,11 +1,15 @@
 package com.terminator.zjxtwvf.guazi.view.widget;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
+
+import com.terminator.zjxtwvf.guazi.util.UIUtils;
 
 /**
  * Created by Administrator on 2018/4/1.
@@ -53,13 +57,15 @@ public class RefreshRecyclerView extends RecyclerView {
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        if(null == mHeadView || !mRefreshSurpport || mRereshState == REFRESH_ING){
+        if(mRereshState == REFRESH_ING){
+            return true;
+        }
+        if(null == mHeadView || !mRefreshSurpport){
             return super.onTouchEvent(ev);
         }
         switch (ev.getAction()){
             case MotionEvent.ACTION_DOWN:
                 mDownY = ev.getY();
-                System.out.println("MotionEvent.ACTION_DOWN:  "    +mDownY);
                 break;
             case MotionEvent.ACTION_MOVE:
                 dis = ev.getY() - mDownY;
@@ -73,10 +79,6 @@ public class RefreshRecyclerView extends RecyclerView {
                             mRereshState = REFRESH_PULL;//下拉状态
                         }
                     }
-                    System.out.println("正常高度----------->  mViewHeight ：" + mViewHeight);
-                    System.out.println("dis  :" + dis   +"        mDownY"   +mDownY);
-                    System.out.println("dis  :" + dis   +"        pading top "   +(-mViewHeight + Math.round(dis)));
-
                     //处于下拉状态可以上下拖动刷新布局
                     if(mRereshState == REFRESH_PULL){
                         mHeadView.setPadding(0,((int)dis)/RATIO - mViewHeight,0,0);
@@ -105,29 +107,40 @@ public class RefreshRecyclerView extends RecyclerView {
 
                 if(REFRESH_RELEASE == mRereshState){
                     //还原正常高度
-                    System.out.println("还原正常高度----------->  mViewHeight ：" + mViewHeight);
-                    mHeadView.setPadding(0,0,0,0);
-                    //开启动画
-                    //刷新
+                    scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,0,200);
                     mRereshState = REFRESH_ING;
                     if(mOnRereshStateChangeListener != null){
                         mOnRereshStateChangeListener.onRereshStateChange(mRereshState);
                     }
                 }else{
                     //还原
-                    System.out.println("还原----------->");
                     mRereshState = REFRESH_NO;
-                    //停止动画
-                    mHeadView.setPadding(0,-mViewHeight,0,0);
-
+                    scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,-mViewHeight,200);
                 }
                 break;
         }
         return super.onTouchEvent(ev);
     }
 
+    private void scrollAnimaionRefresh(int curLocation, int toLocation, int duration) {
+        ValueAnimator animator_relase_torefresh = ValueAnimator.ofInt(curLocation, toLocation);
+        animator_relase_torefresh.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                mHeadView.setPadding(0,(int)valueAnimator.getAnimatedValue(),0,0);
+            }
+        });
+        animator_relase_torefresh.setDuration(duration);
+        animator_relase_torefresh.start();
+    }
+
     public void onRereshFinished(int state){
         mRereshState = state;
+        if(REFRESH_SUCESS == mRereshState){
+            scrollAnimaionRefresh(0,-mViewHeight,200);
+        }else if(REFRESH_ERROR == mRereshState){
+            scrollAnimaionRefresh(0,-mViewHeight,200);
+        }
         if(mOnRereshStateChangeListener != null){
             mOnRereshStateChangeListener.onRereshStateChange(mRereshState);
         }

@@ -22,6 +22,6 @@ public interface SellCarContract {
         void onDisplayBannerAds(BannerAdsEntity bannerAdsEntity);
         void onDisplayCarList(CarListEntity carListEntity);
         void onUpdateLoadingPage(LoadingPage.ResultState resultState);
-        void onLoadRereshData(CarListEntity carListEntity);
+        void onLoadRereshData(CarListEntity carListEntity,int state);
     }
 }
