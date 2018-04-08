@@ -1,5 +1,6 @@
 package com.terminator.zjxtwvf.guazi.view.adapter;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
+import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 
 import org.greenrobot.eventbus.EventBus;
@@ -25,6 +27,9 @@ import java.util.List;
  */
 
 public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+
+    public static final int DISPALY_BIG = 0 ;
+    public static final int DISPALY_SMALL = 1 ;
 
     public static final int LIST_NORMAL = 0;
     public static final int LIST_ADS = 1;
@@ -59,17 +64,15 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType == LIST_NORMAL){
-
             View view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
             HomeAdapter.MyViewHolder myViewHolder = new HomeAdapter.MyViewHolder(view);
-            /*
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
                     UIUtils.getContext().startActivity(intent);
                 }
-            });*/
+            });
             return myViewHolder;
         }else{
             ImageViewMatchWidth imageViewMatchWidth = new ImageViewMatchWidth(UIUtils.getContext());

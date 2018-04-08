@@ -40,6 +40,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+import static com.terminator.zjxtwvf.guazi.view.adapter.HomeAdapter.DISPALY_BIG;
+import static com.terminator.zjxtwvf.guazi.view.adapter.HomeAdapter.DISPALY_SMALL;
 import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ERROR;
 import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ING;
 import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_RELEASE;
@@ -52,9 +54,6 @@ import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRE
  */
 
 public class SellCarFragment extends BaseFragment implements SellCarContract.View{
-
-    public static final int DISPALY_BIG = 0 ;
-    public static final int DISPALY_SMALL = 1 ;
 
     View mView;
     int mDisMode = DISPALY_SMALL;

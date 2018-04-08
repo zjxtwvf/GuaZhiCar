@@ -56,6 +56,16 @@ public class RefreshRecyclerView extends RecyclerView {
     private  float dis = 0f;
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                mDownY = ev.getY();
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if(mRereshState == REFRESH_ING){
             return true;
