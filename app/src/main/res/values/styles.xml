@@ -67,4 +67,15 @@
         <item name="android:layout_marginLeft">20dp</item>
         <item name="android:layout_marginTop">20dp</item>
     </style>
+
+    <style name="LayoutFilterTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorTextBlak</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawableRight">@drawable/ic_drop_down</item>
+        <item name="android:drawablePadding">3dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
 </resources>

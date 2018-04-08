@@ -10,15 +10,53 @@
         android:layout_width="match_parent"
         android:layout_height="45dp">
         <TextView
+            android:id="@+id/tv_city_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="18dp"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:textSize="15sp"
-            android:textColor="#aaa"
+            android:textColor="@color/colorTextBlak"
+            android:drawableRight="@drawable/ic_arrow_down"
+            android:drawablePadding="5dp"
             android:text="成都" />
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:layout_toLeftOf="@id/iv_display_mode"
+            android:layout_toRightOf="@id/tv_city_name"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索您想要的车"
+                android:textColor="@color/colorSearch"
+                android:textSize="14sp"
+                android:drawableLeft="@drawable/ic_search_new"
+                android:drawablePadding="5dp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_display_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_small_mode"
+            android:layout_marginRight="20dp"
+            />
     </RelativeLayout>
+
+    <include layout="@layout/layout_filter_bar"></include>
 
     <View
         android:id="@+id/home_view_top"

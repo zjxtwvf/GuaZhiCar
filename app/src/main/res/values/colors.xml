@@ -11,6 +11,7 @@
     <color name="colorTextPrice">#e3734f</color>
     <color name="colorMianBackground">#116B6B6B</color>
     <color name="colorSplitLine">#226B6B6B</color>
+    <color name="colorSearch">#556B6B6B</color>
     <color name="colorTextBack">#FFFD7E01</color>
     <color name="colorTextYellowBack">#FFFDAD13</color>
 </resources>

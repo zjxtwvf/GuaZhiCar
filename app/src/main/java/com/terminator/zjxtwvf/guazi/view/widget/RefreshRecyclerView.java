@@ -25,7 +25,7 @@ public class RefreshRecyclerView extends RecyclerView {
     public static final int REFRESH_RELEASE = 5;
     public static final int REFRESH_RETURN = 6;
 
-    private int RATIO = 3;
+    private int RATIO = 2;
 
     private  View mHeadView = null;
     private  boolean mRefreshSurpport = true;
@@ -68,7 +68,7 @@ public class RefreshRecyclerView extends RecyclerView {
                 mDownY = ev.getY();
                 break;
             case MotionEvent.ACTION_MOVE:
-                dis = ev.getY() - mDownY;
+                dis = Math.round(ev.getY() - mDownY);
                 if(dis < 0){
                     return super.onTouchEvent(ev);
                 }
@@ -98,24 +98,26 @@ public class RefreshRecyclerView extends RecyclerView {
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                //刷新状态
-                if(((int)dis)/RATIO < mViewHeight){
-                    mRereshState = REFRESH_RETURN;
-                }else{
-                    mRereshState = REFRESH_RELEASE;
-                }
-
-                if(REFRESH_RELEASE == mRereshState){
-                    //还原正常高度
-                    scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,0,200);
-                    mRereshState = REFRESH_ING;
-                    if(mOnRereshStateChangeListener != null){
-                        mOnRereshStateChangeListener.onRereshStateChange(mRereshState);
+                if(mRereshState == REFRESH_PULL){
+                    //刷新状态
+                    if(((int)dis)/RATIO < mViewHeight){
+                        mRereshState = REFRESH_RETURN;
+                    }else{
+                        mRereshState = REFRESH_RELEASE;
                     }
-                }else{
-                    //还原
-                    mRereshState = REFRESH_NO;
-                    scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,-mViewHeight,200);
+
+                    if(REFRESH_RELEASE == mRereshState){
+                        //还原正常高度
+                        scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,0,200);
+                        mRereshState = REFRESH_ING;
+                        if(mOnRereshStateChangeListener != null){
+                            mOnRereshStateChangeListener.onRereshStateChange(mRereshState);
+                        }
+                    }else{
+                        //还原
+                        mRereshState = REFRESH_NO;
+                        scrollAnimaionRefresh(((int)dis)/RATIO - mViewHeight,-mViewHeight,200);
+                    }
                 }
                 break;
         }
