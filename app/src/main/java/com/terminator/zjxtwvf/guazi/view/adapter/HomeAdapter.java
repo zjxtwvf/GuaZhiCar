@@ -1,6 +1,5 @@
 package com.terminator.zjxtwvf.guazi.view.adapter;
 
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +13,12 @@ import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
-import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
+
 
 /**
  * Created by Administrator on 2018/1/6.
@@ -30,8 +29,9 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public static final int LIST_NORMAL = 0;
     public static final int LIST_ADS = 1;
 
-    List<CarListEntity.DataBean.PostListBean> data;
+    int mDisMode;
     BannerAdsEntity mAdsData;
+    List<CarListEntity.DataBean.PostListBean> data;
 
     public HomeAdapter(){
     }
@@ -39,6 +39,11 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public void updateData(List<CarListEntity.DataBean.PostListBean> data , BannerAdsEntity bannerAdsEntity){
         this.data = data;
         this.mAdsData = bannerAdsEntity;
+        this.notifyItemRangeChanged(0,data.size());
+    }
+
+    public void setDisplayMode(int mode){
+        mDisMode = mode;
         this.notifyItemRangeChanged(0,data.size());
     }
 
@@ -54,6 +59,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if(viewType == LIST_NORMAL){
+
             View view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
             HomeAdapter.MyViewHolder myViewHolder = new HomeAdapter.MyViewHolder(view);
             /*

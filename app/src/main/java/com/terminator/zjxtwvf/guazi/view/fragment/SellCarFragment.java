@@ -38,6 +38,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ERROR;
 import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRESH_ING;
@@ -52,7 +53,11 @@ import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRE
 
 public class SellCarFragment extends BaseFragment implements SellCarContract.View{
 
+    public static final int DISPALY_BIG = 0 ;
+    public static final int DISPALY_SMALL = 1 ;
+
     View mView;
+    int mDisMode = DISPALY_SMALL;
     HomeAdapter mHomeAdapter;
     BannerAdsEntity mBannerAdData;
     List<CarListEntity.DataBean.PostListBean> mData;
@@ -67,6 +72,8 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     RelativeLayout mRlLoadingMore;
     @Bind(R.id.refresh_head)
     RelativeLayout mHeadView;
+    @Bind(R.id.iv_display_mode)
+    ImageView mDisplayMode;
 
     public SellCarFragment(){
         super();
@@ -166,6 +173,22 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         toggle(false);
         mSellCarPresenter.loadMoreData();
     }
+
+    @OnClick({R.id.iv_display_mode})
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.iv_display_mode:
+                if(DISPALY_SMALL == mDisMode){
+                    mDisplayMode.setImageDrawable(UIUtils.getContext().getResources().getDrawable(R.drawable.ic_big_mode));
+                    mDisMode = DISPALY_BIG;
+                }else{
+                    mDisplayMode.setImageDrawable(UIUtils.getContext().getResources().getDrawable(R.drawable.ic_small_mode));
+                    mDisMode = DISPALY_SMALL;
+                }
+                break;
+        }
+    }
+
 
     private void toggle(boolean down){
         ValueAnimator animator;
