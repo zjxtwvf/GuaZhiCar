@@ -111,7 +111,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @Override
     public int getItemCount() {
         if(data != null) {
-            return data.size() + 3;
+            return data.size() + 2;
         }
         return 0;
     }
