@@ -67,10 +67,10 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         RecyclerView.ViewHolder myViewHolder;
         if(viewType == LIST_NORMAL){
             if(DISPALY_SMALL == mDisMode){
-                view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
                 myViewHolder = new HomeAdapter.MyViewHolder(view);
             }else{
-                view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.buy_car_list_item_big_mode,parent,false);
+                view = LayoutInflater.from(parent.getContext()).inflate(R.layout.buy_car_list_item_big_mode,parent,false);
                 myViewHolder = new HomeAdapter.MyViewBigModeHolder(view);
             }
 
@@ -114,7 +114,9 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             }
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder)holder).iv,imageUrl);
         }else if(holder instanceof  HomeAdapter.MyViewBigModeHolder){
-
+            ViewGroup.LayoutParams params = ((MyViewBigModeHolder)holder).itemView.getLayoutParams();
+            params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+            ((MyViewBigModeHolder)holder).itemView.setLayoutParams(params);
         }
     }
 
