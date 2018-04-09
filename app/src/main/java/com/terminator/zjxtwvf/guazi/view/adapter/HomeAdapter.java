@@ -34,7 +34,7 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     public static final int LIST_NORMAL = 0;
     public static final int LIST_ADS = 1;
 
-    int mDisMode;
+    int mDisMode = DISPALY_SMALL;
     BannerAdsEntity mAdsData;
     List<CarListEntity.DataBean.PostListBean> data;
 
@@ -63,9 +63,17 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view;
+        RecyclerView.ViewHolder myViewHolder;
         if(viewType == LIST_NORMAL){
-            View view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
-            HomeAdapter.MyViewHolder myViewHolder = new HomeAdapter.MyViewHolder(view);
+            if(DISPALY_SMALL == mDisMode){
+                view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.activity_item_post_list,parent,false);
+                myViewHolder = new HomeAdapter.MyViewHolder(view);
+            }else{
+                view = LayoutInflater.from(UIUtils.getContext()).inflate(R.layout.buy_car_list_item_big_mode,parent,false);
+                myViewHolder = new HomeAdapter.MyViewBigModeHolder(view);
+            }
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -105,6 +113,8 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
             }
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder)holder).iv,imageUrl);
+        }else if(holder instanceof  HomeAdapter.MyViewBigModeHolder){
+
         }
     }
 
@@ -123,6 +133,21 @@ public class HomeAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         TextView tvPrice;
 
         public MyViewHolder(View itemView) {
+            super(itemView);
+            iv = (ImageView)itemView.findViewById(R.id.iv_item_post_list);
+            tvTtile = (TextView)itemView.findViewById(R.id.tv_item_post_title);
+            tvDateHual = (TextView)itemView.findViewById(R.id.tv_item_post_date_hual);
+            tvPrice = (TextView)itemView.findViewById(R.id.tv_item_post_price);
+        }
+    }
+
+    public class MyViewBigModeHolder extends RecyclerView.ViewHolder{
+        ImageView iv;
+        TextView tvTtile;
+        TextView tvDateHual;
+        TextView tvPrice;
+
+        public MyViewBigModeHolder(View itemView) {
             super(itemView);
             iv = (ImageView)itemView.findViewById(R.id.iv_item_post_list);
             tvTtile = (TextView)itemView.findViewById(R.id.tv_item_post_title);

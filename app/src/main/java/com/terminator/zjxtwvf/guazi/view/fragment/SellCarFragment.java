@@ -186,6 +186,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
                 }
                 break;
         }
+        mHomeAdapter.setDisplayMode(mDisMode);
     }
 
 
