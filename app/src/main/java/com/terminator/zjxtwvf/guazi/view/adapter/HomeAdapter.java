@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerAdsEntity;
-import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
