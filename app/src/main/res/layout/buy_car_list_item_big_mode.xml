@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:background="@color/colorTextWhite"
@@ -17,16 +17,17 @@
         <cn.bingoogolapple.bgabanner.BGABanner
             android:layout_height="180dp"
             android:layout_width="match_parent"
-            android:id="@+id/banner_guide_content"
+            android:id="@+id/banner_content"
             app:banner_pointContainerBackground="@android:color/transparent"
             app:banner_pointDrawable="@drawable/bga_banner_selector_point_hollow"
+            app:banner_pointAutoPlayAble="false"
             app:banner_transitionEffect="alpha" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="6dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             >
@@ -34,20 +35,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextBlak"
-                android:textSize="15sp"
+                android:textSize="18sp"
                 android:text="大众高尔夫2014"
                 android:maxLines="1"
                 android:id="@+id/tv_car_title"
                 />
             <RelativeLayout
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorTextDark"
-                    android:textSize="13sp"
+                    android:textSize="15sp"
                     android:text="2014年/5.5万公里"
                     android:id="@+id/tv_dis_desc"
                     />
@@ -71,13 +72,14 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:text="9.69万"
                     android:id="@+id/tv_price"
                     android:textColor="@color/colorTextPrice"
@@ -89,8 +91,9 @@
                     android:text="9.69万"
                     android:id="@+id/tv_price_first"
                     android:layout_toRightOf="@id/tv_price"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:textColor="@color/colorTextPrice"
+                    android:layout_alignBottom="@id/tv_price"
                     />
 
                 <TextView
@@ -101,6 +104,7 @@
                     android:id="@+id/tv_position"
                     android:layout_alignParentRight="true"
                     android:textColor="@color/colorTextDark"
+                    android:layout_alignParentBottom="true"
                     />
             </RelativeLayout>
         </LinearLayout>
