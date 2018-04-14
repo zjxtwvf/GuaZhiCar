@@ -147,7 +147,7 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
         if(!sourceDetailEntity.getData().getBaomai().getImage().equals("")){
             View view = UIUtils.inflate(R.layout.baomai_layout_item);
             ImageView iv = (ImageView)view.findViewById(R.id.iv_baomai);
-            BitmapCacheUtils.getInstance().displayMatchWidth(iv,sourceDetailEntity.getData().getBaomai().getImage());
+            BitmapCacheUtils.getInstance().display(iv,sourceDetailEntity.getData().getBaomai().getImage());
             TextView tv = (TextView)view.findViewById(R.id.tv_baomai_distance);
             tv.setText(sourceDetailEntity.getData().getBm_address().getDistance());
             tv = (TextView)view.findViewById(R.id.tv_baomai_addr);

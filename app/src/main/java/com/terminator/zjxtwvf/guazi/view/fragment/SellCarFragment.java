@@ -24,7 +24,9 @@ import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.presenter.SellCarContract;
 import com.terminator.zjxtwvf.guazi.presenter.SellCarPresenter;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
+import com.terminator.zjxtwvf.guazi.view.adapter.BaseAdapter;
 import com.terminator.zjxtwvf.guazi.view.adapter.HomeAdapter;
+import com.terminator.zjxtwvf.guazi.view.adapter.HomeAdapterBigMode;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 import com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView;
 
@@ -53,11 +55,13 @@ import static com.terminator.zjxtwvf.guazi.view.widget.RefreshRecyclerView.REFRE
  * Created by Administrator on 2018/1/5.
  */
 
-public class SellCarFragment extends BaseFragment implements SellCarContract.View{
+public class SellCarFragment extends BaseFragment implements SellCarContract.View ,RefreshRecyclerView.OnRereshStateChangeListener {
 
     View mView;
     int mDisMode = DISPALY_SMALL;
-    HomeAdapter mHomeAdapter;
+    BaseAdapter mAdapter;
+    BaseAdapter mHomeAdapterSM;
+    BaseAdapter mHomeAdapterBM;
     BannerAdsEntity mBannerAdData;
     List<CarListEntity.DataBean.PostListBean> mData;
 
@@ -90,41 +94,17 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         mRlLoadingMore.getLayoutParams().height = 0;
         mRlLoadingMore.setPadding(0,-UIUtils.dip2px(60),0,0);
         ((RefreshRecyclerView)mSellCarView).setHeadView(mHeadView);
-        final TextView tv = (TextView)mHeadView.findViewById(R.id.tv_list_refresh);
-        final ImageView iv = (ImageView)mHeadView.findViewById(R.id.iv_list_refresh);
-        ((RefreshRecyclerView)mSellCarView).setRereshStateChangeListener(new RefreshRecyclerView.OnRereshStateChangeListener() {
-            @Override
-            public void onRereshStateChange(int state) {
-                switch (state){
-                    case  REFRESH_ING:
-                        tv.setText("正在刷新...");
-                        ((AnimationDrawable)iv.getDrawable()).start();
-                        mSellCarPresenter.loadRereshData();
-                        break;
-                    case  REFRESH_ERROR:
-                        ((AnimationDrawable)iv.getDrawable()).stop();
-                        EventBus.getDefault().post(new FragmentEvent(FragmentEvent.FRAGMENT_BUY_ID));
-                        break;
-                    case  REFRESH_SUCESS:
-                        ((AnimationDrawable)iv.getDrawable()).stop();
-                        break;
-                    case  REFRESH_RETURN:
-                        tv.setText("下拉可以刷新");
-                        break;
-                    case  REFRESH_RELEASE:
-                        tv.setText("释放立即刷新");
-                        break;
-                }
-            }
-        });
+        ((RefreshRecyclerView)mSellCarView).setRereshStateChangeListener(this);
         return mView;
     }
 
     @Override
     public LoadingPage.ResultState onLoad() {
-        mHomeAdapter = new HomeAdapter();
+        mHomeAdapterSM = new HomeAdapter(mSellCarView);
+        mHomeAdapterBM = new HomeAdapterBigMode(mSellCarView);
+        mAdapter = mHomeAdapterSM;
         mSellCarView.setLayoutManager(new LinearLayoutManager(UIUtils.getContext()));
-        mSellCarView.setAdapter(mHomeAdapter);
+        mSellCarView.setAdapter(mAdapter);
         ((SimpleItemAnimator)mSellCarView.getItemAnimator()).setSupportsChangeAnimations(false);
         mSellCarPresenter.getBannerAds();
         return LoadingPage.ResultState.STATE_SUCCESS;
@@ -134,7 +114,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     public void onLoadMoreData(CarListEntity carListEntity) {
         mData.addAll(carListEntity.getData().getPostList());
         toggle(true);
-        mHomeAdapter.updateData(mData,mBannerAdData);
+        mAdapter.updateData(mData,mBannerAdData);
     }
 
     @Override
@@ -145,7 +125,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
 
     @Override
     public void onDisplayCarList(CarListEntity carListEntity) {
-        mHomeAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
+        mAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
         mData = carListEntity.getData().getPostList();
         Animation animation = AnimationUtils.loadAnimation(UIUtils.getContext(),R.anim.roate_animation);
         LinearInterpolator interpolator = new LinearInterpolator();
@@ -161,7 +141,7 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
     @Override
     public void onLoadRereshData(CarListEntity carListEntity,int state) {
         if(null != carListEntity){
-            mHomeAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
+            mAdapter.updateData(carListEntity.getData().getPostList(),mBannerAdData);
             mData = carListEntity.getData().getPostList();
         }
         ((RefreshRecyclerView)mSellCarView).onRereshFinished(state);
@@ -180,15 +160,20 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
                 if(DISPALY_SMALL == mDisMode){
                     mDisplayMode.setImageDrawable(UIUtils.getContext().getResources().getDrawable(R.drawable.ic_big_mode));
                     mDisMode = DISPALY_BIG;
+                    mAdapter = mHomeAdapterBM;
+                    mAdapter.setDisplayMode(mDisMode);
+                    mSellCarView.setAdapter(mAdapter);
                 }else{
                     mDisplayMode.setImageDrawable(UIUtils.getContext().getResources().getDrawable(R.drawable.ic_small_mode));
                     mDisMode = DISPALY_SMALL;
+                    mAdapter = mHomeAdapterSM;
+                    mAdapter.setDisplayMode(mDisMode);
+                    mSellCarView.setAdapter(mAdapter);
                 }
                 break;
         }
-        mHomeAdapter.setDisplayMode(mDisMode);
+        mAdapter.updateData(mData,mBannerAdData);
     }
-
 
     private void toggle(boolean down){
         ValueAnimator animator;
@@ -206,5 +191,31 @@ public class SellCarFragment extends BaseFragment implements SellCarContract.Vie
         });
         animator.setDuration(600);
         animator.start();
+    }
+
+    @Override
+    public void onRereshStateChange(int state) {
+        final TextView tv = (TextView)mHeadView.findViewById(R.id.tv_list_refresh);
+        final ImageView iv = (ImageView)mHeadView.findViewById(R.id.iv_list_refresh);
+        switch (state){
+            case  REFRESH_ING:
+                tv.setText("正在刷新...");
+                ((AnimationDrawable)iv.getDrawable()).start();
+                mSellCarPresenter.loadRereshData();
+                break;
+            case  REFRESH_ERROR:
+                ((AnimationDrawable)iv.getDrawable()).stop();
+                EventBus.getDefault().post(new FragmentEvent(FragmentEvent.FRAGMENT_BUY_ID));
+                break;
+            case  REFRESH_SUCESS:
+                ((AnimationDrawable)iv.getDrawable()).stop();
+                break;
+            case  REFRESH_RETURN:
+                tv.setText("下拉可以刷新");
+                break;
+            case  REFRESH_RELEASE:
+                tv.setText("释放立即刷新");
+                break;
+        }
     }
 }

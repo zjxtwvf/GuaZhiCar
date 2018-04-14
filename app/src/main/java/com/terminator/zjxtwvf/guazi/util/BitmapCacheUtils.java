@@ -30,11 +30,11 @@ public class BitmapCacheUtils {
 
     	
 	private BitmapCacheUtils(){
-		long maxSize = Runtime.getRuntime().freeMemory();
-		mCache = new LruCache<String, Bitmap>((int)(maxSize/2)){
+		long maxSize = Runtime.getRuntime().maxMemory();
+		mCache = new LruCache<String, Bitmap>((int)(maxSize/8)){
 			@Override
-			protected int sizeOf(String key, Bitmap value) {
-				return value.getRowBytes()*value.getHeight();
+			protected int sizeOf(String key, Bitmap bitmap) {
+				return bitmap.getByteCount();
 			}
 		};
 	}
@@ -50,14 +50,14 @@ public class BitmapCacheUtils {
 
 	public void display(final ImageView imageView,final String url){
 		final Bitmap bitmap[] = {null};
-
 		mHashMap.put(imageView, url);
+		//从内存获取
 		bitmap[0] = getFromMap(url);
 		if(bitmap != null && null != bitmap[0]){
 			imageView.setImageBitmap(bitmap[0]);
 			return;
 		}
-		//??File???
+		//从SD卡获取
 		if((null == bitmap[0]) && ((bitmap[0] = getFromFile(url)) != null)){
 			setBitmapToMap(bitmap[0],url);
 			UIUtils.runOnUIThread(new Runnable() {
@@ -69,38 +69,9 @@ public class BitmapCacheUtils {
 				}
 			});
 		}
-		//????????
+		//从网络获取
 		if((null == bitmap[0])){
 			getFromNet(imageView,url,false);
-		}
-	}
-
-	public void displayMatchWidth(final ImageView imageView,final String url){
-		final Bitmap bitmap[] = {null};
-
-		mHashMap.put(imageView, url);
-		bitmap[0] = getFromMap(url);
-		if(bitmap != null && null != bitmap[0]){
-			imageView.setImageBitmap(bitmap[0]);
-			UIUtils.setImageMatchWidth(imageView);
-			return;
-		}
-		//??File???
-		if((null == bitmap[0]) && ((bitmap[0] = getFromFile(url)) != null)){
-			setBitmapToMap(bitmap[0],url);
-			UIUtils.runOnUIThread(new Runnable() {
-				@Override
-				public void run() {
-					if(url.equals(mHashMap.get(imageView))){
-						imageView.setImageBitmap(bitmap[0]);
-						UIUtils.setImageMatchWidth(imageView);
-					}
-				}
-			});
-		}
-		//????????
-		if((null == bitmap[0])){
-			getFromNet(imageView,url,true);
 		}
 	}
 
