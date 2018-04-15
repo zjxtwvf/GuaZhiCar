@@ -17,6 +17,7 @@ import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 
 import org.greenrobot.eventbus.EventBus;
 
+
 /**
  * Created by Administrator on 2018/1/6.
  */
@@ -64,9 +65,7 @@ public class HomeAdapter extends BaseAdapter{
             ((HomeAdapter.MyViewHolder)holder).tvTtile.setText(data.get(index).getTitle());
             ((HomeAdapter.MyViewHolder)holder).tvDateHual.setText(data.get(index).getLicense_date());
             ((HomeAdapter.MyViewHolder)holder).tvPrice.setText(data.get(index).getPrice());
-            //if(mRecyclerView.getScrollState() != RecyclerView.SCROLL_STATE_SETTLING){
-                BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewHolder)holder).iv,data.get(index).getThumb_img());
-            //}
+            BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewHolder)holder).iv,data.get(index).getThumb_img());
         }else if(holder instanceof  HomeAdapter.MyViewAdHolder){
             String imageUrl;
             if(position == 0){
@@ -74,9 +73,17 @@ public class HomeAdapter extends BaseAdapter{
             }else{
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
             }
-            //if(mRecyclerView.getScrollState() != RecyclerView.SCROLL_STATE_SETTLING) {
-                BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder) holder).iv, imageUrl);
-            //}
+            BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder) holder).iv, imageUrl);
+        }
+    }
+
+    @Override
+    public void onViewRecycled(RecyclerView.ViewHolder holder) {
+        super.onViewRecycled(holder);
+        if(holder instanceof  HomeAdapter.MyViewHolder){
+            ((HomeAdapter.MyViewHolder)holder).iv.setImageDrawable(null);
+        }else if(holder instanceof  HomeAdapter.MyViewAdHolder){
+            ((HomeAdapter.MyViewAdHolder) holder).iv.setImageDrawable(null);
         }
     }
 

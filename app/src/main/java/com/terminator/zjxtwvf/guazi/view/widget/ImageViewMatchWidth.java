@@ -1,6 +1,7 @@
 package com.terminator.zjxtwvf.guazi.view.widget;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
@@ -31,6 +32,15 @@ public class ImageViewMatchWidth extends AppCompatImageView{
             setMeasuredDimension(width, height);
         } else {
             super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        }
+    }
+
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        try {
+            super.onDraw(canvas);
+        }catch (Exception e){
         }
     }
 }

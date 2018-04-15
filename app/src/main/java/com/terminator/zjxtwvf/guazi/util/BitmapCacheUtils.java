@@ -36,6 +36,13 @@ public class BitmapCacheUtils {
 			protected int sizeOf(String key, Bitmap bitmap) {
 				return bitmap.getByteCount();
 			}
+			@Override
+			protected void entryRemoved(boolean evicted, String key, Bitmap oldValue, Bitmap newValue){
+				System.out.println("bitmap is recycled --------------------------->>>>>"  + oldValue.toString());
+				if(null != oldValue){
+					oldValue.recycle();
+				}
+			}
 		};
 	}
 	
@@ -44,7 +51,6 @@ public class BitmapCacheUtils {
 			return mCacheUtils;
 		}
 		mCacheUtils = new BitmapCacheUtils();
-		
 		return mCacheUtils;
 	}
 
@@ -54,6 +60,7 @@ public class BitmapCacheUtils {
 		//从内存获取
 		bitmap[0] = getFromMap(url);
 		if(bitmap != null && null != bitmap[0]){
+			System.out.println("from memoty ---------------->>>>>" + bitmap[0].toString() +"   " +Md5Utils.md5(url));
 			imageView.setImageBitmap(bitmap[0]);
 			return;
 		}
@@ -64,6 +71,7 @@ public class BitmapCacheUtils {
 				@Override
 				public void run() {
 					if(url.equals(mHashMap.get(imageView))){
+						System.out.println("from SD ---------------->>>>>" + bitmap[0].toString()  +"   " +Md5Utils.md5(url));
 						imageView.setImageBitmap(bitmap[0]);
 					}
 				}

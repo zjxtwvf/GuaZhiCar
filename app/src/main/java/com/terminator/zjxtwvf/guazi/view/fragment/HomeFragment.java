@@ -119,7 +119,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
                         ((BannerImageUrlEntity.DataBean)model).getImgUrl());
             }
         });
-        mBanner.setData(dataBeans, Arrays.asList("","","","",""));
+        mBanner.setData(R.layout.bga_image_view,dataBeans, Arrays.asList("","","","",""));
     }
 
     @Override

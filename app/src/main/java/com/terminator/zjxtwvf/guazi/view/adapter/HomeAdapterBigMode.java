@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
@@ -28,8 +27,11 @@ import cn.bingoogolapple.bgabanner.BGABanner;
 
 public class HomeAdapterBigMode extends BaseAdapter{
 
+    BGABanner.Adapter mBgaAdapter;
+
     public HomeAdapterBigMode(RecyclerView recyclerView) {
         super(recyclerView);
+        mBgaAdapter = new BGABannerAdapter();
     }
 
     @Override
@@ -72,9 +74,7 @@ public class HomeAdapterBigMode extends BaseAdapter{
             }else{
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
             }
-            //if(mRecyclerView.getScrollState() != RecyclerView.SCROLL_STATE_SETTLING) {
-                BitmapCacheUtils.getInstance().display(((HomeAdapterBigMode.MyViewAdHolder) holder).iv, imageUrl);
-            //}
+            BitmapCacheUtils.getInstance().display(((HomeAdapterBigMode.MyViewAdHolder) holder).iv, imageUrl);
         }else if(holder instanceof  HomeAdapterBigMode.MyViewBigModeHolder){
             ViewGroup.LayoutParams params = ((MyViewBigModeHolder)holder).itemView.getLayoutParams();
             params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
@@ -85,16 +85,19 @@ public class HomeAdapterBigMode extends BaseAdapter{
             ((MyViewBigModeHolder)holder).tv_price_first.setText("首付"+data.get(index).getFirst_pay());
             ((MyViewBigModeHolder)holder).tv_position.setText(data.get(index).getCity_name());
             BGABanner mBanner = ((MyViewBigModeHolder)holder).banner_content;
-            mBanner.setAdapter(new BGABanner.Adapter<ImageView,Object>() {
-                @Override
-                public void fillBannerItem(BGABanner banner, ImageView itemView, Object model, int position) {
-                    //if(mRecyclerView.getScrollState() != RecyclerView.SCROLL_STATE_SETTLING) {
-                        BitmapCacheUtils.getInstance().display(itemView,
-                                (String) model);
-                    //}
-                }
-            });
-            mBanner.setData(data.get(index).getImage_list(), Arrays.asList("","","","",""));
+            mBanner.setAdapter(mBgaAdapter);
+            mBanner.setData(R.layout.bga_image_view,data.get(index).getImage_list(), Arrays.asList("","","","",""));
+        }
+    }
+
+    @Override
+    public void onViewRecycled(RecyclerView.ViewHolder holder) {
+        super.onViewRecycled(holder);
+        if(holder instanceof  HomeAdapterBigMode.MyViewAdHolder){
+            ((HomeAdapterBigMode.MyViewAdHolder) holder).iv.setImageDrawable(null);
+        }else if(holder instanceof  HomeAdapterBigMode.MyViewBigModeHolder){
+            BGABanner mBanner = ((MyViewBigModeHolder)holder).banner_content;
+            mBanner.setAdapter(null);
         }
     }
 
