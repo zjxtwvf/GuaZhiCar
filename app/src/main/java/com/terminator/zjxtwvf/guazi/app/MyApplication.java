@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
+import com.squareup.leakcanary.LeakCanary;
+import com.squareup.leakcanary.RefWatcher;
 import com.terminator.zjxtwvf.guazi.di.components.DaggerNetComponent;
 import com.terminator.zjxtwvf.guazi.di.components.NetComponent;
 import com.terminator.zjxtwvf.guazi.di.modules.NetModule;
@@ -22,7 +24,9 @@ public class MyApplication extends Application{
 	}
 
 	private static Handler handler;
-	
+
+	private static RefWatcher mRefWatcher;
+
 	@Override
 	public void onCreate() {
 		context = getApplicationContext();
@@ -31,6 +35,7 @@ public class MyApplication extends Application{
 		netComponent = DaggerNetComponent.builder()
 				.netModule(new NetModule())
 				.build();
+		mRefWatcher = LeakCanary.install(this);
 		super.onCreate();
 	}
 
@@ -45,5 +50,9 @@ public class MyApplication extends Application{
 	public MyApplication getInstance()
 	{
 		return this;
+	}
+
+	public static RefWatcher getmRefWatcher() {
+		return mRefWatcher;
 	}
 }

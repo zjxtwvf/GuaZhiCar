@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
 import com.terminator.zjxtwvf.guazi.R;
+import com.terminator.zjxtwvf.guazi.app.MyApplication;
 import com.terminator.zjxtwvf.guazi.view.fragment.SourceDetailFragment;
 
 
@@ -26,10 +27,8 @@ public class SourceDetailActivity extends AppCompatActivity {
 
         SourceDetailFragment sourceDetailFragment = new SourceDetailFragment();
         fragmentTransaction.add(R.id.fl_detail_activity,sourceDetailFragment);
-
         fragmentTransaction.commit();
-
         sourceDetailFragment.loadData();
-
+        MyApplication.getmRefWatcher().watch(this);
     }
 }

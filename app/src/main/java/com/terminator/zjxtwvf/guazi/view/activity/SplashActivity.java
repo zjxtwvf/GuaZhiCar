@@ -70,4 +70,10 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
         startActivity(intent);
         finish();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BitmapCacheUtils.getInstance().removeKey(imageView);
+    }
 }

@@ -93,6 +93,7 @@ public class HomeAdapterBigMode extends BaseAdapter{
     @Override
     public void onViewRecycled(RecyclerView.ViewHolder holder) {
         super.onViewRecycled(holder);
+        System.out.println("HomeAdapterBigMode onViewRecycled--------------------->");
         if(holder instanceof  HomeAdapterBigMode.MyViewAdHolder){
             ((HomeAdapterBigMode.MyViewAdHolder) holder).iv.setImageDrawable(null);
         }else if(holder instanceof  HomeAdapterBigMode.MyViewBigModeHolder){

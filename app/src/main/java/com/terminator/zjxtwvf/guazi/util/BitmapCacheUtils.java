@@ -173,6 +173,11 @@ public class BitmapCacheUtils {
 		return null;
 	}
 
+	//防止内存泄漏
+	public void removeKey(ImageView view){
+		mHashMap.remove(view);
+	}
+
 	private Bitmap getFromMap(String url) {
 		return mCache.get(Md5Utils.md5(url));
 	}
