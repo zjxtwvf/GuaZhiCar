@@ -26,7 +26,6 @@ public class HomeViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        //((BaseFragment)data.get(position)).loadData();
         return data.get(position);
     }
 

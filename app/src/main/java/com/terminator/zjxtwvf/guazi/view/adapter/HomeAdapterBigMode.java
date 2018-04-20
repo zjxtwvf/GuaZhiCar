@@ -5,9 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.terminator.zjxtwvf.guazi.R;
+import com.terminator.zjxtwvf.guazi.app.MyApplication;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
@@ -17,6 +20,7 @@ import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.Arrays;
+import java.util.List;
 
 import cn.bingoogolapple.bgabanner.BGABanner;
 
@@ -93,7 +97,6 @@ public class HomeAdapterBigMode extends BaseAdapter{
     @Override
     public void onViewRecycled(RecyclerView.ViewHolder holder) {
         super.onViewRecycled(holder);
-        System.out.println("HomeAdapterBigMode onViewRecycled--------------------->");
         if(holder instanceof  HomeAdapterBigMode.MyViewAdHolder){
             ((HomeAdapterBigMode.MyViewAdHolder) holder).iv.setImageDrawable(null);
         }else if(holder instanceof  HomeAdapterBigMode.MyViewBigModeHolder){

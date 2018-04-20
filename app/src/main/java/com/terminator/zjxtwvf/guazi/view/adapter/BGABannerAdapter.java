@@ -1,6 +1,5 @@
 package com.terminator.zjxtwvf.guazi.view.adapter;
 
-
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.view.widget.RecycleImageView;
 

@@ -15,6 +15,7 @@ import android.os.Environment;
 import android.support.v4.util.LruCache;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.orhanobut.logger.Logger;
 
 public class BitmapCacheUtils {
@@ -40,7 +41,7 @@ public class BitmapCacheUtils {
 			protected void entryRemoved(boolean evicted, String key, Bitmap oldValue, Bitmap newValue){
 				System.out.println("bitmap is recycled --------------------------->>>>>"  + oldValue.toString());
 				if(null != oldValue){
-					oldValue.recycle();
+					//oldValue.recycle();
 				}
 			}
 		};
@@ -55,6 +56,12 @@ public class BitmapCacheUtils {
 	}
 
 	public void display(final ImageView imageView,final String url){
+		Glide.with(UIUtils.getContext())
+				.load(url)
+				.into(imageView);
+	}
+
+	public void display01(final ImageView imageView,final String url){
 		final Bitmap bitmap[] = {null};
 		mHashMap.put(imageView, url);
 		//从内存获取
