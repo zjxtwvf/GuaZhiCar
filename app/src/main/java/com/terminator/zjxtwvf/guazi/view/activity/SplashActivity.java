@@ -74,6 +74,5 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        BitmapCacheUtils.getInstance().removeKey(imageView);
     }
 }

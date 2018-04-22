@@ -80,7 +80,6 @@ public class HomeAdapter extends BaseAdapter{
     @Override
     public void onViewRecycled(RecyclerView.ViewHolder holder) {
         super.onViewRecycled(holder);
-        System.out.println("onViewRecycled--------------------->");
         if(holder instanceof  HomeAdapter.MyViewHolder){
             ((HomeAdapter.MyViewHolder)holder).iv.setImageDrawable(null);
         }else if(holder instanceof  HomeAdapter.MyViewAdHolder){

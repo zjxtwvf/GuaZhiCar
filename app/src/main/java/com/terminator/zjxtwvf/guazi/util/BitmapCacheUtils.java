@@ -8,6 +8,8 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -17,19 +19,16 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.orhanobut.logger.Logger;
+import com.squareup.picasso.Picasso;
 
 public class BitmapCacheUtils {
 
 	public static final String SDPATH = Environment.getExternalStorageDirectory().getAbsolutePath();
-
 	public static final String ADPATH = SDPATH + "/Guazhi";
 	
 	private LruCache<String, Bitmap> mCache;
-	private HashMap<ImageView, String> mHashMap = new HashMap<ImageView, String>();
-	
 	private static BitmapCacheUtils mCacheUtils;
 
-    	
 	private BitmapCacheUtils(){
 		long maxSize = Runtime.getRuntime().maxMemory();
 		mCache = new LruCache<String, Bitmap>((int)(maxSize/8)){
@@ -39,9 +38,8 @@ public class BitmapCacheUtils {
 			}
 			@Override
 			protected void entryRemoved(boolean evicted, String key, Bitmap oldValue, Bitmap newValue){
-				System.out.println("bitmap is recycled --------------------------->>>>>"  + oldValue.toString());
 				if(null != oldValue){
-					//oldValue.recycle();
+					//removeView(key);
 				}
 			}
 		};
@@ -55,19 +53,21 @@ public class BitmapCacheUtils {
 		return mCacheUtils;
 	}
 
-	public void display(final ImageView imageView,final String url){
-		Glide.with(UIUtils.getContext())
+	public void display01(final ImageView imageView,final String url){
+		//Glide.with(UIUtils.getContext())
+			//	.load(url)
+				//.into(imageView);
+		Picasso.with(UIUtils.getContext())
 				.load(url)
 				.into(imageView);
 	}
 
-	public void display01(final ImageView imageView,final String url){
+	public void display(final ImageView imageView,final String url){
 		final Bitmap bitmap[] = {null};
-		mHashMap.put(imageView, url);
+		imageView.setTag(url);
 		//从内存获取
 		bitmap[0] = getFromMap(url);
 		if(bitmap != null && null != bitmap[0]){
-			System.out.println("from memoty ---------------->>>>>" + bitmap[0].toString() +"   " +Md5Utils.md5(url));
 			imageView.setImageBitmap(bitmap[0]);
 			return;
 		}
@@ -77,8 +77,7 @@ public class BitmapCacheUtils {
 			UIUtils.runOnUIThread(new Runnable() {
 				@Override
 				public void run() {
-					if(url.equals(mHashMap.get(imageView))){
-						System.out.println("from SD ---------------->>>>>" + bitmap[0].toString()  +"   " +Md5Utils.md5(url));
+					if(url.equals(imageView.getTag())){
 						imageView.setImageBitmap(bitmap[0]);
 					}
 				}
@@ -131,17 +130,16 @@ public class BitmapCacheUtils {
 					}
 					InputStream inputStream = connection.getInputStream();
 					if(null != inputStream){
-						bitmap = BitmapFactory.decodeStream(inputStream);
+						BitmapFactory.Options options =new BitmapFactory.Options();
+						options.inPreferredConfig = Bitmap.Config.RGB_565;
+						bitmap = BitmapFactory.decodeStream(inputStream,null,options);
 						setBitmapToMap(bitmap,url);
 						setBitmapToFile(bitmap,url);
 						UIUtils.runOnUIThread(new Runnable() {
 							@Override
 							public void run() {
-								if(url.equals(mHashMap.get(imageView))){
+								if(url.equals(imageView.getTag())){
 									imageView.setImageBitmap(bitmap);
-									if(ifMatchWidth){
-										UIUtils.setImageMatchWidth(imageView);
-									}
 								}
 							}
 						});
@@ -169,20 +167,11 @@ public class BitmapCacheUtils {
 			}
 		}
 		File image = new File(ADPATH +"/"+ Md5Utils.md5(url)+".png");
-		
+		System.out.println("getFromFile------------->");
 		if(image.exists()){
 			bitmap = BitmapFactory.decodeFile(image.getAbsolutePath());
 		}
-		
-		if(null != bitmap){
-			return bitmap;
-		}
-		return null;
-	}
-
-	//防止内存泄漏
-	public void removeKey(ImageView view){
-		mHashMap.remove(view);
+		return bitmap;
 	}
 
 	private Bitmap getFromMap(String url) {
