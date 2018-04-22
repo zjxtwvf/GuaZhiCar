@@ -1,28 +1,15 @@
 package com.terminator.zjxtwvf.guazi.view.adapter;
 
-import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.terminator.zjxtwvf.guazi.R;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+
 import com.terminator.zjxtwvf.guazi.model.entity.BannerAdsEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.CarListEntity;
-import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
-import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
-import com.terminator.zjxtwvf.guazi.util.UIUtils;
-import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
-import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 
-import org.greenrobot.eventbus.EventBus;
-
-import java.util.Arrays;
 import java.util.List;
-
-import cn.bingoogolapple.bgabanner.BGABanner;
 
 
 /**
@@ -50,7 +37,9 @@ public abstract class BaseAdapter extends RecyclerView.Adapter<RecyclerView.View
     public void updateData(List<CarListEntity.DataBean.PostListBean> data , BannerAdsEntity bannerAdsEntity){
         this.data = data;
         this.mAdsData = bannerAdsEntity;
-        this.notifyItemRangeChanged(0,data.size());
+        LinearLayoutManager linearLayoutManager = (LinearLayoutManager)mRecyclerView.getLayoutManager();
+        int positon = linearLayoutManager.findFirstVisibleItemPosition();
+        this.notifyItemRangeChanged(positon,data.size());
     }
 
     public void setDisplayMode(int mode){

@@ -7,9 +7,6 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -62,31 +59,47 @@ public class BitmapCacheUtils {
 				.into(imageView);
 	}
 
-	public void display(final ImageView imageView,final String url){
-		final Bitmap bitmap[] = {null};
-		imageView.setTag(url);
-		//从内存获取
-		bitmap[0] = getFromMap(url);
-		if(bitmap != null && null != bitmap[0]){
-			imageView.setImageBitmap(bitmap[0]);
-			return;
-		}
-		//从SD卡获取
-		if((null == bitmap[0]) && ((bitmap[0] = getFromFile(url)) != null)){
-			setBitmapToMap(bitmap[0],url);
+	public void intoView(final ImageView imageView,final Bitmap bitmap,final String url){
+		if(null != bitmap){
 			UIUtils.runOnUIThread(new Runnable() {
 				@Override
 				public void run() {
 					if(url.equals(imageView.getTag())){
-						imageView.setImageBitmap(bitmap[0]);
+						imageView.setImageBitmap(bitmap);
+						setBitmapToMap(bitmap,url);
 					}
 				}
 			});
 		}
-		//从网络获取
-		if((null == bitmap[0])){
-			getFromNet(imageView,url,false);
-		}
+	}
+
+	public void display(final ImageView imageView,final String url){
+		imageView.setTag(url);
+		ThreadManager.getThreadPool().execute(new Runnable() {
+			Bitmap bitmap = null;
+			@Override
+			public void run() {
+				//从内存获取
+				bitmap = getFromMap(url);
+				if(null != bitmap){
+					intoView(imageView,bitmap,url);
+					return;
+				}
+				//从SD卡获取
+				if(null == bitmap){
+					bitmap = getFromFile(url);
+				}
+				if(null != bitmap){
+					intoView(imageView,bitmap,url);
+					setBitmapToMap(bitmap,url);
+					return;
+				}
+				//从网络获取
+				if((null == bitmap)){
+					getFromNet(imageView,url,false);
+				}
+			}
+		});
 	}
 
 	private void setBitmapToFile(Bitmap bitmap, String url) {
@@ -133,16 +146,8 @@ public class BitmapCacheUtils {
 						BitmapFactory.Options options =new BitmapFactory.Options();
 						options.inPreferredConfig = Bitmap.Config.RGB_565;
 						bitmap = BitmapFactory.decodeStream(inputStream,null,options);
-						setBitmapToMap(bitmap,url);
 						setBitmapToFile(bitmap,url);
-						UIUtils.runOnUIThread(new Runnable() {
-							@Override
-							public void run() {
-								if(url.equals(imageView.getTag())){
-									imageView.setImageBitmap(bitmap);
-								}
-							}
-						});
+						intoView(imageView,bitmap,url);
 					}
 					
 				} catch (MalformedURLException e) {
@@ -169,7 +174,9 @@ public class BitmapCacheUtils {
 		File image = new File(ADPATH +"/"+ Md5Utils.md5(url)+".png");
 		System.out.println("getFromFile------------->");
 		if(image.exists()){
-			bitmap = BitmapFactory.decodeFile(image.getAbsolutePath());
+			BitmapFactory.Options options =new BitmapFactory.Options();
+			options.inPreferredConfig = Bitmap.Config.RGB_565;
+			bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(),options);
 		}
 		return bitmap;
 	}
