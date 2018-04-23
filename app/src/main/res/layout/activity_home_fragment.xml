@@ -116,6 +116,7 @@
             style="@style/AppMainTextStyle"
             android:textSize="16sp"
             android:text="查看全部优质车源"
+            android:id="@+id/tv_see_more_good_car"
             />
         <LinearLayout
             android:layout_width="match_parent"

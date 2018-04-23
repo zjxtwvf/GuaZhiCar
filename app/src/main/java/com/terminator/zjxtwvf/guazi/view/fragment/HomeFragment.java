@@ -40,6 +40,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import cn.bingoogolapple.bgabanner.BGABanner;
 
 
@@ -77,9 +78,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
     TextView mHomeMore;
 
     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT,1);
-    LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,0,1);
     LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(540,0,1);
-
 
     View mHomeView = null;
     HomeClickListener mHomeClickListener = null;
@@ -180,7 +179,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
 
     @Override
     public void onDisplayHomeCar(HomeEntity homeEntity) {
-        //homeAdapter.updateData(homeEntity.getData().get(0).getPostList());
         ImageView iv;
         TextView tvTtile;
         TextView tvDateHual;
@@ -222,8 +220,30 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        mBanner.setAutoPlayAble(true);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mBanner.setAutoPlayAble(false);
+    }
+
+    @Override
     public void onUpdateLoadingPage(LoadingPage.ResultState resultState) {
         updatePage(resultState);
+    }
+
+    @OnClick({R.id.tv_see_more_good_car})
+    public void onClick(View view){
+        switch (view.getId()){
+            case R.id.tv_see_more_good_car:
+                Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
+                startActivity(intent);
+                return;
+        }
     }
 
     public class HomeClickListener implements View.OnClickListener{
