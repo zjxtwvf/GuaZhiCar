@@ -3,7 +3,10 @@ package com.terminator.zjxtwvf.guazi.view.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.app.MyApplication;
@@ -16,12 +19,25 @@ import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class SplashActivity extends AppCompatActivity implements SplashContract.View{
     @Bind(R.id.iv_splash)
     ImageView imageView;
+    @Bind(R.id.tv_splash_skip)
+    TextView mSkip;
+    @Bind(R.id.tv_splash_time)
+    TextView mDelay;
+    @Bind(R.id.tv_splash_more)
+    TextView mKownMore;
+    @Bind(R.id.ll_splash_skip)
+    LinearLayout mLlDelaySkip;
+
     @Inject
     SplashPresenter splashPresenter;
+
+
+    private  int delay = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,31 +53,30 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
     }
 
     public void delayGetSplash(){
-        MyApplication.getHandler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                splashPresenter.getSplash();
-            }
-        },1000);
+        splashPresenter.getSplash();
     }
 
     @Override
     public void onDisplay(String url) {
-        long time = 0;
         if(url != null && !url.equals("")){
             BitmapCacheUtils.getInstance().display(imageView,url);
-            time = 3000;
+            mLlDelaySkip.setVisibility(View.VISIBLE);
+            mKownMore.setVisibility(View.VISIBLE);
+            MyApplication.getHandler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mDelay.setText("剩余"+delay+"秒");
+                    delay--;
+                    if(delay < 0){
+                        onGetSplashError();
+                    }else{
+                        MyApplication.getHandler().postDelayed(this,1000);
+                    }
+                }
+            },1000);
         }else{
-            time = 0;
+            onGetSplashError();
         }
-
-        MyApplication.getHandler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //无论能否加载SPLASH图片，都进入主页面
-                onGetSplashError();
-            }
-        },time);
     }
 
     @Override
@@ -71,8 +86,12 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
         finish();
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+    @OnClick({R.id.tv_splash_skip})
+    public void OnClick(View view){
+        switch (view.getId()){
+            case R.id.tv_splash_skip:
+                onGetSplashError();
+                break;
+        }
     }
 }
