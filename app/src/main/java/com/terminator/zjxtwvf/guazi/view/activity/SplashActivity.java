@@ -90,6 +90,7 @@ public class SplashActivity extends AppCompatActivity implements SplashContract.
     public void OnClick(View view){
         switch (view.getId()){
             case R.id.tv_splash_skip:
+                MyApplication.getHandler().removeCallbacksAndMessages(null);
                 onGetSplashError();
                 break;
         }
