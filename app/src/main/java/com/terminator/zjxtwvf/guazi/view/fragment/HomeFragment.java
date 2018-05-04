@@ -236,12 +236,13 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         updatePage(resultState);
     }
 
-    @OnClick({R.id.tv_see_more_good_car})
+    @OnClick({R.id.tv_see_more_good_car,R.id.tv_home_more})
     public void onClick(View view){
         switch (view.getId()){
             case R.id.tv_see_more_good_car:
-                Intent intent = new Intent(UIUtils.getContext(),SourceDetailActivity.class);
-                startActivity(intent);
+                View eventView = new View(UIUtils.getContext());
+                eventView.setId(R.id.ll_main_buy_car);
+                EventBus.getDefault().post(eventView);
                 return;
         }
     }

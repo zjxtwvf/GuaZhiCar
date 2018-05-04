@@ -89,6 +89,7 @@ public class HomeActivity extends AppCompatActivity{
         mTvTabMe.setTextColor(getResources().getColor(R.color.colorTextBlak));
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
     @OnClick({R.id.ll_main_home,R.id.ll_main_buy_car,R.id.ll_main_sell_car,R.id.ll_main_mine})
     public void onClick(View view){
         setTabsNormal();
