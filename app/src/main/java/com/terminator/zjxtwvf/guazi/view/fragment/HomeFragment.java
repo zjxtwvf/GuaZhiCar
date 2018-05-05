@@ -28,6 +28,7 @@ import com.terminator.zjxtwvf.guazi.presenter.HomePresenter;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import com.terminator.zjxtwvf.guazi.view.activity.SourceDetailActivity;
+import com.terminator.zjxtwvf.guazi.view.activity.WebViewActivity;
 import com.terminator.zjxtwvf.guazi.view.widget.ImageViewMatchWidth;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
@@ -113,7 +114,16 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         Logger.d(dataBeans);
         mBanner.setAdapter(new BGABanner.Adapter<ImageView,Object>() {
             @Override
-            public void fillBannerItem(BGABanner banner, ImageView itemView, Object model, int position) {
+            public void fillBannerItem(BGABanner banner, ImageView itemView, final Object model, int position) {
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(UIUtils.getContext(),WebViewActivity.class);
+                        intent.putExtra("url",((BannerImageUrlEntity.DataBean)model).getLinkUrl());
+                        intent.putExtra("title",((BannerImageUrlEntity.DataBean)model).getTitle());
+                        startActivity(intent);
+                    }
+                });
                 BitmapCacheUtils.getInstance().display((ImageView) itemView,
                         ((BannerImageUrlEntity.DataBean)model).getImgUrl());
             }

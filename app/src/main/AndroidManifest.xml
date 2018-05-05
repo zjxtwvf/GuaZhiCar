@@ -32,6 +32,9 @@
         <activity android:name=".view.activity.SourceDetailActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         </activity>
+        <activity android:name=".view.activity.WebViewActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
