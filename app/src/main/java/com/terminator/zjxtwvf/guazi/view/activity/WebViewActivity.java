@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.view.activity;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,13 +11,20 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
+import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
+import com.terminator.zjxtwvf.guazi.model.entity.WebViewEvent;
+import com.terminator.zjxtwvf.guazi.util.UIUtils;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
 
 
 public class WebViewActivity extends Activity {
@@ -42,20 +50,24 @@ public class WebViewActivity extends Activity {
             webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
-                public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                    if (url.indexOf("apk") > 0) {
-                        //Toast.makeText(getApplicationContext(), "正在准备下载", Toast.LENGTH_SHORT).show();
-                        //(new DownloadUtil()).enqueue(url, getApplicationContext());
-                        return true;
-                    } else {
-                        view.loadUrl(url);
-                        return false;
-                    }
+                public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                    super.onPageStarted(view, url, favicon);
+                    webView.setVisibility(View.INVISIBLE);
                 }
 
                 @Override
                 public void onPageFinished(WebView view, String url) {
-                    CookieSyncManager.getInstance().sync();
+                    //取标题栏
+                    String javascript = "javascript:function hideOther() {" +
+                            "document.getElementsByTagName('body')[0].innerHTML;" +
+                            "document.getElementsByTagName('header')[0].style.display='none';" +  //取标题栏
+                            "}";
+
+                    //创建方法
+                    view.loadUrl(javascript);
+                    //加载方法
+                    view.loadUrl("javascript:hideOther();");
+                    EventBus.getDefault().post(new WebViewEvent(0));
                 }
             });
             webView.loadUrl(webViewUrl);
@@ -65,24 +77,37 @@ public class WebViewActivity extends Activity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void loadUI() {
         setContentView(R.layout.activity_webview);
-
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return;
-
         Window window = this.getWindow();
-
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        EventBus.getDefault().register(this);
     }
 
-    public void performBack(View view) {
-        super.onBackPressed();
+    @Override
+    protected void onPause() {
+        super.onPause();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe
+    public void onReciveEvent(WebViewEvent event){
+        UIUtils.getHandler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                UIUtils.runOnUIThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        webView.setVisibility(View.VISIBLE);
+                    }
+                });
+            }
+        },500);
     }
 
     @Override
