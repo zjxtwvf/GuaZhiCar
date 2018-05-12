@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RectShape;
 import android.graphics.drawable.shapes.Shape;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
@@ -50,6 +51,8 @@ import cn.bingoogolapple.bgabanner.BGABanner;
  */
 
 public class HomeFragment extends BaseFragment implements HomeContract.View{
+
+    private static final String ONCLICK_EVNET = "onclick_event";
 
     @Inject
     HomePresenter mHomePresenter;
@@ -118,10 +121,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
                 itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(UIUtils.getContext(),WebViewActivity.class);
-                        intent.putExtra("url",((BannerImageUrlEntity.DataBean)model).getLinkUrl());
-                        intent.putExtra("title",((BannerImageUrlEntity.DataBean)model).getTitle());
-                        startActivity(intent);
+                        openLink(((BannerImageUrlEntity.DataBean)model).getLinkUrl(),((BannerImageUrlEntity.DataBean)model).getTitle());
                     }
                 });
                 BitmapCacheUtils.getInstance().display((ImageView) itemView,
@@ -163,6 +163,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         for(int i=0;i<fastIndexEntity.getData().getChannel().getItemList().size();i++){
             ImageView iv = new ImageView(UIUtils.getContext());
             iv.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            //iv.setTag(fastIndexEntity.getData().getChannel().getItemList().get(i).getLink()+
+                    //"::::"+fastIndexEntity.getData().getChannel().getItemList().get(i).getTitle());
+            iv.setTag(R.id.tag_link,fastIndexEntity.getData().getChannel().getItemList().get(i).getLink());
+            iv.setTag(R.id.tag_titile,fastIndexEntity.getData().getChannel().getItemList().get(i).getTitle());
+            iv.setOnClickListener(mHomeClickListener);
             BitmapCacheUtils.getInstance().display(iv,fastIndexEntity.getData().getChannel().getItemList().get(i).getImgUrl());
             mLlItemChannel.addView(iv,params);
         }
@@ -257,9 +262,23 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
         }
     }
 
+    public void openLink(String url,String title){
+        Intent intent = new Intent(UIUtils.getContext(),WebViewActivity.class);
+        intent.putExtra("url",url);
+        intent.putExtra("title",title);
+        startActivity(intent);
+    }
+
     public class HomeClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
+            if (view.getTag(1) != null && view.getTag(2) != null){
+                //String data = (String)(view.getTag());
+                //String [] strings = data.split("::::");
+                openLink((String)view.getTag(R.id.tag_link), (String)view.getTag(R.id.tag_titile));
+                return;
+            }
+
             switch (view.getId()){
                 case R.id.tv_home_more:
                     EventBus.getDefault().post(new FragmentEvent(FragmentEvent.FRAGMENT_SELL_ID));

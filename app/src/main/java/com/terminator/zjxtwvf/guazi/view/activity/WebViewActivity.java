@@ -11,9 +11,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.CookieManager;
-import android.webkit.CookieSyncManager;
-import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -47,6 +44,7 @@ public class WebViewActivity extends Activity {
             webView.getSettings().setBuiltInZoomControls(false);
             webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setDomStorageEnabled(true);
+            webView.getSettings().setDatabaseEnabled(true);
             webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
