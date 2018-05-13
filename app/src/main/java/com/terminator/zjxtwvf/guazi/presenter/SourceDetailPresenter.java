@@ -30,16 +30,16 @@ public class SourceDetailPresenter implements SourceDetailContract.Presenter{
     /// &platform=armeabi-v7a&osv=7.0&deviceId=862007036501106&ca_n=meizu&sign=3beea967e88121487b78516addba72be
     /// &dpi=3.0&customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=4.0.2.0&model=m3%20note&ca_s=app_tg
 
-    //clientc/post/getSourceDetail?puid=3003793877&lat=30.704457&lng=104.017387&screenWH=1080X1920
-    // &platform=armeabi-v7a&osv=7.0&deviceId=862007036501106&ca_n=meizu&sign=c78c3b8facf9cbb40f9d8f92ee02e77e
-    // &dpi=3.0&customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=3.9.1.0&model=m3%20note&ca_s=app_tg
+    //GET /clientc/post/getSourceDetail?puid=3003958625&lat=30.704536&lng=104.017556&screenWH=1080X1920&
+    // platform=armeabi-v7a&osv=7.0&deviceId=862007036501106&ca_n=meizu&sign=3796c5942707a286ae02f424fc8021cd&
+    // dpi=3.0&customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=3.9.6.0&model=m3%20note&ca_s=app_tg
     @Override
     public void getSourceDetail() {
-        mApiService.getSourceDetail("3003793877","30.704457","104.017387",
+        mApiService.getSourceDetail("3003958625","30.704536","104.017556",
                 "1080X1920","armeabi-v7a","7.0",
-                "862007036501106","meizu","c78c3b8facf9cbb40f9d8f92ee02e77e",
+                "862007036501106","meizu","3796c5942707a286ae02f424fc8021cd",
                 "3.0","879","a4:44:d1:41:f3:14","45",
-                "3.9.1.0","m3 note","app_tg")
+                "3.9.6.0","m3 note","app_tg")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Subscriber<SourceDetailEntity>() {

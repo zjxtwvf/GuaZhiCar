@@ -277,11 +277,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
                 eventView.setId(R.id.ll_main_buy_car);
                 EventBus.getDefault().post(eventView);
                 break;
-            case R.id.ll_evaluate:
-                if (view.getTag(R.id.tag_link) != null && view.getTag(R.id.tag_titile) != null){
-                    openLink((String)view.getTag(R.id.tag_link), (String)view.getTag(R.id.tag_titile));
-                }
-                break;
             case R.id.ll_sell_free:
                 View eventViewSell = new View(UIUtils.getContext());
                 eventViewSell.setId(R.id.ll_main_sell_car);
@@ -316,6 +311,7 @@ public class HomeFragment extends BaseFragment implements HomeContract.View{
                 case R.id.iv_home_guaratee:
                 case R.id.iv_home_like:
                 case R.id.tv_home_topic:
+                case R.id.ll_evaluate:
                     if (view.getTag(R.id.tag_link) != null && view.getTag(R.id.tag_titile) != null){
                         openLink((String)view.getTag(R.id.tag_link), (String)view.getTag(R.id.tag_titile));
                     }
