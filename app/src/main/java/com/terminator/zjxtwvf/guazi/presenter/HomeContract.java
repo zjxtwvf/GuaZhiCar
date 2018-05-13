@@ -3,6 +3,7 @@ package com.terminator.zjxtwvf.guazi.presenter;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
+import com.terminator.zjxtwvf.guazi.model.entity.IndexActiveEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
@@ -19,6 +20,7 @@ public interface HomeContract {
         void getFastIndex();
         void getHomeCar();
         void getHomeTopic();
+        void getIndexActive();
     }
 
     interface View{
@@ -26,7 +28,7 @@ public interface HomeContract {
         void onDisplayFastIndex(FastIndexEntity fastIndexEntity);
         void onDisplayHomeCar(HomeEntity homeEntity);
         void onDisplayHomeTopic(TopicEntity topicEntity);
-
         void onUpdateLoadingPage(LoadingPage.ResultState resultState);
+        void onDisplayIndexActive(IndexActiveEntity indexActiveEntity);
     }
 }

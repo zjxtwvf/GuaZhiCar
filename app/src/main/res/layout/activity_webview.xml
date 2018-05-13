@@ -25,6 +25,9 @@
             android:text="瓜子二手车"
             android:textColor="@color/colorTextBlak"
             android:textSize="18sp"
+            android:maxEms="8"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:id="@+id/tv_webview_title"
             android:layout_centerHorizontal="true"
             />

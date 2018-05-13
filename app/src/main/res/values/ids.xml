@@ -2,6 +2,12 @@
 <resources>
     <item type="id" name="tag_link"></item>
     <item type="id" name="tag_titile"></item>
+    <item type="id" name="iv_home_channel"></item>
+    <item type="id" name="iv_home_guaratee"></item>
+    <item type="id" name="iv_home_like"></item>
+    <item type="id" name="tv_home_price"></item>
+    <item type="id" name="tv_home_topic"></item>
+    <item type="id" name="tv_home_hot"></item>
 </resources>
 
 

@@ -5,6 +5,7 @@ import com.terminator.zjxtwvf.guazi.model.api.ApiService;
 import com.terminator.zjxtwvf.guazi.model.entity.BannerImageUrlEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.FastIndexEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.HomeEntity;
+import com.terminator.zjxtwvf.guazi.model.entity.IndexActiveEntity;
 import com.terminator.zjxtwvf.guazi.model.entity.TopicEntity;
 import com.terminator.zjxtwvf.guazi.view.widget.LoadingPage;
 
@@ -131,6 +132,35 @@ public class HomePresenter implements HomeContract.Presenter{
                     public void onNext(TopicEntity topicEntity) {
                         Logger.d("getHomeTopic onNext------------->");
                         mView.onDisplayHomeTopic(topicEntity);
+                    }
+                });
+    }
+
+    //GET /clientc/banner/index_active?pos=APP_INDEX_ACTIVE&screenWH=1080X1920&platform=armeabi-v7a&osv=7.0&
+    // deviceId=862007036501106&ca_n=meizu&sign=cad014b71757d1b729763a45cf35b497&dpi=3.0&
+    // customerId=879&mac=a4:44:d1:41:f3:14&guazi_city=45&versionId=3.9.6.0&model=m3%20note&ca_s=app_tg
+    @Override
+    public void getIndexActive() {
+        mApiService.getIndexActive("APP_INDEX_ACTIVE","1080X1920","armeabi-v7a","7.0",
+                "862007036501106","meizu","cad014b71757d1b729763a45cf35b497",
+                "3.0","879","a4:44:d1:41:f3:14","45",
+                "3.9.6.0","m3 note","app_tg")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Subscriber<IndexActiveEntity>() {
+                    @Override
+                    public void onCompleted() {
+                        Logger.d("getIndexActive onCompleted------------->");
+                    }
+                    @Override
+                    public void onError(Throwable e) {
+                        Logger.d("getIndexActive onError------------->");
+                        e.printStackTrace();
+                    }
+                    @Override
+                    public void onNext(IndexActiveEntity indexActiveEntity) {
+                        Logger.d("getIndexActive onNext------------->");
+                        mView.onDisplayIndexActive(indexActiveEntity);
                     }
                 });
     }
