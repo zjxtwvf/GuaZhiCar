@@ -74,6 +74,9 @@ public class BitmapCacheUtils {
 	}
 
 	public void display(final ImageView imageView,final String url){
+		if(null == imageView || null == url){
+			return;
+		}
 		imageView.setTag(url);
 		ThreadManager.getThreadPool().execute(new Runnable() {
 			Bitmap bitmap = null;

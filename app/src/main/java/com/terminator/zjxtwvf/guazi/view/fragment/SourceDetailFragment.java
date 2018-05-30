@@ -144,6 +144,7 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
 
         mEvaluateDesc.setText(sourceDetailEntity.getData().getEvaluator_desc());
 
+        /*
         if(!sourceDetailEntity.getData().getBaomai().getImage().equals("")){
             View view = UIUtils.inflate(R.layout.baomai_layout_item);
             ImageView iv = (ImageView)view.findViewById(R.id.iv_baomai);
@@ -154,7 +155,7 @@ public class SourceDetailFragment extends BaseFragment implements SourceDetailCo
             tv.setText(sourceDetailEntity.getData().getBm_address().getTitle());
             mBaoMai.addView(view,params1);
         }
-
+    */
         for(int i=0;i<sourceDetailEntity.getData().getImageList().size();i++){
             View view = UIUtils.inflate(R.layout.source_detail_image_list_item);
             ImageView iv = (ImageView)view.findViewById(R.id.iv_source_detail_item);

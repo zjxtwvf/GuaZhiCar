@@ -29,6 +29,6 @@ public class SourceDetailActivity extends AppCompatActivity {
         fragmentTransaction.add(R.id.fl_detail_activity,sourceDetailFragment);
         fragmentTransaction.commit();
         sourceDetailFragment.loadData();
-        MyApplication.getmRefWatcher().watch(this);
+        //MyApplication.getmRefWatcher().watch(this);
     }
 }

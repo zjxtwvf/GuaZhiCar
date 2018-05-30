@@ -1,8 +1,6 @@
 package com.terminator.zjxtwvf.guazi.model.entity;
 
 
-import com.google.gson.annotations.SerializedName;
-
 import java.util.List;
 
 /**
@@ -13,7 +11,7 @@ public class SourceDetailEntity {
     /**
      * code : 0
      * message : 成功
-     * data : {"car_source_status":"0","show_status":0,"title":"别克威朗 2016款 两厢 15S 自动领先型","clue_id":"28416715","clue_id_str":"HC-28416715","price":"9.98","promote_price":0,"road_haul":"2.2","license":"2016-11","air_displacement":"1.5","gearbox":"自动","seller":"苏先生","seller_job":"自由职业","transfer_num":"0","puid":"3003793877","city_id":"45","card_city":"成都","gender":"1","domain":"cd","district_name":"武侯","seller_description":"我的这辆车刚用了一年多一点，用车时也很在意，外观内饰非常干净。我这车才两三万公里，简直就是准新车，我的车基本都没怎么出过市区，底盘非常整，城市驾驶很得心应手，油耗表现也很满意。这辆车就是日常家用代步，一直都是在4S店做的保养，这车用着一直不错，只不过现在家底殷实了，想换一辆豪华点、上档次的新车。","audit_date":"2018年11月年检到期","strong_insurance_date":"2018年11月交强险到期","insurance_date":"商业险已过期","deal_price":0,"thumb_img":"https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=280&h=180&q=88","new_price":"16.92","is_pay":1,"first_amount":"2.99","loan_amount":69860,"monthly_payment":2416,"loan_url":"https://app2-jr.guazi.com/cd/loan/4082278?title=%E7%93%9C%E5%AD%90%E5%88%86%E6%9C%9F&jr_from=detailpage&platform=app&ca_s=app_tg&ca_n=meizu","loanInfo":"<span style=\"color: #38b44c;font-size: 12px;font-family: PingFang SC;\"><span style=\"font-size: 20px;\">2.99<\/span><span style=\"font-size:18px;\">万<\/span>开回家<\/span>","subtitle":"帮我看看这辆车怎么样？我还挺喜欢的","wap_url":"https://m.guazi.com/cd/3003793877x?ca_s=app_tg&ca_n=meizu","wap_share_icon":"https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=96&h=72&q=88","is_collection":0,"car_hot_params":[{"title":"0过户","color":"#888888"},{"title":"超值","color":"#888888"}],"service_charge":{"service_price":3992,"service_msg":"车价x4%","service_upgrade":1},"use_date":"1年4个月","follow_num":247,"is_heat_analysis":1,"heat_analysis":{"star_level":5,"desc":"该车性价比极高，预计1-3天内售出；好车不等人，快快预约看车吧"},"not_zhibao":0,"service_desc":[{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"1年2万公里质保","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"专人陪同办理过户","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"259项专业检测","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"14天可退","is_show":0,"title":"","msg":""}],"offer_price_info":[],"show_config":1,"service":{"service_desc":[{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"6.30万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}],"compensation_amount":"6.30万","service_security_page":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu"},"buy_car_gifts":[],"emission_standard":"国四","emission_standard_desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","emissions_standards_url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu","highlight_config_item":[{"title":"电动天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang.png","is_add":0},{"title":"座椅加热","image":"https://sta.guazistatic.com/static/c2c/app/client/jiare.png","is_add":0},{"title":"倒车雷达","image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida.png","is_add":0}],"hege_icon":"https://sta.guazistatic.com/static/c2c/app/client/hege.png","evaluator_desc":"经检测，该车骨架完好，排除事故车，火烧，水泡等特殊车况。发动机舱内部机械部件正常，无拆卸渗漏痕迹。全车原版漆面，内饰干净整洁，准新车。","evaluate_items":[{"title":"事故排查","count":30,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_accident","icon":"https://sta.guazistatic.com/static/c2c/app/client/accident.png"},{"title":"轻微碰撞","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_slight","icon":"https://sta.guazistatic.com/static/c2c/app/client/slight.png"},{"title":"易损耗部件","count":18,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_easyWear","icon":"https://sta.guazistatic.com/static/c2c/app/client/easyWear.png"},{"title":"常用功能","count":76,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_function","icon":"https://sta.guazistatic.com/static/c2c/app/client/function.png"},{"title":"启动检测","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_start","icon":"https://sta.guazistatic.com/static/c2c/app/client/start.png"},{"title":"外观内饰","count":40,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_surface","icon":"https://sta.guazistatic.com/static/c2c/app/client/surface.png"}],"report_url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0","evaluator":"","evaluate_job":"资深二手车检测师","evaluator_image":"","evaluate_time":"","evaluate_tips_desc":"以上为2018年03月07日车况，交易以复检结果为准","service_item":[{"title":"杜绝事故车","image":"https://sta.guazistatic.com/static/c2c/app/client/dujueshiguche.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"不赚差价","image":"https://sta.guazistatic.com/static/c2c/app/client/buzhuanchajia.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"售后质保","image":"https://sta.guazistatic.com/static/c2c/app/client/yinianzhibao.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"14天可退","image":"https://sta.guazistatic.com/static/c2c/app/client/14tianketui.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"}],"imageList":[{"category":"正侧","category_desc":"漆面保持较好，车身结构无修复，无重大事故","images":[{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"正前","category_desc":"前脸完好","images":[{"image":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"前排","category_desc":"车身内饰干净整洁","images":[{"image":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"后排","category_desc":"座椅几乎无损耗","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控","category_desc":"安全指示灯正常，气囊灯被动安全项正常","images":[{"image":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机舱","category_desc":"油液位及品质正常，油封不泄露，线路管无剥落","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","category_desc":"共0处","images":[]}],"phone":"4000607050","imageCategoryList":[{"category":"车身外观","images":[{"image":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控内饰","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/8783061b8d08767e3265cb5e31563d52.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/8783061b8d08767e3265cb5e31563d52.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/22664c379903fcb9d46a8b3305faacb5.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/22664c379903fcb9d46a8b3305faacb5.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/4e45bfe405781f8205190a1b38b52cf5.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/4e45bfe405781f8205190a1b38b52cf5.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/634d4bf77da10e0f5b9e3e2240b15804.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/634d4bf77da10e0f5b9e3e2240b15804.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/b40803ec556ce2ce35272efd5d12c956.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/b40803ec556ce2ce35272efd5d12c956.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/c105c8b1e1acbe4e8ac856b9f75d2b7b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/c105c8b1e1acbe4e8ac856b9f75d2b7b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/188ef8669237e08a5f2d5168f39a8718.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/188ef8669237e08a5f2d5168f39a8718.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/330f9a26e2e7a9503566c1fd64814c3c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/330f9a26e2e7a9503566c1fd64814c3c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/ee271ea9a06595eafdc7b99b813ec050.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/ee271ea9a06595eafdc7b99b813ec050.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/6a529144692ffc3c6965c6479d2b99c3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/6a529144692ffc3c6965c6479d2b99c3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机底盘","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/a98f942f85955a9a9b0568fbb3a406e6.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/a98f942f85955a9a9b0568fbb3a406e6.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/924e4ef7bc32918086048cb5c03b726c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/924e4ef7bc32918086048cb5c03b726c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/75883e805f82723c8f15a71409a0f07b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/75883e805f82723c8f15a71409a0f07b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/7ecd09c62aa7fbef7275171186f53071.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/7ecd09c62aa7fbef7275171186f53071.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/db185b9fa01a261b613e61a501d9de03.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/db185b9fa01a261b613e61a501d9de03.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/ffff6850505fadd594a368c9af85da0c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/ffff6850505fadd594a368c9af85da0c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","images":[]}],"describe_list":{"news_price_desc":"新车含税价 = 厂商公布的指导价 + 购置税费，该价格仅供参考","insurance_desc":"保险是否随车赠送，需在交易过程中与车主确认"},"bottom_tips":"此车已有247人关注，预计很快售出，建议您尽快预约看车~","bottom_icon":"https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=90&h=78&q=88","title_tag":[{"title":"保卖车","color":"#FFFFFF","background-color":"#FFA600"}],"baomai":{"title":"保卖车","image":"https://image.guazistatic.com/gz01180127/13/33/ad7c784e0a6c012a4674f8421ea5566f.png","item":["车况更好","价格公道","百家门店","当日提车"],"pop_box":{"title":"瓜子保卖车说明","item":[{"title":"车况更好","desc":"经过复检评估师二次深度检测，只为您提供更高品质的二手好车"},{"title":"价格公道","desc":"瓜子人工智能引擎根据海量历史成交数据及当前市场行情，精准定价，物有所值。"},{"title":"百家门店","desc":"上百辆好车集中存放，看车更方便"},{"title":"当日提车","desc":"随时看车，无需再次复检，最快可当日提车过户。"}]}},"isBaoMai":1,"loan_appraisal":{"title":"<span style=\"color:#495056;font-size: 12px;font-family: PingFang SC;\">在线贷款秒批，最高可贷<span style=\"color: #FF704A;\">50万<\/span><\/span>","jump":{"text":"测测贷款额度","url":"https://app2-jr.guazi.com/loan_v2/webank_pre_apply?platform=app&from=app_v4_index&ca_s=app_tg&ca_n=meizu"}},"phone_type":0,"recommend":[{"title":"别克威朗 2016款 两厢 15S 自动领先型","price":"10.20万","license_date":"2016年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180308/11/12/b1b153e5890fb350c0e4c71d9b24d02c.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.90万","puid":"3003814498","clue_id":"28949555","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动领先型","price":"10.80万","license_date":"2016年","road_haul":"3.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180128/15/06/8e510a7438400e7881bd99613f01bd52.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003565743","clue_id":"27013801","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动领先型","price":"10.98万","license_date":"2016年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171227/15/10/57708436d3a3316128a7a7b6fc9b930c.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003294784","clue_id":"24306602","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动进取型","price":"10.00万","license_date":"2016年","road_haul":"7.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171231/11/56/7dd3deebf0726532c3f012d4913ca5b0.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"15.90万","puid":"3003331577","clue_id":"24861717","sale_type":"0"},{"title":"别克威朗 2016款 两厢GS 20T 双离合纵情运动型","price":"12.68万","license_date":"2016年","road_haul":"3.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180309/13/28/e18ae68231d2e0500999b9e6777eba29.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3003821993","clue_id":"29186944","sale_type":"0"},{"title":"别克威朗 2017款 三厢 15S 自动进取型","price":"10.68万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180313/13/05/c7f1d0b96417ffc52f8cae52ed9647ed.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"15.90万","puid":"3003877839","clue_id":"29676992","sale_type":"0"},{"title":"别克威朗 2015款 三厢 20T 双离合领先型","price":"12.25万","license_date":"2016年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn1708201940114cbf093093ab99c68ce8f31c8556e68e.jpg?imageView2/2/w/280/h/180/q/88","msrp":"17.70万","puid":"3002202986","clue_id":"15954176","sale_type":"0"},{"title":"别克威朗 2017款 三厢 15S 自动领先型","price":"11.30万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180303/21/40/6eee3e3fd4671352bbf07a37599bd2e8.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003749648","clue_id":"28562515","sale_type":"0"},{"title":"别克威朗 2017款 三厢 20T 双离合精英型","price":"13.00万","license_date":"2017年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180117/19/19/a01f3ffa22a38e12a526dcda9cc363e1.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"18.80万","puid":"3003481083","clue_id":"26120082","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 手动进取型","price":"8.50万","license_date":"2016年","road_haul":"3.2万公里","gearbox":"手动","thumb_img":"https://image.guazistatic.com/gz01180228/14/57/6b683016da92978e935f9be36bf43e04.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"14.80万","puid":"3003706737","clue_id":"28237348","sale_type":"0"}],"summary":[{"label":"表显里程","value":"2.2万公里"},{"label":"2016-11上牌","value":"1年4个月"},{"label":"车牌所在地","value":"成都"},{"label":"看车地点","value":"武侯"},{"label":"迁入地为准","value":"国四","pop":{"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu"}},{"label":"变速箱","value":"自动"},{"label":"排放量","value":"1.5"},{"label":"登记证为准","value":"0次过户","pop":{"title":"过户次数提示","desc":"该次数为评估师录入时车主告知情况，具体以交易前该车辆登记证显示信息为准。"}}],"bm_address":{"title":"武侯区晋吉南路88号","distance":"6.41km","phone":"4000609047","shop_name":"瓜子保卖车场(武侯)"},"question":[{"title":"服务费怎么算","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#fuwufei"},{"title":"可否贷款","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#daikuan"},{"title":"牌照能过户吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#paizhaoguohu"},{"title":"车辆怎么过户","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu"},{"title":"保险怎么办","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#baoxian"},{"title":"车况真实吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#chekuang"}],"report_other":{"report_title":"交易前陪同买卖双方进行67项复检","report_link":"guazi://openapi/openArticleDetail?id=4606"}}
+     * data : {"car_source_status":"0","show_status":0,"title":"标致4008 2017款 350THP 精英版","clue_id":"30395853","clue_id_str":"HC-30395853","price":"16.50","price_total":"17.16","promote_price":0,"road_haul":"1.4","license":"2017-07","air_displacement":"1.6","gearbox":"自动","seller":"张先生","seller_job":"个体","transfer_num":"0","puid":"3003958625","city_id":"45","card_city":"成都","gender":"1","domain":"cd","district_name":"金堂","seller_description":"这车可新可新了，你看轮胎上胎毛还在呢。用车的机会不多，开了一万多公里大多都是城市道路行驶，这辆车就是日常家用代步，4S店保养太贵，所以在信得过的修理厂保养，因个人原因出售爱车，看到一定相中。","audit_date":"2019年7月年检到期","strong_insurance_date":"2018年7月交强险到期","insurance_date":"2018年7月商业险到期","deal_price":0,"thumb_img":"https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=280&h=180&q=88","new_price":"22.65","is_pay":1,"first_amount":"4.95","loan_amount":115500,"monthly_payment":3994,"loan_url":"https://app2-jr.guazi.com/cd/loan/4246874?title=%E7%93%9C%E5%AD%90%E5%88%86%E6%9C%9F&jr_from=detailpage&platform=app&ca_s=app_tg&ca_n=meizu","loanInfo":"<span style=\"color: #38b44c;font-size: 12px;font-family: PingFang SC;\"><span style=\"font-size: 20px;\">4.95<\/span><span style=\"font-size:18px;\">万<\/span>开回家<\/span>","subtitle":"帮我看看这辆车怎么样？我还挺喜欢的","wap_url":"https://m.guazi.com/cd/3003958625x?ca_s=app_tg&ca_n=meizu","wap_share_icon":"https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=96&h=72&q=88","is_collection":0,"car_hot_params":[{"title":"4s店保养","color":"#888888"},{"title":"0过户","color":"#888888"},{"title":"准新车","color":"#888888"}],"service_charge":{"msg":"车价x4%","service_price":6600,"service_msg":"车价x4%","service_upgrade":1,"total_desc":"服务费6600元（车价x4%）"},"use_date":"10个月","follow_num":51,"is_heat_analysis":1,"heat_analysis":{"star_level":4,"desc":"该车性价比较高，预计3~7天内售出；好车不等人，快快预约看车吧"},"not_zhibao":0,"service_desc":[{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"1年2万公里质保","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"专人陪同办理过户","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"259项专业检测","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"14天可退","is_show":0,"title":"","msg":""}],"offer_price_info":[],"show_config":1,"service":{"service_desc":[{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"9.20万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}],"compensation_amount":"9.20万","service_security_page":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu"},"buy_car_gifts":[],"emission_standard":"国五","emission_standard_desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","emissions_standards_url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu","highlight_config_item":[{"title":"电动天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang_v2.png","is_add":0},{"title":"倒车雷达","image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida_v2.png","is_add":0},{"title":"全景天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/quanjing.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/quanjingtianchuang_v2.png","is_add":0}],"hege_icon":"https://sta.guazistatic.com/static/c2c/app/client/hege.png","evaluator_desc":"经检测:该车骨架完好，排除事故车、火烧、水泡等特殊车况，发动机舱内部机械部件正常，发动机变速箱无拆卸，无渗油现象。内饰干净整洁，变速箱换挡平顺，外观有轻微喷漆修复，修复工艺优秀，综合车况优秀，值得入手。","evaluate_items":[{"title":"事故排查","count":30,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_accident","icon":"https://sta.guazistatic.com/static/c2c/app/client/accident.png"},{"title":"轻微碰撞","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_slight","icon":"https://sta.guazistatic.com/static/c2c/app/client/slight.png"},{"title":"易损耗部件","count":18,"fails":1,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_easyWear","icon":"https://sta.guazistatic.com/static/c2c/app/client/easyWear.png"},{"title":"常用功能","count":76,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_function","icon":"https://sta.guazistatic.com/static/c2c/app/client/function.png"},{"title":"启动检测","count":13,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_start","icon":"https://sta.guazistatic.com/static/c2c/app/client/start.png"},{"title":"外观内饰","count":41,"fails":2,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_surface","icon":"https://sta.guazistatic.com/static/c2c/app/client/surface.png"}],"report_url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0","evaluator":"","evaluate_job":"高级车辆评估师","evaluator_image":"","evaluate_time":"","evaluate_tips_desc":"以上为2018年03月19日车况，交易以复检结果为准","service_item":[{"title":"杜绝事故车","image":"https://sta.guazistatic.com/static/c2c/app/client/dujueshiguche.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"不赚差价","image":"https://sta.guazistatic.com/static/c2c/app/client/buzhuanchajia.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"售后质保","image":"https://sta.guazistatic.com/static/c2c/app/client/yinianzhibao.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"14天可退","image":"https://sta.guazistatic.com/static/c2c/app/client/14tianketui.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"}],"imageList":[{"category":"正侧","category_desc":"漆面保持较好，车身结构无修复，无重大事故","images":[{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"正前","category_desc":"前脸完好","images":[{"image":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"前排","category_desc":"车身内饰干净整洁","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"后排","category_desc":"座椅几乎无损耗","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控","category_desc":"安全指示灯正常，气囊灯被动安全项正常","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机舱","category_desc":"油液位及品质正常，油封不泄露，线路管无剥落","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","category_desc":"共0处","images":[]}],"phone":"4000607050","imageCategoryList":[{"category":"车身外观","images":[{"image":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控内饰","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/738c6b11b4f5f7c64b0b2f46f7e9abe0.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/738c6b11b4f5f7c64b0b2f46f7e9abe0.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/7a3c11d54d2cb033acbaa456c9c59850.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/7a3c11d54d2cb033acbaa456c9c59850.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/00859c2287a4d3fb9bf8c38386853dc3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/00859c2287a4d3fb9bf8c38386853dc3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/ea32ee5fd6f4178b624c0342dd4f16a6.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/ea32ee5fd6f4178b624c0342dd4f16a6.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/519954622bf831a769a18f4fe2d6ccb0.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/519954622bf831a769a18f4fe2d6ccb0.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/70e4ec122cd1e73e200804559356242d.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/70e4ec122cd1e73e200804559356242d.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/afee6c20bb252fc88a4b912802897aab.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/afee6c20bb252fc88a4b912802897aab.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/d7d755eb6614603b948dab7a9d84af83.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/d7d755eb6614603b948dab7a9d84af83.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/9054b5ef7060799fc677853224bcf57f.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/9054b5ef7060799fc677853224bcf57f.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/8e212ea5598a2d1e5fa5c5a6c05bba7b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/8e212ea5598a2d1e5fa5c5a6c05bba7b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机底盘","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/96654ae329ecad76c4061db279e8898a.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/96654ae329ecad76c4061db279e8898a.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/380fbe0a9d939f7498caf4e6a9991418.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/380fbe0a9d939f7498caf4e6a9991418.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/9e438c91cbbc0362fd7792c69482db95.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/9e438c91cbbc0362fd7792c69482db95.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/03c68d1029c5a72942a5e59582145f49.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/03c68d1029c5a72942a5e59582145f49.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/34c102fc87b84f7f8685d6b7b7ef7411.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/34c102fc87b84f7f8685d6b7b7ef7411.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/e3671ced49534568608a3489b980c9d2.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/e3671ced49534568608a3489b980c9d2.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","images":[]}],"describe_list":{"news_price_desc":"新车含税价 = 厂商公布的指导价 + 购置税费，该价格仅供参考","insurance_desc":"保险是否随车赠送，需在交易过程中与车主确认"},"bottom_tips":"此车已有51人关注，预计很快售出，建议您尽快预约看车~","bottom_icon":"https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=90&h=78&q=88","title_tag":[],"baomai":{},"isBaoMai":0,"loan_appraisal":{"title":"<span style=\"color:#495056;font-size: 12px;font-family: PingFang SC;\">在线贷款秒批，最高可贷<span style=\"color: #FF704A;\">50万<\/span><\/span>","jump":{"text":"测测贷款额度","url":"https://app2-jr.guazi.com/loan_v2/webank_pre_apply?platform=app&from=app_v4_index&ca_s=app_tg&ca_n=meizu"}},"phone_type":0,"recommend":[{"title":"标致4008 2017款 350THP 精英版","price":"16.60万","license_date":"2017年","road_haul":"1.5万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505144327bb57882e23fc0a111b7f19b865b6beae.jpg?imageView2/2/w/280/h/180/q/88","msrp":"22.70万","puid":"3004498080","clue_id":"35037217","sale_type":"0"},{"title":"标致4008 2017款 350THP 精英版","price":"17.00万","license_date":"2017年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180304/11/59/105e7a0a395979e0b69a5697cff16940.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.70万","puid":"3003753639","clue_id":"28643742","sale_type":"0"},{"title":"标致4008 2017款 350THP 精英版","price":"16.50万","license_date":"2017年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180422/18/20/c45bb166808baee8c751d4589547dda9.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.70万","puid":"3004361997","clue_id":"34020791","sale_type":"0"},{"title":"雷诺科雷傲 2017款 2.0L 两驱豪华版","price":"16.50万","license_date":"2017年","road_haul":"0.7万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180227/16/43/38c4b0d889f5cd4fa18c088e571855d4.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3003697255","clue_id":"28085008","sale_type":"0"},{"title":"福特蒙迪欧 2017款 EcoBoost 200 时尚型","price":"16.60万","license_date":"2017年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180508/18/41/20269f940eda22bda224e8ff6561951d.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3004538866","clue_id":"35422430","sale_type":"0"},{"title":"福特蒙迪欧 2017款 EcoBoost 180 豪华型","price":"16.50万","license_date":"2017年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01170914/16/26/05b9c0c3cebb09a8a6a0800311d6ed49.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"23.20万","puid":"3002374519","clue_id":"17144273","sale_type":"0"},{"title":"标致4008 2017款 350THP 豪华版","price":"19.50万","license_date":"2017年","road_haul":"0.8万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180422/16/17/04190e6e50df4bd97c948c3e0432c8c8.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"25.00万","puid":"3004367280","clue_id":"34066264","sale_type":"0"},{"title":"荣威RX5 2016款 30T 四驱自动互联网智尊版","price":"14.90万","license_date":"2017年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180415/12/40/332d0d1e95b6d6d79e7f7798a5f7a6ca.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.30万","puid":"3004276127","clue_id":"33412683","sale_type":"0"},{"title":"奥迪A6L 2009款 2.0 TFSI 手动标准型","price":"12.50万","license_date":"2010年","road_haul":"9.6万公里","gearbox":"手动","thumb_img":"https://image1.guazistatic.com/qn171206151523c74690fc5e5cbe69f72015b09695203c.jpg?imageView2/2/w/280/h/180/q/88","msrp":"40.40万","puid":"3003073225","clue_id":"21914400","sale_type":"0"},{"title":"大众途观 2016款 280TSI 自动两驱丝绸之路风尚版","price":"16.30万","license_date":"2017年","road_haul":"0.6万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180430/12/48/0fe98717cd3d19148d2586a9429598d9.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"21.70万","puid":"3004441568","clue_id":"34710232","sale_type":"0"},{"title":"大众凌渡 2017款 280TSI DSG舒适版","price":"16.00万","license_date":"2017年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180416/20/16/dbe02bcbe718d5e68e0d310cca82e0cc.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.00万","puid":"3004295443","clue_id":"33458146","sale_type":"0"},{"title":"福特翼虎 2017款 EcoBoost 180 两驱精翼型","price":"14.60万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180411/15/36/593c8ced2b83ddd451899972dfb6a9c0.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.10万","puid":"3004233254","clue_id":"32862118","sale_type":"0"},{"title":"标致408 2018款 350THP 自动豪华版","price":"11.80万","license_date":"2018年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180410/09/37/b999294eba2faffa34cd00bf4628d149.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"17.60万","puid":"3004213208","clue_id":"32824884","sale_type":"0"},{"title":"标致408 2018款 350THP 自动豪华版","price":"12.10万","license_date":"2017年","road_haul":"0.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180409/10/05/78ca046203fb8511a9e32315ef661709.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"17.60万","puid":"3004200336","clue_id":"32613766","sale_type":"0"},{"title":"别克昂科威 2017款 20T 两驱领先型","price":"18.00万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171226/16/13/5436090de6976c914baa65bb8a2c12e2.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"23.90万","puid":"3003285148","clue_id":"24401005","sale_type":"0"},{"title":"别克昂科威 2016款 20T 两驱精英型","price":"16.98万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180427/20/29/af0fe83adfb1553182f574512b6911d3.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"25.60万","puid":"3004418771","clue_id":"34292200","sale_type":"0"},{"title":"斯巴鲁XV 2012款 2.0i 精英导航版","price":"12.50万","license_date":"2013年","road_haul":"8.4万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505115437ac198d682abadece3daefbfe0b8f6613.jpg?imageView2/2/w/280/h/180/q/88","msrp":"24.70万","puid":"3004496596","clue_id":"34478539","sale_type":"0"},{"title":"大众途观 2010款 2.0TSI 自动四驱旗舰版","price":"12.50万","license_date":"2010年","road_haul":"11.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180402/19/59/580ed93349771f428ba1f66c5423ff0f.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"32.00万","puid":"3004133522","clue_id":"32035438","sale_type":"0"},{"title":"别克昂科威 2017款 20T 两驱精英型","price":"16.90万","license_date":"2016年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505134728d1f9a89c300bc3992c7bc93a7ea013e5.jpg?imageView2/2/w/280/h/180/q/88","msrp":"25.60万","puid":"3004520898","clue_id":"35161255","sale_type":"0"},{"title":"马自达CX-5 2017款 2.0L 自动两驱智尚型","price":"17.60万","license_date":"2017年","road_haul":"0.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180503/17/18/afbf674b4b28f52fc18a64a91b628078.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.60万","puid":"3004476127","clue_id":"34928270","sale_type":"0"}],"summary":[{"label":"表显里程","value":"1.4万公里"},{"label":"2017-07上牌","value":"10个月"},{"label":"车牌所在地","value":"成都"},{"label":"看车地点","value":"金堂"},{"label":"迁入地为准","value":"国五","pop":{"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu"}},{"label":"变速箱","value":"自动"},{"label":"排放量","value":"1.6"},{"label":"登记证为准","value":"0次过户","pop":{"title":"过户次数提示","desc":"该次数为评估师录入时车主告知情况，具体以交易前该车辆登记证显示信息为准。"}},{"label":"年检到期","value":"2019.7"},{"label":"交强险到期","value":"2018.7"},{"label":"商业险到期","value":"2018.7","pop":{"title":"商业保险提示","desc":"保险是否随车赠送，需在交易过程中与车主确认"}}],"bm_address":{},"question":[{"title":"服务费怎么算","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#fuwufei"},{"title":"可否贷款","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#daikuan"},{"title":"牌照能过户吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#paizhaoguohu"},{"title":"车辆怎么过户","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu"},{"title":"保险怎么办","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#baoxian"},{"title":"车况真实吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#chekuang"}],"report_other":{"report_title":"交易前陪同买卖双方进行67项复检","report_link":"guazi://openapi/openArticleDetail?id=4606"},"service_status":0,"price_content":"含车主报价、服务费、养护服务费","price_popup":[],"online":{"inquiry_price":"guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23base-price%3Fpuid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631","bargain":"guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23bargain%3Foperator%3Dbuyer%26puid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631"}}
      */
 
     private int code;
@@ -48,83 +46,88 @@ public class SourceDetailEntity {
         /**
          * car_source_status : 0
          * show_status : 0
-         * title : 别克威朗 2016款 两厢 15S 自动领先型
-         * clue_id : 28416715
-         * clue_id_str : HC-28416715
-         * price : 9.98
+         * title : 标致4008 2017款 350THP 精英版
+         * clue_id : 30395853
+         * clue_id_str : HC-30395853
+         * price : 16.50
+         * price_total : 17.16
          * promote_price : 0
-         * road_haul : 2.2
-         * license : 2016-11
-         * air_displacement : 1.5
+         * road_haul : 1.4
+         * license : 2017-07
+         * air_displacement : 1.6
          * gearbox : 自动
-         * seller : 苏先生
-         * seller_job : 自由职业
+         * seller : 张先生
+         * seller_job : 个体
          * transfer_num : 0
-         * puid : 3003793877
+         * puid : 3003958625
          * city_id : 45
          * card_city : 成都
          * gender : 1
          * domain : cd
-         * district_name : 武侯
-         * seller_description : 我的这辆车刚用了一年多一点，用车时也很在意，外观内饰非常干净。我这车才两三万公里，简直就是准新车，我的车基本都没怎么出过市区，底盘非常整，城市驾驶很得心应手，油耗表现也很满意。这辆车就是日常家用代步，一直都是在4S店做的保养，这车用着一直不错，只不过现在家底殷实了，想换一辆豪华点、上档次的新车。
-         * audit_date : 2018年11月年检到期
-         * strong_insurance_date : 2018年11月交强险到期
-         * insurance_date : 商业险已过期
+         * district_name : 金堂
+         * seller_description : 这车可新可新了，你看轮胎上胎毛还在呢。用车的机会不多，开了一万多公里大多都是城市道路行驶，这辆车就是日常家用代步，4S店保养太贵，所以在信得过的修理厂保养，因个人原因出售爱车，看到一定相中。
+         * audit_date : 2019年7月年检到期
+         * strong_insurance_date : 2018年7月交强险到期
+         * insurance_date : 2018年7月商业险到期
          * deal_price : 0
-         * thumb_img : https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=280&h=180&q=88
-         * new_price : 16.92
+         * thumb_img : https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=280&h=180&q=88
+         * new_price : 22.65
          * is_pay : 1
-         * first_amount : 2.99
-         * loan_amount : 69860
-         * monthly_payment : 2416
-         * loan_url : https://app2-jr.guazi.com/cd/loan/4082278?title=%E7%93%9C%E5%AD%90%E5%88%86%E6%9C%9F&jr_from=detailpage&platform=app&ca_s=app_tg&ca_n=meizu
-         * loanInfo : <span style="color: #38b44c;font-size: 12px;font-family: PingFang SC;"><span style="font-size: 20px;">2.99</span><span style="font-size:18px;">万</span>开回家</span>
+         * first_amount : 4.95
+         * loan_amount : 115500
+         * monthly_payment : 3994
+         * loan_url : https://app2-jr.guazi.com/cd/loan/4246874?title=%E7%93%9C%E5%AD%90%E5%88%86%E6%9C%9F&jr_from=detailpage&platform=app&ca_s=app_tg&ca_n=meizu
+         * loanInfo : <span style="color: #38b44c;font-size: 12px;font-family: PingFang SC;"><span style="font-size: 20px;">4.95</span><span style="font-size:18px;">万</span>开回家</span>
          * subtitle : 帮我看看这辆车怎么样？我还挺喜欢的
-         * wap_url : https://m.guazi.com/cd/3003793877x?ca_s=app_tg&ca_n=meizu
-         * wap_share_icon : https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=96&h=72&q=88
+         * wap_url : https://m.guazi.com/cd/3003958625x?ca_s=app_tg&ca_n=meizu
+         * wap_share_icon : https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=96&h=72&q=88
          * is_collection : 0
-         * car_hot_params : [{"title":"0过户","color":"#888888"},{"title":"超值","color":"#888888"}]
-         * service_charge : {"service_price":3992,"service_msg":"车价x4%","service_upgrade":1}
-         * use_date : 1年4个月
-         * follow_num : 247
+         * car_hot_params : [{"title":"4s店保养","color":"#888888"},{"title":"0过户","color":"#888888"},{"title":"准新车","color":"#888888"}]
+         * service_charge : {"msg":"车价x4%","service_price":6600,"service_msg":"车价x4%","service_upgrade":1,"total_desc":"服务费6600元（车价x4%）"}
+         * use_date : 10个月
+         * follow_num : 51
          * is_heat_analysis : 1
-         * heat_analysis : {"star_level":5,"desc":"该车性价比极高，预计1-3天内售出；好车不等人，快快预约看车吧"}
+         * heat_analysis : {"star_level":4,"desc":"该车性价比较高，预计3~7天内售出；好车不等人，快快预约看车吧"}
          * not_zhibao : 0
          * service_desc : [{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"1年2万公里质保","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"专人陪同办理过户","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"259项专业检测","is_show":0,"title":"","msg":""},{"icon":"https://sta.guazistatic.com/static/c2c/app/client/baogao_no.png","text":"14天可退","is_show":0,"title":"","msg":""}]
          * offer_price_info : []
          * show_config : 1
-         * service : {"service_desc":[{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"6.30万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}],"compensation_amount":"6.30万","service_security_page":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu"}
+         * service : {"service_desc":[{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"9.20万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}],"compensation_amount":"9.20万","service_security_page":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu"}
          * buy_car_gifts : []
-         * emission_standard : 国四
+         * emission_standard : 国五
          * emission_standard_desc : 各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。
-         * emissions_standards_url : https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu
-         * highlight_config_item : [{"title":"电动天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang.png","is_add":0},{"title":"座椅加热","image":"https://sta.guazistatic.com/static/c2c/app/client/jiare.png","is_add":0},{"title":"倒车雷达","image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida.png","is_add":0}]
+         * emissions_standards_url : https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu
+         * highlight_config_item : [{"title":"电动天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang_v2.png","is_add":0},{"title":"倒车雷达","image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/daocheleida_v2.png","is_add":0},{"title":"全景天窗","image":"https://sta.guazistatic.com/static/c2c/app/client/quanjing.png","new_image":"https://sta.guazistatic.com/static/c2c/app/client/quanjingtianchuang_v2.png","is_add":0}]
          * hege_icon : https://sta.guazistatic.com/static/c2c/app/client/hege.png
-         * evaluator_desc : 经检测，该车骨架完好，排除事故车，火烧，水泡等特殊车况。发动机舱内部机械部件正常，无拆卸渗漏痕迹。全车原版漆面，内饰干净整洁，准新车。
-         * evaluate_items : [{"title":"事故排查","count":30,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_accident","icon":"https://sta.guazistatic.com/static/c2c/app/client/accident.png"},{"title":"轻微碰撞","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_slight","icon":"https://sta.guazistatic.com/static/c2c/app/client/slight.png"},{"title":"易损耗部件","count":18,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_easyWear","icon":"https://sta.guazistatic.com/static/c2c/app/client/easyWear.png"},{"title":"常用功能","count":76,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_function","icon":"https://sta.guazistatic.com/static/c2c/app/client/function.png"},{"title":"启动检测","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_start","icon":"https://sta.guazistatic.com/static/c2c/app/client/start.png"},{"title":"外观内饰","count":40,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_surface","icon":"https://sta.guazistatic.com/static/c2c/app/client/surface.png"}]
-         * report_url : https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0
+         * evaluator_desc : 经检测:该车骨架完好，排除事故车、火烧、水泡等特殊车况，发动机舱内部机械部件正常，发动机变速箱无拆卸，无渗油现象。内饰干净整洁，变速箱换挡平顺，外观有轻微喷漆修复，修复工艺优秀，综合车况优秀，值得入手。
+         * evaluate_items : [{"title":"事故排查","count":30,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_accident","icon":"https://sta.guazistatic.com/static/c2c/app/client/accident.png"},{"title":"轻微碰撞","count":14,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_slight","icon":"https://sta.guazistatic.com/static/c2c/app/client/slight.png"},{"title":"易损耗部件","count":18,"fails":1,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_easyWear","icon":"https://sta.guazistatic.com/static/c2c/app/client/easyWear.png"},{"title":"常用功能","count":76,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_function","icon":"https://sta.guazistatic.com/static/c2c/app/client/function.png"},{"title":"启动检测","count":13,"fails":0,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_start","icon":"https://sta.guazistatic.com/static/c2c/app/client/start.png"},{"title":"外观内饰","count":41,"fails":2,"url":"https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_surface","icon":"https://sta.guazistatic.com/static/c2c/app/client/surface.png"}]
+         * report_url : https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0
          * evaluator :
-         * evaluate_job : 资深二手车检测师
+         * evaluate_job : 高级车辆评估师
          * evaluator_image :
          * evaluate_time :
-         * evaluate_tips_desc : 以上为2018年03月07日车况，交易以复检结果为准
+         * evaluate_tips_desc : 以上为2018年03月19日车况，交易以复检结果为准
          * service_item : [{"title":"杜绝事故车","image":"https://sta.guazistatic.com/static/c2c/app/client/dujueshiguche.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"不赚差价","image":"https://sta.guazistatic.com/static/c2c/app/client/buzhuanchajia.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"售后质保","image":"https://sta.guazistatic.com/static/c2c/app/client/yinianzhibao.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"},{"title":"14天可退","image":"https://sta.guazistatic.com/static/c2c/app/client/14tianketui.png","url":"https://guaziapp-m.guazi.com/cd/intro?from=appDetail&ca_s=app_tg&ca_n=meizu"}]
-         * imageList : [{"category":"正侧","category_desc":"漆面保持较好，车身结构无修复，无重大事故","images":[{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"正前","category_desc":"前脸完好","images":[{"image":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"前排","category_desc":"车身内饰干净整洁","images":[{"image":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"后排","category_desc":"座椅几乎无损耗","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控","category_desc":"安全指示灯正常，气囊灯被动安全项正常","images":[{"image":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机舱","category_desc":"油液位及品质正常，油封不泄露，线路管无剥落","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","category_desc":"共0处","images":[]}]
+         * imageList : [{"category":"正侧","category_desc":"漆面保持较好，车身结构无修复，无重大事故","images":[{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"正前","category_desc":"前脸完好","images":[{"image":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/190/h/144/q/88"}]},{"category":"前排","category_desc":"车身内饰干净整洁","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"后排","category_desc":"座椅几乎无损耗","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控","category_desc":"安全指示灯正常，气囊灯被动安全项正常","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机舱","category_desc":"油液位及品质正常，油封不泄露，线路管无剥落","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","category_desc":"共0处","images":[]}]
          * phone : 4000607050
-         * imageCategoryList : [{"category":"车身外观","images":[{"image":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控内饰","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/8783061b8d08767e3265cb5e31563d52.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/8783061b8d08767e3265cb5e31563d52.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6691daf98b2464bb523852c5cb4ed0be.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/22664c379903fcb9d46a8b3305faacb5.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/22664c379903fcb9d46a8b3305faacb5.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/4e45bfe405781f8205190a1b38b52cf5.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/4e45bfe405781f8205190a1b38b52cf5.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/634d4bf77da10e0f5b9e3e2240b15804.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/634d4bf77da10e0f5b9e3e2240b15804.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/b40803ec556ce2ce35272efd5d12c956.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/b40803ec556ce2ce35272efd5d12c956.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/c105c8b1e1acbe4e8ac856b9f75d2b7b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/c105c8b1e1acbe4e8ac856b9f75d2b7b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/188ef8669237e08a5f2d5168f39a8718.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/188ef8669237e08a5f2d5168f39a8718.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/330f9a26e2e7a9503566c1fd64814c3c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/330f9a26e2e7a9503566c1fd64814c3c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/6c918adea35bde856a1f16b36c5d0858.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/f50c247139f3095386d2e5ca49757e4b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/19/ee271ea9a06595eafdc7b99b813ec050.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/19/ee271ea9a06595eafdc7b99b813ec050.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/6a529144692ffc3c6965c6479d2b99c3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/6a529144692ffc3c6965c6479d2b99c3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机底盘","images":[{"image":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/372c63ce3de7e183bd762a4b7c6617d8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/a98f942f85955a9a9b0568fbb3a406e6.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/a98f942f85955a9a9b0568fbb3a406e6.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/924e4ef7bc32918086048cb5c03b726c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/924e4ef7bc32918086048cb5c03b726c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/75883e805f82723c8f15a71409a0f07b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/75883e805f82723c8f15a71409a0f07b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/7ecd09c62aa7fbef7275171186f53071.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/7ecd09c62aa7fbef7275171186f53071.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/db185b9fa01a261b613e61a501d9de03.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/db185b9fa01a261b613e61a501d9de03.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/ffff6850505fadd594a368c9af85da0c.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/ffff6850505fadd594a368c9af85da0c.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","images":[]}]
+         * imageCategoryList : [{"category":"车身外观","images":[{"image":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"中控内饰","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/738c6b11b4f5f7c64b0b2f46f7e9abe0.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/738c6b11b4f5f7c64b0b2f46f7e9abe0.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/4e53f4dd1b9f4a22d20b89111655b683.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/7a3c11d54d2cb033acbaa456c9c59850.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/7a3c11d54d2cb033acbaa456c9c59850.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/00859c2287a4d3fb9bf8c38386853dc3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/00859c2287a4d3fb9bf8c38386853dc3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/ea32ee5fd6f4178b624c0342dd4f16a6.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/ea32ee5fd6f4178b624c0342dd4f16a6.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/519954622bf831a769a18f4fe2d6ccb0.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/519954622bf831a769a18f4fe2d6ccb0.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/70e4ec122cd1e73e200804559356242d.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/70e4ec122cd1e73e200804559356242d.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/afee6c20bb252fc88a4b912802897aab.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/afee6c20bb252fc88a4b912802897aab.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/d7d755eb6614603b948dab7a9d84af83.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/d7d755eb6614603b948dab7a9d84af83.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/fe98b7b0197dee57c08c5a32eed28f25.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/6c7b067ae03baf5fb2fe7b2bdf78b3d3.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/9054b5ef7060799fc677853224bcf57f.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/9054b5ef7060799fc677853224bcf57f.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/8e212ea5598a2d1e5fa5c5a6c05bba7b.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/8e212ea5598a2d1e5fa5c5a6c05bba7b.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"发动机底盘","images":[{"image":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/f1e95f5e850c357f82b0cf745f63dfbf.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/96654ae329ecad76c4061db279e8898a.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/96654ae329ecad76c4061db279e8898a.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/380fbe0a9d939f7498caf4e6a9991418.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/380fbe0a9d939f7498caf4e6a9991418.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/9e438c91cbbc0362fd7792c69482db95.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/9e438c91cbbc0362fd7792c69482db95.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/03c68d1029c5a72942a5e59582145f49.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/03c68d1029c5a72942a5e59582145f49.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/34c102fc87b84f7f8685d6b7b7ef7411.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/34c102fc87b84f7f8685d6b7b7ef7411.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/e3671ced49534568608a3489b980c9d2.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/e3671ced49534568608a3489b980c9d2.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]},{"category":"瑕疵","images":[]}]
          * describe_list : {"news_price_desc":"新车含税价 = 厂商公布的指导价 + 购置税费，该价格仅供参考","insurance_desc":"保险是否随车赠送，需在交易过程中与车主确认"}
-         * bottom_tips : 此车已有247人关注，预计很快售出，建议您尽快预约看车~
-         * bottom_icon : https://image.guazistatic.com/gz01180307/12/19/8bb1c0018832d0d90f68a782fa7263df.jpg@base@tag=imgScale&w=90&h=78&q=88
-         * title_tag : [{"title":"保卖车","color":"#FFFFFF","background-color":"#FFA600"}]
-         * baomai : {"title":"保卖车","image":"https://image.guazistatic.com/gz01180127/13/33/ad7c784e0a6c012a4674f8421ea5566f.png","item":["车况更好","价格公道","百家门店","当日提车"],"pop_box":{"title":"瓜子保卖车说明","item":[{"title":"车况更好","desc":"经过复检评估师二次深度检测，只为您提供更高品质的二手好车"},{"title":"价格公道","desc":"瓜子人工智能引擎根据海量历史成交数据及当前市场行情，精准定价，物有所值。"},{"title":"百家门店","desc":"上百辆好车集中存放，看车更方便"},{"title":"当日提车","desc":"随时看车，无需再次复检，最快可当日提车过户。"}]}}
-         * isBaoMai : 1
+         * bottom_tips : 此车已有51人关注，预计很快售出，建议您尽快预约看车~
+         * bottom_icon : https://image.guazistatic.com/gz01180319/16/47/d07292e9a6ba34ccd7b55e0f9ff6244e.jpg@base@tag=imgScale&w=90&h=78&q=88
+         * title_tag : []
+         * baomai : {}
+         * isBaoMai : 0
          * loan_appraisal : {"title":"<span style=\"color:#495056;font-size: 12px;font-family: PingFang SC;\">在线贷款秒批，最高可贷<span style=\"color: #FF704A;\">50万<\/span><\/span>","jump":{"text":"测测贷款额度","url":"https://app2-jr.guazi.com/loan_v2/webank_pre_apply?platform=app&from=app_v4_index&ca_s=app_tg&ca_n=meizu"}}
          * phone_type : 0
-         * recommend : [{"title":"别克威朗 2016款 两厢 15S 自动领先型","price":"10.20万","license_date":"2016年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180308/11/12/b1b153e5890fb350c0e4c71d9b24d02c.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.90万","puid":"3003814498","clue_id":"28949555","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动领先型","price":"10.80万","license_date":"2016年","road_haul":"3.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180128/15/06/8e510a7438400e7881bd99613f01bd52.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003565743","clue_id":"27013801","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动领先型","price":"10.98万","license_date":"2016年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171227/15/10/57708436d3a3316128a7a7b6fc9b930c.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003294784","clue_id":"24306602","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 自动进取型","price":"10.00万","license_date":"2016年","road_haul":"7.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171231/11/56/7dd3deebf0726532c3f012d4913ca5b0.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"15.90万","puid":"3003331577","clue_id":"24861717","sale_type":"0"},{"title":"别克威朗 2016款 两厢GS 20T 双离合纵情运动型","price":"12.68万","license_date":"2016年","road_haul":"3.0万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180309/13/28/e18ae68231d2e0500999b9e6777eba29.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3003821993","clue_id":"29186944","sale_type":"0"},{"title":"别克威朗 2017款 三厢 15S 自动进取型","price":"10.68万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180313/13/05/c7f1d0b96417ffc52f8cae52ed9647ed.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"15.90万","puid":"3003877839","clue_id":"29676992","sale_type":"0"},{"title":"别克威朗 2015款 三厢 20T 双离合领先型","price":"12.25万","license_date":"2016年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn1708201940114cbf093093ab99c68ce8f31c8556e68e.jpg?imageView2/2/w/280/h/180/q/88","msrp":"17.70万","puid":"3002202986","clue_id":"15954176","sale_type":"0"},{"title":"别克威朗 2017款 三厢 15S 自动领先型","price":"11.30万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180303/21/40/6eee3e3fd4671352bbf07a37599bd2e8.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"16.80万","puid":"3003749648","clue_id":"28562515","sale_type":"0"},{"title":"别克威朗 2017款 三厢 20T 双离合精英型","price":"13.00万","license_date":"2017年","road_haul":"2.1万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180117/19/19/a01f3ffa22a38e12a526dcda9cc363e1.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"18.80万","puid":"3003481083","clue_id":"26120082","sale_type":"0"},{"title":"别克威朗 2015款 三厢 15S 手动进取型","price":"8.50万","license_date":"2016年","road_haul":"3.2万公里","gearbox":"手动","thumb_img":"https://image.guazistatic.com/gz01180228/14/57/6b683016da92978e935f9be36bf43e04.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"14.80万","puid":"3003706737","clue_id":"28237348","sale_type":"0"}]
-         * summary : [{"label":"表显里程","value":"2.2万公里"},{"label":"2016-11上牌","value":"1年4个月"},{"label":"车牌所在地","value":"成都"},{"label":"看车地点","value":"武侯"},{"label":"迁入地为准","value":"国四","pop":{"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu"}},{"label":"变速箱","value":"自动"},{"label":"排放量","value":"1.5"},{"label":"登记证为准","value":"0次过户","pop":{"title":"过户次数提示","desc":"该次数为评估师录入时车主告知情况，具体以交易前该车辆登记证显示信息为准。"}}]
-         * bm_address : {"title":"武侯区晋吉南路88号","distance":"6.41km","phone":"4000609047","shop_name":"瓜子保卖车场(武侯)"}
-         * question : [{"title":"服务费怎么算","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#fuwufei"},{"title":"可否贷款","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#daikuan"},{"title":"牌照能过户吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#paizhaoguohu"},{"title":"车辆怎么过户","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu"},{"title":"保险怎么办","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#baoxian"},{"title":"车况真实吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#chekuang"}]
+         * recommend : [{"title":"标致4008 2017款 350THP 精英版","price":"16.60万","license_date":"2017年","road_haul":"1.5万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505144327bb57882e23fc0a111b7f19b865b6beae.jpg?imageView2/2/w/280/h/180/q/88","msrp":"22.70万","puid":"3004498080","clue_id":"35037217","sale_type":"0"},{"title":"标致4008 2017款 350THP 精英版","price":"17.00万","license_date":"2017年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180304/11/59/105e7a0a395979e0b69a5697cff16940.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.70万","puid":"3003753639","clue_id":"28643742","sale_type":"0"},{"title":"标致4008 2017款 350THP 精英版","price":"16.50万","license_date":"2017年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180422/18/20/c45bb166808baee8c751d4589547dda9.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.70万","puid":"3004361997","clue_id":"34020791","sale_type":"0"},{"title":"雷诺科雷傲 2017款 2.0L 两驱豪华版","price":"16.50万","license_date":"2017年","road_haul":"0.7万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180227/16/43/38c4b0d889f5cd4fa18c088e571855d4.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3003697255","clue_id":"28085008","sale_type":"0"},{"title":"福特蒙迪欧 2017款 EcoBoost 200 时尚型","price":"16.60万","license_date":"2017年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180508/18/41/20269f940eda22bda224e8ff6561951d.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"22.30万","puid":"3004538866","clue_id":"35422430","sale_type":"0"},{"title":"福特蒙迪欧 2017款 EcoBoost 180 豪华型","price":"16.50万","license_date":"2017年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01170914/16/26/05b9c0c3cebb09a8a6a0800311d6ed49.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"23.20万","puid":"3002374519","clue_id":"17144273","sale_type":"0"},{"title":"标致4008 2017款 350THP 豪华版","price":"19.50万","license_date":"2017年","road_haul":"0.8万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180422/16/17/04190e6e50df4bd97c948c3e0432c8c8.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"25.00万","puid":"3004367280","clue_id":"34066264","sale_type":"0"},{"title":"荣威RX5 2016款 30T 四驱自动互联网智尊版","price":"14.90万","license_date":"2017年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180415/12/40/332d0d1e95b6d6d79e7f7798a5f7a6ca.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.30万","puid":"3004276127","clue_id":"33412683","sale_type":"0"},{"title":"奥迪A6L 2009款 2.0 TFSI 手动标准型","price":"12.50万","license_date":"2010年","road_haul":"9.6万公里","gearbox":"手动","thumb_img":"https://image1.guazistatic.com/qn171206151523c74690fc5e5cbe69f72015b09695203c.jpg?imageView2/2/w/280/h/180/q/88","msrp":"40.40万","puid":"3003073225","clue_id":"21914400","sale_type":"0"},{"title":"大众途观 2016款 280TSI 自动两驱丝绸之路风尚版","price":"16.30万","license_date":"2017年","road_haul":"0.6万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180430/12/48/0fe98717cd3d19148d2586a9429598d9.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"21.70万","puid":"3004441568","clue_id":"34710232","sale_type":"0"},{"title":"大众凌渡 2017款 280TSI DSG舒适版","price":"16.00万","license_date":"2017年","road_haul":"1.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180416/20/16/dbe02bcbe718d5e68e0d310cca82e0cc.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.00万","puid":"3004295443","clue_id":"33458146","sale_type":"0"},{"title":"福特翼虎 2017款 EcoBoost 180 两驱精翼型","price":"14.60万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180411/15/36/593c8ced2b83ddd451899972dfb6a9c0.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.10万","puid":"3004233254","clue_id":"32862118","sale_type":"0"},{"title":"标致408 2018款 350THP 自动豪华版","price":"11.80万","license_date":"2018年","road_haul":"1.4万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180410/09/37/b999294eba2faffa34cd00bf4628d149.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"17.60万","puid":"3004213208","clue_id":"32824884","sale_type":"0"},{"title":"标致408 2018款 350THP 自动豪华版","price":"12.10万","license_date":"2017年","road_haul":"0.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180409/10/05/78ca046203fb8511a9e32315ef661709.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"17.60万","puid":"3004200336","clue_id":"32613766","sale_type":"0"},{"title":"别克昂科威 2017款 20T 两驱领先型","price":"18.00万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01171226/16/13/5436090de6976c914baa65bb8a2c12e2.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"23.90万","puid":"3003285148","clue_id":"24401005","sale_type":"0"},{"title":"别克昂科威 2016款 20T 两驱精英型","price":"16.98万","license_date":"2017年","road_haul":"1.2万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180427/20/29/af0fe83adfb1553182f574512b6911d3.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"25.60万","puid":"3004418771","clue_id":"34292200","sale_type":"0"},{"title":"斯巴鲁XV 2012款 2.0i 精英导航版","price":"12.50万","license_date":"2013年","road_haul":"8.4万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505115437ac198d682abadece3daefbfe0b8f6613.jpg?imageView2/2/w/280/h/180/q/88","msrp":"24.70万","puid":"3004496596","clue_id":"34478539","sale_type":"0"},{"title":"大众途观 2010款 2.0TSI 自动四驱旗舰版","price":"12.50万","license_date":"2010年","road_haul":"11.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180402/19/59/580ed93349771f428ba1f66c5423ff0f.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"32.00万","puid":"3004133522","clue_id":"32035438","sale_type":"0"},{"title":"别克昂科威 2017款 20T 两驱精英型","price":"16.90万","license_date":"2016年","road_haul":"1.9万公里","gearbox":"自动","thumb_img":"https://image1.guazistatic.com/qn180505134728d1f9a89c300bc3992c7bc93a7ea013e5.jpg?imageView2/2/w/280/h/180/q/88","msrp":"25.60万","puid":"3004520898","clue_id":"35161255","sale_type":"0"},{"title":"马自达CX-5 2017款 2.0L 自动两驱智尚型","price":"17.60万","license_date":"2017年","road_haul":"0.3万公里","gearbox":"自动","thumb_img":"https://image.guazistatic.com/gz01180503/17/18/afbf674b4b28f52fc18a64a91b628078.jpg@base@tag=imgScale&w=280&h=180&q=88","msrp":"20.60万","puid":"3004476127","clue_id":"34928270","sale_type":"0"}]
+         * summary : [{"label":"表显里程","value":"1.4万公里"},{"label":"2017-07上牌","value":"10个月"},{"label":"车牌所在地","value":"成都"},{"label":"看车地点","value":"金堂"},{"label":"迁入地为准","value":"国五","pop":{"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu"}},{"label":"变速箱","value":"自动"},{"label":"排放量","value":"1.6"},{"label":"登记证为准","value":"0次过户","pop":{"title":"过户次数提示","desc":"该次数为评估师录入时车主告知情况，具体以交易前该车辆登记证显示信息为准。"}},{"label":"年检到期","value":"2019.7"},{"label":"交强险到期","value":"2018.7"},{"label":"商业险到期","value":"2018.7","pop":{"title":"商业保险提示","desc":"保险是否随车赠送，需在交易过程中与车主确认"}}]
+         * bm_address : {}
+         * question : [{"title":"服务费怎么算","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#fuwufei"},{"title":"可否贷款","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#daikuan"},{"title":"牌照能过户吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#paizhaoguohu"},{"title":"车辆怎么过户","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu"},{"title":"保险怎么办","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#baoxian"},{"title":"车况真实吗","url":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#chekuang"}]
          * report_other : {"report_title":"交易前陪同买卖双方进行67项复检","report_link":"guazi://openapi/openArticleDetail?id=4606"}
+         * service_status : 0
+         * price_content : 含车主报价、服务费、养护服务费
+         * price_popup : []
+         * online : {"inquiry_price":"guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23base-price%3Fpuid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631","bargain":"guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23bargain%3Foperator%3Dbuyer%26puid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631"}
          */
 
         private String car_source_status;
@@ -133,6 +136,7 @@ public class SourceDetailEntity {
         private String clue_id;
         private String clue_id_str;
         private String price;
+        private String price_total;
         private int promote_price;
         private String road_haul;
         private String license;
@@ -193,6 +197,9 @@ public class SourceDetailEntity {
         private int phone_type;
         private BmAddressBean bm_address;
         private ReportOtherBean report_other;
+        private int service_status;
+        private String price_content;
+        private OnlineBean online;
         private List<CarHotParamsBean> car_hot_params;
         private List<ServiceDescBeanX> service_desc;
         private List<?> offer_price_info;
@@ -202,10 +209,11 @@ public class SourceDetailEntity {
         private List<ServiceItemBean> service_item;
         private List<ImageListBean> imageList;
         private List<ImageCategoryListBean> imageCategoryList;
-        private List<TitleTagBean> title_tag;
+        private List<?> title_tag;
         private List<RecommendBean> recommend;
         private List<SummaryBean> summary;
         private List<QuestionBean> question;
+        private List<?> price_popup;
 
         public String getCar_source_status() {
             return car_source_status;
@@ -253,6 +261,14 @@ public class SourceDetailEntity {
 
         public void setPrice(String price) {
             this.price = price;
+        }
+
+        public String getPrice_total() {
+            return price_total;
+        }
+
+        public void setPrice_total(String price_total) {
+            this.price_total = price_total;
         }
 
         public int getPromote_price() {
@@ -735,6 +751,30 @@ public class SourceDetailEntity {
             this.report_other = report_other;
         }
 
+        public int getService_status() {
+            return service_status;
+        }
+
+        public void setService_status(int service_status) {
+            this.service_status = service_status;
+        }
+
+        public String getPrice_content() {
+            return price_content;
+        }
+
+        public void setPrice_content(String price_content) {
+            this.price_content = price_content;
+        }
+
+        public OnlineBean getOnline() {
+            return online;
+        }
+
+        public void setOnline(OnlineBean online) {
+            this.online = online;
+        }
+
         public List<CarHotParamsBean> getCar_hot_params() {
             return car_hot_params;
         }
@@ -807,11 +847,11 @@ public class SourceDetailEntity {
             this.imageCategoryList = imageCategoryList;
         }
 
-        public List<TitleTagBean> getTitle_tag() {
+        public List<?> getTitle_tag() {
             return title_tag;
         }
 
-        public void setTitle_tag(List<TitleTagBean> title_tag) {
+        public void setTitle_tag(List<?> title_tag) {
             this.title_tag = title_tag;
         }
 
@@ -839,16 +879,36 @@ public class SourceDetailEntity {
             this.question = question;
         }
 
+        public List<?> getPrice_popup() {
+            return price_popup;
+        }
+
+        public void setPrice_popup(List<?> price_popup) {
+            this.price_popup = price_popup;
+        }
+
         public static class ServiceChargeBean {
             /**
-             * service_price : 3992
+             * msg : 车价x4%
+             * service_price : 6600
              * service_msg : 车价x4%
              * service_upgrade : 1
+             * total_desc : 服务费6600元（车价x4%）
              */
 
+            private String msg;
             private int service_price;
             private String service_msg;
             private int service_upgrade;
+            private String total_desc;
+
+            public String getMsg() {
+                return msg;
+            }
+
+            public void setMsg(String msg) {
+                this.msg = msg;
+            }
 
             public int getService_price() {
                 return service_price;
@@ -873,12 +933,20 @@ public class SourceDetailEntity {
             public void setService_upgrade(int service_upgrade) {
                 this.service_upgrade = service_upgrade;
             }
+
+            public String getTotal_desc() {
+                return total_desc;
+            }
+
+            public void setTotal_desc(String total_desc) {
+                this.total_desc = total_desc;
+            }
         }
 
         public static class HeatAnalysisBean {
             /**
-             * star_level : 5
-             * desc : 该车性价比极高，预计1-3天内售出；好车不等人，快快预约看车吧
+             * star_level : 4
+             * desc : 该车性价比较高，预计3~7天内售出；好车不等人，快快预约看车吧
              */
 
             private int star_level;
@@ -903,9 +971,9 @@ public class SourceDetailEntity {
 
         public static class ServiceBean {
             /**
-             * service_desc : [{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"6.30万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}]
-             * compensation_amount : 6.30万
-             * service_security_page : https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu
+             * service_desc : [{"text":"售后保障","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#","tags":[{"title":"9.20万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}],"event_id":"1212123456000001","icon":"https://sta.guazistatic.com/static/c2c/app/client/zhibao.png","type":0},{"text":"14天可退","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#tui","tags":[{"title":"重大事故车14天可退","desc":"买到问题车也不怕"}],"event_id":"1212123456000003","icon":"https://sta.guazistatic.com/static/c2c/app/client/tui.png","type":3},{"text":"259项检测","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#test","tags":[{"title":"上架前259项检测，过户前深度复检","desc":"精选安全放心车"}],"event_id":"1212123456000005","icon":"https://sta.guazistatic.com/static/c2c/app/client/jiance.png","type":2},{"text":"100%个人车","url":"https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#percent","tags":[{"title":"个人卖给个人，无中间商赚差价","desc":"买家少花钱"}],"event_id":"1212123456000009","icon":"https://sta.guazistatic.com/static/c2c/app/client/geren.png","type":5}]
+             * compensation_amount : 9.20万
+             * service_security_page : https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu
              */
 
             private String compensation_amount;
@@ -939,8 +1007,8 @@ public class SourceDetailEntity {
             public static class ServiceDescBean {
                 /**
                  * text : 售后保障
-                 * url : https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=28416715&ca_s=app_tg&ca_n=meizu#
-                 * tags : [{"title":"6.30万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}]
+                 * url : https://guaziapp-m.guazi.com/cd/detailFaq?act=serviceInfo&clue_id=30395853&ca_s=app_tg&ca_n=meizu#
+                 * tags : [{"title":"9.20万","desc":"最高赔付额","color":"#f56539"},{"title":"13大系统","desc":"保障范围"},{"title":"1年2万公里","desc":"保障期限里程"}]
                  * event_id : 1212123456000001
                  * icon : https://sta.guazistatic.com/static/c2c/app/client/zhibao.png
                  * type : 0
@@ -1003,7 +1071,7 @@ public class SourceDetailEntity {
 
                 public static class TagsBean {
                     /**
-                     * title : 6.30万
+                     * title : 9.20万
                      * desc : 最高赔付额
                      * color : #f56539
                      */
@@ -1040,225 +1108,17 @@ public class SourceDetailEntity {
         }
 
         public static class DescribeListBean {
-            /**
-             * news_price_desc : 新车含税价 = 厂商公布的指导价 + 购置税费，该价格仅供参考
-             * insurance_desc : 保险是否随车赠送，需在交易过程中与车主确认
-             */
-
-            private String news_price_desc;
-            private String insurance_desc;
-
-            public String getNews_price_desc() {
-                return news_price_desc;
-            }
-
-            public void setNews_price_desc(String news_price_desc) {
-                this.news_price_desc = news_price_desc;
-            }
-
-            public String getInsurance_desc() {
-                return insurance_desc;
-            }
-
-            public void setInsurance_desc(String insurance_desc) {
-                this.insurance_desc = insurance_desc;
-            }
         }
 
         public static class BaomaiBean {
-            /**
-             * title : 保卖车
-             * image : https://image.guazistatic.com/gz01180127/13/33/ad7c784e0a6c012a4674f8421ea5566f.png
-             * item : ["车况更好","价格公道","百家门店","当日提车"]
-             * pop_box : {"title":"瓜子保卖车说明","item":[{"title":"车况更好","desc":"经过复检评估师二次深度检测，只为您提供更高品质的二手好车"},{"title":"价格公道","desc":"瓜子人工智能引擎根据海量历史成交数据及当前市场行情，精准定价，物有所值。"},{"title":"百家门店","desc":"上百辆好车集中存放，看车更方便"},{"title":"当日提车","desc":"随时看车，无需再次复检，最快可当日提车过户。"}]}
-             */
-
-            private String title;
-            private String image;
-            private PopBoxBean pop_box;
-            private List<String> item;
-
-            public String getTitle() {
-                return title;
-            }
-
-            public void setTitle(String title) {
-                this.title = title;
-            }
-
-            public String getImage() {
-                return image;
-            }
-
-            public void setImage(String image) {
-                this.image = image;
-            }
-
-            public PopBoxBean getPop_box() {
-                return pop_box;
-            }
-
-            public void setPop_box(PopBoxBean pop_box) {
-                this.pop_box = pop_box;
-            }
-
-            public List<String> getItem() {
-                return item;
-            }
-
-            public void setItem(List<String> item) {
-                this.item = item;
-            }
-
-            public static class PopBoxBean {
-                /**
-                 * title : 瓜子保卖车说明
-                 * item : [{"title":"车况更好","desc":"经过复检评估师二次深度检测，只为您提供更高品质的二手好车"},{"title":"价格公道","desc":"瓜子人工智能引擎根据海量历史成交数据及当前市场行情，精准定价，物有所值。"},{"title":"百家门店","desc":"上百辆好车集中存放，看车更方便"},{"title":"当日提车","desc":"随时看车，无需再次复检，最快可当日提车过户。"}]
-                 */
-
-                private String title;
-                private List<ItemBean> item;
-
-                public String getTitle() {
-                    return title;
-                }
-
-                public void setTitle(String title) {
-                    this.title = title;
-                }
-
-                public List<ItemBean> getItem() {
-                    return item;
-                }
-
-                public void setItem(List<ItemBean> item) {
-                    this.item = item;
-                }
-
-                public static class ItemBean {
-                    /**
-                     * title : 车况更好
-                     * desc : 经过复检评估师二次深度检测，只为您提供更高品质的二手好车
-                     */
-
-                    private String title;
-                    private String desc;
-
-                    public String getTitle() {
-                        return title;
-                    }
-
-                    public void setTitle(String title) {
-                        this.title = title;
-                    }
-
-                    public String getDesc() {
-                        return desc;
-                    }
-
-                    public void setDesc(String desc) {
-                        this.desc = desc;
-                    }
-                }
-            }
         }
 
         public static class LoanAppraisalBean {
-            /**
-             * title : <span style="color:#495056;font-size: 12px;font-family: PingFang SC;">在线贷款秒批，最高可贷<span style="color: #FF704A;">50万</span></span>
-             * jump : {"text":"测测贷款额度","url":"https://app2-jr.guazi.com/loan_v2/webank_pre_apply?platform=app&from=app_v4_index&ca_s=app_tg&ca_n=meizu"}
-             */
-
-            private String title;
-            private JumpBean jump;
-
-            public String getTitle() {
-                return title;
-            }
-
-            public void setTitle(String title) {
-                this.title = title;
-            }
-
-            public JumpBean getJump() {
-                return jump;
-            }
-
-            public void setJump(JumpBean jump) {
-                this.jump = jump;
-            }
-
             public static class JumpBean {
-                /**
-                 * text : 测测贷款额度
-                 * url : https://app2-jr.guazi.com/loan_v2/webank_pre_apply?platform=app&from=app_v4_index&ca_s=app_tg&ca_n=meizu
-                 */
-
-                private String text;
-                private String url;
-
-                public String getText() {
-                    return text;
-                }
-
-                public void setText(String text) {
-                    this.text = text;
-                }
-
-                public String getUrl() {
-                    return url;
-                }
-
-                public void setUrl(String url) {
-                    this.url = url;
-                }
             }
         }
 
         public static class BmAddressBean {
-            /**
-             * title : 武侯区晋吉南路88号
-             * distance : 6.41km
-             * phone : 4000609047
-             * shop_name : 瓜子保卖车场(武侯)
-             */
-
-            private String title;
-            private String distance;
-            private String phone;
-            private String shop_name;
-
-            public String getTitle() {
-                return title;
-            }
-
-            public void setTitle(String title) {
-                this.title = title;
-            }
-
-            public String getDistance() {
-                return distance;
-            }
-
-            public void setDistance(String distance) {
-                this.distance = distance;
-            }
-
-            public String getPhone() {
-                return phone;
-            }
-
-            public void setPhone(String phone) {
-                this.phone = phone;
-            }
-
-            public String getShop_name() {
-                return shop_name;
-            }
-
-            public void setShop_name(String shop_name) {
-                this.shop_name = shop_name;
-            }
         }
 
         public static class ReportOtherBean {
@@ -1287,9 +1147,35 @@ public class SourceDetailEntity {
             }
         }
 
+        public static class OnlineBean {
+            /**
+             * inquiry_price : guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23base-price%3Fpuid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631
+             * bargain : guazi://openapi/openWebview?url=https%3A%2F%2Fsta.guazi.com%2Fwe_client%2Fc2c-common.html%23bargain%3Foperator%3Dbuyer%26puid%3D3003958625%26clue_id%3D30395853%26city_id%3D45%26ca_s%3Dapp_tg%26ca_n%3Dmeizu%26platform%3D5%26guid%3D862007036501106%26versionId%3D3.9.6.0%26version%3D1%26scode%3D10101021631
+             */
+
+            private String inquiry_price;
+            private String bargain;
+
+            public String getInquiry_price() {
+                return inquiry_price;
+            }
+
+            public void setInquiry_price(String inquiry_price) {
+                this.inquiry_price = inquiry_price;
+            }
+
+            public String getBargain() {
+                return bargain;
+            }
+
+            public void setBargain(String bargain) {
+                this.bargain = bargain;
+            }
+        }
+
         public static class CarHotParamsBean {
             /**
-             * title : 0过户
+             * title : 4s店保养
              * color : #888888
              */
 
@@ -1373,11 +1259,13 @@ public class SourceDetailEntity {
             /**
              * title : 电动天窗
              * image : https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang.png
+             * new_image : https://sta.guazistatic.com/static/c2c/app/client/diandongtianchuang_v2.png
              * is_add : 0
              */
 
             private String title;
             private String image;
+            private String new_image;
             private int is_add;
 
             public String getTitle() {
@@ -1396,6 +1284,14 @@ public class SourceDetailEntity {
                 this.image = image;
             }
 
+            public String getNew_image() {
+                return new_image;
+            }
+
+            public void setNew_image(String new_image) {
+                this.new_image = new_image;
+            }
+
             public int getIs_add() {
                 return is_add;
             }
@@ -1410,7 +1306,7 @@ public class SourceDetailEntity {
              * title : 事故排查
              * count : 30
              * fails : 0
-             * url : https://guaziapp-m.guazi.com/cd/3d29c1620110a924x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.1.0#detail_accident
+             * url : https://guaziapp-m.guazi.com/cd/33bf71e28773a8f9x/?act=getReportPage&platform=5&ca_s=app_tg&ca_n=meizu&appversionId=3.9.6.0#detail_accident
              * icon : https://sta.guazistatic.com/static/c2c/app/client/accident.png
              */
 
@@ -1501,7 +1397,7 @@ public class SourceDetailEntity {
             /**
              * category : 正侧
              * category_desc : 漆面保持较好，车身结构无修复，无重大事故
-             * images : [{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"}]
+             * images : [{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"}]
              */
 
             private String category;
@@ -1534,8 +1430,8 @@ public class SourceDetailEntity {
 
             public static class ImagesBean {
                 /**
-                 * image : https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88
-                 * thumb : https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88
+                 * image : https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88
+                 * thumb : https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88
                  */
 
                 private String image;
@@ -1562,7 +1458,7 @@ public class SourceDetailEntity {
         public static class ImageCategoryListBean {
             /**
              * category : 车身外观
-             * images : [{"image":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045722b47d79ba2f3088e745f06032553d2dc9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045724a6c4d9db3155bfa472b5fb4b5bed5b51.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045727baf8201cbfd9766c4b2efebe2affd7d9.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045730d37974ac837c77b9c1ed062423b9ff2c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180309045733aa152bd8c12fe44e1293c916d7125bee.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18030904573513ba2e3e5c8ea7baf6180b116a8bc65c.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/3214a93b828c53f46857148be18c2ed1.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/2782779c0b226bdddeebad07008e4fd8.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180307/12/31/35a2984ff737bc4f0b42656c4555e728.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]
+             * images : [{"image":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916525569213ac39c61f1c8acd00288d7a66e67.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn1803191652562c677ed2db8871560781c39185e95fe1.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165257fcab2fe7ef60b2fd65ff5dbf411d8589.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn18031916534652e5b54d8ce413ec843d3120fea47e97.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165347cb8d3fd27b817cab6a323d284989993a.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/750/h/500/q/88","thumb":"https://image1.guazistatic.com/qn180319165348c4afeabdafff3698ec7f1d0ba843d594.jpg?imageView2/1/w/190/h/144/q/88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/ae0836aa49e6f456af14b03f0f0e3bfc.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/7de089c3c9e5fd520a7de5cea7c4d839.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"},{"image":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=750&h=500&c=1&m=2&q=88","thumb":"https://image.guazistatic.com/gz01180319/16/47/867696d015ea6f88d5ccea61394f6f91.jpg@base@tag=imgScale&w=190&h=144&c=1&m=2&q=88"}]
              */
 
             private String category;
@@ -1586,8 +1482,8 @@ public class SourceDetailEntity {
 
             public static class ImagesBeanX {
                 /**
-                 * image : https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/750/h/500/q/88
-                 * thumb : https://image1.guazistatic.com/qn1803090457198456ac4232eb3afe93819ac718d62e82.jpg?imageView2/1/w/190/h/144/q/88
+                 * image : https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/750/h/500/q/88
+                 * thumb : https://image1.guazistatic.com/qn18031916485329b3a3582ac81e67769e6cca0f8e31c8.jpg?imageView2/1/w/190/h/144/q/88
                  */
 
                 private String image;
@@ -1611,54 +1507,17 @@ public class SourceDetailEntity {
             }
         }
 
-        public static class TitleTagBean {
-            /**
-             * title : 保卖车
-             * color : #FFFFFF
-             * background-color : #FFA600
-             */
-
-            private String title;
-            private String color;
-            @SerializedName("background-color")
-            private String backgroundcolor;
-
-            public String getTitle() {
-                return title;
-            }
-
-            public void setTitle(String title) {
-                this.title = title;
-            }
-
-            public String getColor() {
-                return color;
-            }
-
-            public void setColor(String color) {
-                this.color = color;
-            }
-
-            public String getBackgroundcolor() {
-                return backgroundcolor;
-            }
-
-            public void setBackgroundcolor(String backgroundcolor) {
-                this.backgroundcolor = backgroundcolor;
-            }
-        }
-
         public static class RecommendBean {
             /**
-             * title : 别克威朗 2016款 两厢 15S 自动领先型
-             * price : 10.20万
-             * license_date : 2016年
-             * road_haul : 2.1万公里
+             * title : 标致4008 2017款 350THP 精英版
+             * price : 16.60万
+             * license_date : 2017年
+             * road_haul : 1.5万公里
              * gearbox : 自动
-             * thumb_img : https://image.guazistatic.com/gz01180308/11/12/b1b153e5890fb350c0e4c71d9b24d02c.jpg@base@tag=imgScale&w=280&h=180&q=88
-             * msrp : 16.90万
-             * puid : 3003814498
-             * clue_id : 28949555
+             * thumb_img : https://image1.guazistatic.com/qn180505144327bb57882e23fc0a111b7f19b865b6beae.jpg?imageView2/2/w/280/h/180/q/88
+             * msrp : 22.70万
+             * puid : 3004498080
+             * clue_id : 35037217
              * sale_type : 0
              */
 
@@ -1757,8 +1616,8 @@ public class SourceDetailEntity {
         public static class SummaryBean {
             /**
              * label : 表显里程
-             * value : 2.2万公里
-             * pop : {"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu"}
+             * value : 1.4万公里
+             * pop : {"title":"排放标准提示","desc":"各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。","label":"外迁标准","link":"https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu"}
              */
 
             private String label;
@@ -1794,7 +1653,7 @@ public class SourceDetailEntity {
                  * title : 排放标准提示
                  * desc : 各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。
                  * label : 外迁标准
-                 * link : https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#cheliangguohu
+                 * link : https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#cheliangguohu
                  */
 
                 private String title;
@@ -1839,7 +1698,7 @@ public class SourceDetailEntity {
         public static class QuestionBean {
             /**
              * title : 服务费怎么算
-             * url : https://guaziapp-m.guazi.com/misc/QA/?clue_id=28416715#fuwufei
+             * url : https://guaziapp-m.guazi.com/misc/QA/?clue_id=30395853#fuwufei
              */
 
             private String title;

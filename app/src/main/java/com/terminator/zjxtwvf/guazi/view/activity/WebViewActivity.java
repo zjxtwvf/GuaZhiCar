@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.terminator.zjxtwvf.guazi.R;
@@ -23,10 +25,17 @@ import com.terminator.zjxtwvf.guazi.util.UIUtils;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 
 public class WebViewActivity extends Activity {
     private WebView webView;
     private String webViewUrl, webViewTitle;
+
+    @Bind(R.id.iv_webview_back)
+    ImageView mBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +84,7 @@ public class WebViewActivity extends Activity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void loadUI() {
         setContentView(R.layout.activity_webview);
+        ButterKnife.bind(this);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) return;
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -123,6 +133,11 @@ public class WebViewActivity extends Activity {
 
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @OnClick({R.id.iv_webview_back})
+    public void onClick(View view){
+        onBackPressed();
     }
 
     public void openLink(View view) {

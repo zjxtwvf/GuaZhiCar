@@ -67,11 +67,16 @@ public class HomeAdapter extends BaseAdapter{
             ((HomeAdapter.MyViewHolder)holder).tvPrice.setText(data.get(index).getPrice());
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewHolder)holder).iv,data.get(index).getThumb_img());
         }else if(holder instanceof  HomeAdapter.MyViewAdHolder){
-            String imageUrl;
+            String imageUrl = null;
             if(position == 0){
-                imageUrl = mAdsData.getData().getAPP_BUY_LIST_BM().get(0).getImgUrl();
+                if(0 != mAdsData.getData().getAPP_BUY_LIST_BM().size()){
+                    imageUrl = mAdsData.getData().getAPP_BUY_LIST_BM().get(0).getImgUrl();
+                }
+
             }else{
-                imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
+                if(0 != mAdsData.getData().getAPP_BUY_LIST_JR().size()) {
+                    imageUrl = mAdsData.getData().getAPP_BUY_LIST_JR().get(0).getImgUrl();
+                }
             }
             BitmapCacheUtils.getInstance().display(((HomeAdapter.MyViewAdHolder) holder).iv, imageUrl);
         }
