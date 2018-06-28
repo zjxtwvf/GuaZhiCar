@@ -5,12 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.leakcanary.LeakCanary;
 import com.terminator.zjxtwvf.guazi.R;
-import com.terminator.zjxtwvf.guazi.app.MyApplication;
 import com.terminator.zjxtwvf.guazi.model.entity.RecyclerViewEvent;
 import com.terminator.zjxtwvf.guazi.util.BitmapCacheUtils;
 import com.terminator.zjxtwvf.guazi.util.UIUtils;
