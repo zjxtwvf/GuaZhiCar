@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -17,6 +16,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.terminator.zjxtwvf.guazi.R;
 import com.terminator.zjxtwvf.guazi.model.entity.WebViewEvent;
@@ -37,6 +37,8 @@ public class WebViewActivity extends Activity {
     @Bind(R.id.iv_webview_back)
     ImageView mBack;
 
+    long time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +56,7 @@ public class WebViewActivity extends Activity {
             webView.getSettings().setJavaScriptEnabled(true);
             webView.getSettings().setDomStorageEnabled(true);
             webView.getSettings().setDatabaseEnabled(true);
-            webView.getSettings().setCacheMode(WebSettings.LOAD_DEFAULT);
+            webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
             webView.setWebViewClient(new WebViewClient() {
                 @Override
                 public void onPageStarted(WebView view, String url, Bitmap favicon) {
@@ -74,9 +76,13 @@ public class WebViewActivity extends Activity {
                     view.loadUrl(javascript);
                     //加载方法
                     view.loadUrl("javascript:hideOther();");
-                    EventBus.getDefault().post(new WebViewEvent(0));
+                    long cost = System.currentTimeMillis()-time;
+                    Toast.makeText(UIUtils.getContext(),"cost time  :" + cost,Toast.LENGTH_SHORT).show();
+                    webView.setVisibility(View.VISIBLE);
+                    //EventBus.getDefault().post(new WebViewEvent(0));
                 }
             });
+            time = System.currentTimeMillis();
             webView.loadUrl(webViewUrl);
         }
     }

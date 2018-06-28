@@ -71,7 +71,7 @@ public class HomeAdapterBigMode extends BaseAdapter{
         if(position == data.size() -1){
             EventBus.getDefault().post(new RecyclerViewEvent());
         }
-        if(holder instanceof  HomeAdapterBigMode.MyViewAdHolder){
+        if(holder instanceof  HomeAdapterBigMode.MyViewAdHolder && mAdsData.getData().getAPP_BUY_LIST_BM().size() != 0){
             String imageUrl;
             if(position == 0){
                 imageUrl = mAdsData.getData().getAPP_BUY_LIST_BM().get(0).getImgUrl();
